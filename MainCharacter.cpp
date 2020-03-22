@@ -9,23 +9,27 @@
 
 // --- Variables ---
 float forcePower;
+float health;
 
-int JdamageGiven = 2;
-int JattackRange = 3;
-int SdamageGiven = 3;
-int SattackRange = 2;
+int damageGiven = 2;
+int attackRange = 3;
+int movementSpeed;
 int powerLevel;
+int Jlvl,Slvl = 0; //This is to restrict level ups
 
-bool JSpecialDone,SSpecialDone = false;
+bool JSpecialDone,SSpecialDone = false; //Determine if special was done (point of reset)
+bool JlvlUp, SlvlUp = false; //Determine if jedi levels up
 
-//Default Constructor
+char JediChar = 'J';
+char SithChar = 'S';
+
+// --- Default Constructor ---
 MainCharacter::MainCharacter(/*Can define parameters if you want*/)
 {
     // this.health = ##
     //this.damageGiven == ##    These are examples of how to initialize variables upon creation of the object
 
 }
-
 
 // --- Main Character Function ---
 void mainChar() //Make objects for sith and jedi
@@ -72,8 +76,8 @@ void JediSpecialMove() //Jedi Special Move
         while (SM == true)
         {
             //Temp increase stats for special move
-            JdamageGiven + 8;
-            JattackRange + 2;
+            damageGiven + 8;
+            attackRange + 2;
             SM = false; //change to exit
             JSpecialDone = true; //To avoid Issue listed in instructions step 3
         }
@@ -83,8 +87,8 @@ void JediSpecialMove() //Jedi Special Move
 void JediSMReset() //Jedi Special Stats Remove
 {
     //Reset stats, subtract difference that was added
-    JdamageGiven - 8;
-    JattackRange - 2;
+    damageGiven - 8;
+    attackRange - 2;
     JSpecialDone = false;
 }
 
@@ -108,8 +112,8 @@ void SithSpecialMove() //Sith Special Move
         while (SM == true)
         {
             //Temp increase stats
-            SdamageGiven + 10;
-            SattackRange + 1;
+            damageGiven + 10;
+            attackRange + 1;
             SM = false;
             SSpecialDone = true;
         }
@@ -119,8 +123,8 @@ void SithSpecialMove() //Sith Special Move
 void SithSMReset() //Reset Sith Special Move
 {
     //Take away difference that was added to reset
-    SdamageGiven - 10;
-    SattackRange - 1;
+    damageGiven - 10;
+    attackRange - 1;
     SSpecialDone = false;
 }
 /*      INSTRUCTIONS ---
@@ -136,3 +140,49 @@ void SithSMReset() //Reset Sith Special Move
         voidSithSMReset();
     }
 // --- --- --- --- --- --- --- */
+
+// --- Level Up Functions ---
+//Stats when charatcters level up
+void JediPowerLvlUp()
+{
+    JlvlUp = true; //Sets JlvlUp true to run if statement
+
+    //If statement for increasing stats
+    while(JlvlUp = true)
+    {
+        Jlvl++;
+        if (Jlvl < 3) //Sets limit so characters cannot become overpowered
+        {
+        health = health + 2; //This is to heal by 2
+        damageGiven = damageGiven + 1;
+        break; //Force exit loop after one run through
+        }
+        JlvlUp = false; //Exit while loop
+    }
+}
+void SithPowerLvlUp()
+{
+    SlvlUp = true; //Sets SlvlUp true to run if loop
+
+    //If statements to increase stats and heal
+    while(SlvlUp = true)
+    {
+        Slvl++;
+        if (Slvl < 3) //Sets limit so characters cannot become overpowered
+        {
+        health = health + 2; //This is to heal by 2
+        damageGiven = damageGiven + 1;
+        break; //Force exit if loop after one go through
+        }
+        SlvlUp = false; //Exit While Loop
+    }
+}
+/*      INSTRUCTIONS ---
+1) Have statement to determine when character levels up
+2) In that statement, if it hits the conditions call function
+    for example: if (KillCount == 5)
+    {
+    SithPowerLvlUp();
+    }
+// --- --- --- --- --- --- --- */
+

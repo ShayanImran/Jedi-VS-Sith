@@ -8,7 +8,6 @@
         movementSpeed = mvmntSpeed;
         attackRange = attRange;
         specialRange =  specRange;
-
     }
 
     float Characters::getHealth()

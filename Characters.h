@@ -13,7 +13,6 @@ class Characters : public Cell
         int getDamage();
 
 
-
     private:
 
         float health;

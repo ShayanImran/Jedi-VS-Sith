@@ -8,7 +8,6 @@ class MainCharacter
 
        MainCharacter();
         //Object Variables
-        //Object Variables
         float health;
         int damageGiven;
         int attackRange;
@@ -17,7 +16,6 @@ class MainCharacter
     private:
 
         float forcePower;
-
 
     protected:
 
