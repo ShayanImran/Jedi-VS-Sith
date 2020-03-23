@@ -1,5 +1,6 @@
 #ifndef MAINCHARACTER_H_INCLUDED
 #define MAINCHARACTER_H_INCLUDED
+
 #include "Characters.h"
 
 class MainCharacter
@@ -7,17 +8,15 @@ class MainCharacter
     public:
 
        MainCharacter();
-        //Object Variables
-        //Object Variables
+       void mainChar();
+    //void MainCharacter()
+    private:
+
+        float forcePower;
         float health;
         int damageGiven;
         int attackRange;
         int movementSpeed;
-
-    private:
-
-        float forcePower;
-
 
     protected:
 

@@ -95,7 +95,6 @@ void SimulationDialog::OnButton1Click(wxCommandEvent& event)
 void SimulationDialog::OnSpinCtrl1Change(wxSpinEvent& event)
 {
     numJedi = event.GetValue();
-    wxMessageBox(std::to_string(numJedi));
 }
 /*
 * Updates the value of the number of Sith in the simulation(s)

@@ -7,7 +7,7 @@
 1584898573 /home/shayan/Desktop/Embedded GUI/Jedi-VS-Sith/Jedi_VS_SithApp.h
 	<wx/app.h>
 
-1522244266 /usr/include/wx-3.0/wx/app.h
+1568053608 /usr/include/wx-3.0/wx/app.h
 	"wx/event.h"
 	"wx/eventfilter.h"
 	"wx/build.h"
@@ -561,24 +561,24 @@
 
 1522244266 /usr/include/wx-3.0/wx/meta/removeref.h
 
-1522244266 /usr/include/wx-3.0/wx/eventfilter.h
+1568053608 /usr/include/wx-3.0/wx/eventfilter.h
 	"wx/defs.h"
 
-1522244266 /usr/include/wx-3.0/wx/build.h
+1568053608 /usr/include/wx-3.0/wx/build.h
 	"wx/version.h"
 
-1522244266 /usr/include/wx-3.0/wx/cmdargs.h
+1568053608 /usr/include/wx-3.0/wx/cmdargs.h
 	"wx/arrstr.h"
 
-1522244266 /usr/include/wx-3.0/wx/init.h
+1568053608 /usr/include/wx-3.0/wx/init.h
 	"wx/defs.h"
 	"wx/chartype.h"
 	"wx/msw/init.h"
 
-1522244266 /usr/include/wx-3.0/wx/unix/app.h
+1568053608 /usr/include/wx-3.0/wx/unix/app.h
 	<signal.h>
 
-1522244266 /usr/include/wx-3.0/wx/gtk/app.h
+1568053608 /usr/include/wx-3.0/wx/gtk/app.h
 
 1584898573 /home/shayan/Desktop/Embedded GUI/Jedi-VS-Sith/Jedi_VS_SithMain.h
 	<wx/frame.h>
@@ -1013,6 +1013,23 @@
 
 1584769794 source:/home/shayan/Desktop/Embedded GUI/Jedi-VS-Sith/Obstacle.cpp
 
+1584922106 D
+
+1584982719 source:/home/shayan/Desktop/Git/Jedi-VS-Sith/Arena.cpp
+	"Arena.h"
+	"Cell.h"
+	<iostream>
+
+1584982719 source:/home/shayan/Desktop/Git/Jedi-VS-Sith/Cell.cpp
+	"Cell.h"
+	"Characters.h"
+	<iostream>
+
+1584982719 /home/shayan/Desktop/Git/Jedi-VS-Sith/Cell.h
+	"Characters.h"
+
+1584900397 source:/home/shayan/Desktop/Git/Jedi-VS-Sith/Jedi_VS_SithApp.cpp
+
 1584900085 source:/home/jason/Documents/Senior Project/Jedi-VS-Sith/Arena.cpp
 
 1584900085 source:/home/jason/Documents/Senior Project/Jedi-VS-Sith/Cell.cpp
@@ -1021,9 +1038,43 @@
 1584900085 /home/jason/Documents/Senior Project/Jedi-VS-Sith/Cell.h
 
 1584900085 source:/home/jason/Documents/Senior Project/Jedi-VS-Sith/Jedi_VS_SithApp.cpp
+
+1522244266 
 	"Jedi_VS_SithApp.h"
 	"Jedi_VS_SithMain.h"
 	<wx/image.h>
+	"MainCharacter.h"
+	<wx/msgdlg.h>
+	<cstdlib>
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<bits/stdc++.h>
+
+1584900397 /home/shayan/Desktop/Git/Jedi-VS-Sith/Jedi_VS_SithApp.h
+	<wx/app.h>
+
+1584982719 /home/shayan/Desktop/Git/Jedi-VS-Sith/Jedi_VS_SithMain.h
+	<wx/menu.h>
+	<wx/statusbr.h>
+	<wx/frame.h>
+
+1584982719 source:/home/shayan/Desktop/Git/Jedi-VS-Sith/Jedi_VS_SithMain.cpp
+	"Jedi_VS_SithMain.h"
+	<wx/msgdlg.h>
+	"SimulationDialog.h"
+	<wx/string.h>
+	<wx/intl.h>
+
+1584982719 source:/home/shayan/Desktop/Git/Jedi-VS-Sith/MainCharacter.cpp
+	"MainCharacter.h"
+	<wx/msgdlg.h>
+	<cstdlib>
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<bits/stdc++.h>
+	"Characters.h"
 
 1584900085 /home/jason/Documents/Senior Project/Jedi-VS-Sith/Jedi_VS_SithApp.h
 	<wx/app.h>
@@ -1035,7 +1086,7 @@
 	<wx/sizer.h>
 	<wx/statusbr.h>
 
-1584933065 source:/home/jason/Documents/Senior Project/Jedi-VS-Sith/Jedi_VS_SithMain.cpp
+1584933498 source:/home/jason/Documents/Senior Project/Jedi-VS-Sith/Jedi_VS_SithMain.cpp
 	"Jedi_VS_SithMain.h"
 	<wx/msgdlg.h>
 	"SimulationDialog.h"
@@ -1043,13 +1094,21 @@
 	<wx/string.h>
 
 1584922106 source:/home/jason/Documents/Senior Project/Jedi-VS-Sith/MainCharacter.cpp
-	"MainCharacter.h"
-	<wx/msgdlg.h>
-	<cstdlib>
-	<stdio.h>
-	<stdlib.h>
-	<time.h>
-	<bits/stdc++.h>
+
+1584982719 /home/shayan/Desktop/Git/Jedi-VS-Sith/MainCharacter.h
+	"Characters.h"
+
+1584982719 /home/shayan/Desktop/Git/Jedi-VS-Sith/Characters.h
+
+1584900397 source:/home/shayan/Desktop/Git/Jedi-VS-Sith/Obstacle.cpp
+
+1584982719 source:/home/shayan/Desktop/Git/Jedi-VS-Sith/Characters.cpp
+	"Characters.h"
+	"Cell.h"
+
+1584982719 /home/shayan/Desktop/Git/Jedi-VS-Sith/Arena.h
+	"Cell.h"
+	<iostream>
 
 1584922105 /home/jason/Documents/Senior Project/Jedi-VS-Sith/MainCharacter.h
 	"Characters.h"
@@ -1127,7 +1186,7 @@
 	"wx/bitmap.h"
 	"wx/frame.h"
 
-1584932581 source:/home/jason/Documents/Senior Project/Jedi-VS-Sith/SimulationDialog.cpp
+1584976341 source:/home/jason/Documents/Senior Project/Jedi-VS-Sith/SimulationDialog.cpp
 	"SimulationDialog.h"
 	<wx/msgdlg.h>
 	<wx/intl.h>
@@ -1255,6 +1314,8 @@
 
 1522244266 /usr/include/wx-3.0/wx/gtk/stattext.h
 
+
+adding this
 1584900397 source:/home/shayan/Desktop/Git/Jedi-VS-Sith/Jedi_VS_SithApp.cpp
 	"Jedi_VS_SithApp.h"
 	"Jedi_VS_SithMain.h"
@@ -1269,4 +1330,17 @@
 	<wx/panel.h>
 	<wx/sizer.h>
 	<wx/statusbr.h>
+
+1584975802 /home/shayan/Desktop/Git/Jedi-VS-Sith/SimulationDialog.h
+	<wx/button.h>
+	<wx/dialog.h>
+	<wx/spinctrl.h>
+	<wx/stattext.h>
+	"Jedi_VS_SithMain.h"
+
+1584982719 source:/home/shayan/Desktop/Git/Jedi-VS-Sith/SimulationDialog.cpp
+	"SimulationDialog.h"
+	<wx/msgdlg.h>
+	<wx/intl.h>
+	<wx/string.h>
 

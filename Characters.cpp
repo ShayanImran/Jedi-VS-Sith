@@ -8,7 +8,6 @@
         movementSpeed = mvmntSpeed;
         attackRange = attRange;
         specialRange =  specRange;
-
     }
 
     float Characters::getHealth()
@@ -30,7 +29,7 @@
     {
 
     }
-
+/*
     void Characters::moveTo(Cell from, Cell to)
     {
         Cell temp;
@@ -44,7 +43,7 @@
         to.setOffset(temp.getOffset());
         to.setImage(temp.getImage());
     }
-
+*/
     void Characters::doDamage(Characters attacker, Characters hostile)
     {
         hostile.setHealth(hostile.getHealth() - attacker.getDamage());

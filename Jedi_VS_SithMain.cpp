@@ -12,8 +12,8 @@
 #include "SimulationDialog.h"
 
 //(*InternalHeaders(Jedi_VS_SithFrame)
-#include <wx/intl.h>
 #include <wx/string.h>
+#include <wx/intl.h>
 //*)
 
 //helper functions
@@ -59,6 +59,13 @@ END_EVENT_TABLE()
 Jedi_VS_SithFrame::Jedi_VS_SithFrame(wxWindow* parent,wxWindowID id)
 {
     //(*Initialize(Jedi_VS_SithFrame)
+<<<<<<< HEAD
+    wxMenuItem* MenuItem2;
+    wxMenuItem* MenuItem1;
+    wxMenu* Menu1;
+    wxMenuBar* MenuBar1;
+    wxMenu* Menu2;
+=======
     wxBoxSizer* BoxSizer1;
     wxMenu* Menu1;
     wxMenu* Menu2;
@@ -67,6 +74,7 @@ Jedi_VS_SithFrame::Jedi_VS_SithFrame(wxWindow* parent,wxWindowID id)
     wxMenuItem* MenuItem1;
     wxMenuItem* MenuItem2;
     wxMenuItem* MenuItem3;
+>>>>>>> gui
 
     Create(parent, wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxDEFAULT_FRAME_STYLE, _T("wxID_ANY"));
     BoxSizer1 = new wxBoxSizer(wxHORIZONTAL);

@@ -1,48 +1,71 @@
 #include "MainCharacter.h"
-//#include "Characters.h"
 #include <wx/msgdlg.h>
 #include <cstdlib>
 #include <stdio.h>
 #include <stdlib.h> //Random
 #include <time.h> //Time
 #include <bits/stdc++.h>
+#include "Characters.h"
 
 // --- Variables ---
 float forcePower;
+float health;
 
-int JdamageGiven = 2;
-int JattackRange = 3;
-int SdamageGiven = 3;
-int SattackRange = 2;
+int damageGiven;
+int attackRange;
+int movementSpeed;
 int powerLevel;
+int Jlvl,Slvl = 0; //This is to restrict level ups
 
-bool JSpecialDone,SSpecialDone = false;
+bool JSpecialDone,SSpecialDone = false; //Determine if special was done (point of reset)
+bool JlvlUp, SlvlUp = false; //Determine if jedi levels up
+bool JediChar,SithChar = false;
 
-//Default Constructor
-MainCharacter::MainCharacter(/*Can define parameters if you want*/)
+char JediImage = 'J';
+char SithImage = 'S';
+
+// --- Default Constructor ---
+MainCharacter::MainCharacter()
 {
     // this.health = ##
     //this.damageGiven == ##    These are examples of how to initialize variables upon creation of the object
 
 }
 
-
+// --- Put functions in scope
+void JediSpecialMove();
+void SithSpecialMove();
+void JediSMReset();
+void SithSMReset();
+void JediPowerLvlUp();
+void SithPowerLvlUp();
+void SidePick();
 // --- Main Character Function ---
-void mainChar() //Make objects for sith and jedi
+void MainCharacter::mainChar() //Make objects for sith and jedi
 {
-    //Jedi
-    MainCharacter Jedi; //Object character for Jedi
 
-        Jedi.health = 10;
-        Jedi.damageGiven = 2;
-        Jedi.movementSpeed = 5;
-        Jedi.attackRange = 2;
-    //Sith
-    MainCharacter Sith; //Object character for Sith
-        Sith.health = 12;
-        Sith.damageGiven = 3;
-        Sith.movementSpeed = 4;
-        Sith.attackRange = 3;
+    //Character Object
+    MainCharacter mChar; //Object character for Jedi
+        mChar.health;
+        mChar.damageGiven;
+        mChar.movementSpeed;
+        mChar.attackRange;
+    SidePick(); //Call SidePick to determine stats of Character
+    //Loop to determine stats of characters
+    if (JediChar == true) //Jedi stats
+    {
+        mChar.health = 12;
+        mChar.damageGiven = 3;
+        mChar.movementSpeed = 2;
+        mChar.attackRange = 2;
+    }
+    if (SithChar == true) //Sith stats
+    {
+        mChar.health = 10;
+        mChar.damageGiven = 4;
+        mChar.movementSpeed = 2;
+        mChar.attackRange = 2;
+    }
 }
 /*
 ~mainChar()
@@ -50,6 +73,7 @@ void mainChar() //Make objects for sith and jedi
 
 }
 */
+
 // --- --- --- --- --- ---
 
 // --- Special Move Functions ---
@@ -72,8 +96,8 @@ void JediSpecialMove() //Jedi Special Move
         while (SM == true)
         {
             //Temp increase stats for special move
-            JdamageGiven + 8;
-            JattackRange + 2;
+            damageGiven + 8;
+            attackRange + 2;
             SM = false; //change to exit
             JSpecialDone = true; //To avoid Issue listed in instructions step 3
         }
@@ -83,8 +107,8 @@ void JediSpecialMove() //Jedi Special Move
 void JediSMReset() //Jedi Special Stats Remove
 {
     //Reset stats, subtract difference that was added
-    JdamageGiven - 8;
-    JattackRange - 2;
+    damageGiven - 8;
+    attackRange - 2;
     JSpecialDone = false;
 }
 
@@ -108,8 +132,8 @@ void SithSpecialMove() //Sith Special Move
         while (SM == true)
         {
             //Temp increase stats
-            SdamageGiven + 10;
-            SattackRange + 1;
+            damageGiven + 10;
+            attackRange + 1;
             SM = false;
             SSpecialDone = true;
         }
@@ -119,12 +143,12 @@ void SithSpecialMove() //Sith Special Move
 void SithSMReset() //Reset Sith Special Move
 {
     //Take away difference that was added to reset
-    SdamageGiven - 10;
-    SattackRange - 1;
+    damageGiven - 10;
+    attackRange - 1;
     SSpecialDone = false;
 }
 /*      INSTRUCTIONS ---
-1) Call Spcial Attack Move, if
+1) Call Special Attack Move, if
 2) Character Attacks (doDamage)
 3) Call Reset Functions to Reset their stats back to before. Need loop to check
     if special attack was done, as if it wasnt in loop and reset was called this
@@ -136,3 +160,68 @@ void SithSMReset() //Reset Sith Special Move
         voidSithSMReset();
     }
 // --- --- --- --- --- --- --- */
+
+// --- Level Up Functions ---
+//Stats when charatcters level up
+void JediPowerLvlUp()
+{
+    JlvlUp = true; //Sets JlvlUp true to run if statement
+
+    //If statement for increasing stats
+    while(JlvlUp = true)
+    {
+        Jlvl++;
+        if (Jlvl < 3) //Sets limit so characters cannot become overpowered
+        {
+        health = health + 2; //This is to heal by 2
+        damageGiven = damageGiven + 1;
+        break; //Force exit loop after one run through
+        }
+        JlvlUp = false; //Exit while loop
+    }
+}
+void SithPowerLvlUp()
+{
+    SlvlUp = true; //Sets SlvlUp true to run if loop
+
+    //If statements to increase stats and heal
+    while(SlvlUp = true)
+    {
+        Slvl++;
+        if (Slvl < 3) //Sets limit so characters cannot become overpowered
+        {
+        health = health + 2; //This is to heal by 2
+        damageGiven = damageGiven + 1;
+        break; //Force exit if loop after one go through
+        }
+        SlvlUp = false; //Exit While Loop
+    }
+}
+/*      INSTRUCTIONS ---
+1) Have statement to determine when character levels up
+2) In that statement, if it hits the conditions call function
+    for example: if (KillCount == 5)
+    {
+    SithPowerLvlUp();
+    }
+// --- --- --- --- --- --- --- */
+
+// --- Determine if Jedi or Sith
+void SidePick()
+{
+    int rand();
+    int side;
+
+    //Random Generator
+    srand((time(NULL)));
+    side = rand() %1;
+
+    if (side == 1)
+    {
+        JediChar = true;
+    }
+    else
+        SithChar = true;
+}
+
+
