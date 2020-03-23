@@ -1069,7 +1069,7 @@
 	<wx/sizer.h>
 	<wx/statusbr.h>
 
-1584933065 source:/home/jason/Documents/Senior Project/Jedi-VS-Sith/Jedi_VS_SithMain.cpp
+1584933498 source:/home/jason/Documents/Senior Project/Jedi-VS-Sith/Jedi_VS_SithMain.cpp
 	"Jedi_VS_SithMain.h"
 	<wx/msgdlg.h>
 	"SimulationDialog.h"
@@ -1178,7 +1178,7 @@
 	"wx/bitmap.h"
 	"wx/frame.h"
 
-1584932581 source:/home/jason/Documents/Senior Project/Jedi-VS-Sith/SimulationDialog.cpp
+1584976341 source:/home/jason/Documents/Senior Project/Jedi-VS-Sith/SimulationDialog.cpp
 	"SimulationDialog.h"
 	<wx/msgdlg.h>
 	<wx/intl.h>
