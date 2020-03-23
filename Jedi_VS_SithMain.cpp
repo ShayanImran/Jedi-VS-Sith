@@ -11,8 +11,8 @@
 #include <wx/msgdlg.h>
 
 //(*InternalHeaders(Jedi_VS_SithFrame)
-#include <wx/intl.h>
 #include <wx/string.h>
+#include <wx/intl.h>
 //*)
 
 //helper functions
@@ -55,11 +55,11 @@ END_EVENT_TABLE()
 Jedi_VS_SithFrame::Jedi_VS_SithFrame(wxWindow* parent,wxWindowID id)
 {
     //(*Initialize(Jedi_VS_SithFrame)
-    wxMenu* Menu1;
-    wxMenu* Menu2;
-    wxMenuBar* MenuBar1;
-    wxMenuItem* MenuItem1;
     wxMenuItem* MenuItem2;
+    wxMenuItem* MenuItem1;
+    wxMenu* Menu1;
+    wxMenuBar* MenuBar1;
+    wxMenu* Menu2;
 
     Create(parent, id, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxDEFAULT_FRAME_STYLE, _T("id"));
     MenuBar1 = new wxMenuBar();

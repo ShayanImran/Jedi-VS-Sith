@@ -1,52 +1,71 @@
 #include "MainCharacter.h"
-//#include "Characters.h"
 #include <wx/msgdlg.h>
 #include <cstdlib>
 #include <stdio.h>
 #include <stdlib.h> //Random
 #include <time.h> //Time
 #include <bits/stdc++.h>
+#include "Characters.h"
 
 // --- Variables ---
 float forcePower;
 float health;
 
-int damageGiven = 2;
-int attackRange = 3;
+int damageGiven;
+int attackRange;
 int movementSpeed;
 int powerLevel;
 int Jlvl,Slvl = 0; //This is to restrict level ups
 
 bool JSpecialDone,SSpecialDone = false; //Determine if special was done (point of reset)
 bool JlvlUp, SlvlUp = false; //Determine if jedi levels up
+bool JediChar,SithChar = false;
 
-char JediChar = 'J';
-char SithChar = 'S';
+char JediImage = 'J';
+char SithImage = 'S';
 
 // --- Default Constructor ---
-MainCharacter::MainCharacter(/*Can define parameters if you want*/)
+MainCharacter::MainCharacter()
 {
     // this.health = ##
     //this.damageGiven == ##    These are examples of how to initialize variables upon creation of the object
 
 }
 
+// --- Put functions in scope
+void JediSpecialMove();
+void SithSpecialMove();
+void JediSMReset();
+void SithSMReset();
+void JediPowerLvlUp();
+void SithPowerLvlUp();
+void SidePick();
 // --- Main Character Function ---
-void mainChar() //Make objects for sith and jedi
+void MainCharacter::mainChar() //Make objects for sith and jedi
 {
-    //Jedi
-    MainCharacter Jedi; //Object character for Jedi
 
-        Jedi.health = 10;
-        Jedi.damageGiven = 2;
-        Jedi.movementSpeed = 5;
-        Jedi.attackRange = 2;
-    //Sith
-    MainCharacter Sith; //Object character for Sith
-        Sith.health = 12;
-        Sith.damageGiven = 3;
-        Sith.movementSpeed = 4;
-        Sith.attackRange = 3;
+    //Character Object
+    MainCharacter mChar; //Object character for Jedi
+        mChar.health;
+        mChar.damageGiven;
+        mChar.movementSpeed;
+        mChar.attackRange;
+    SidePick(); //Call SidePick to determine stats of Character
+    //Loop to determine stats of characters
+    if (JediChar == true) //Jedi stats
+    {
+        mChar.health = 12;
+        mChar.damageGiven = 3;
+        mChar.movementSpeed = 2;
+        mChar.attackRange = 2;
+    }
+    if (SithChar == true) //Sith stats
+    {
+        mChar.health = 10;
+        mChar.damageGiven = 4;
+        mChar.movementSpeed = 2;
+        mChar.attackRange = 2;
+    }
 }
 /*
 ~mainChar()
@@ -54,6 +73,7 @@ void mainChar() //Make objects for sith and jedi
 
 }
 */
+
 // --- --- --- --- --- ---
 
 // --- Special Move Functions ---
@@ -185,4 +205,23 @@ void SithPowerLvlUp()
     SithPowerLvlUp();
     }
 // --- --- --- --- --- --- --- */
+
+// --- Determine if Jedi or Sith
+void SidePick()
+{
+    int rand();
+    int side;
+
+    //Random Generator
+    srand((time(NULL)));
+    side = rand() %1;
+
+    if (side == 1)
+    {
+        JediChar = true;
+    }
+    else
+        SithChar = true;
+}
+
 

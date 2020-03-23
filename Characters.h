@@ -12,7 +12,6 @@ class Characters : public Cell
         void setHealth(float vitality);
         int getDamage();
 
-
     private:
 
         float health;

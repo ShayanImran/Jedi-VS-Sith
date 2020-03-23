@@ -1028,16 +1028,16 @@
 1584904320 /home/michael/Jedi-VS-Sith/Jedi_VS_SithApp.h
 	<wx/app.h>
 
-1584904320 /home/michael/Jedi-VS-Sith/Jedi_VS_SithMain.h
-	<wx/frame.h>
+1584923941 /home/michael/Jedi-VS-Sith/Jedi_VS_SithMain.h
 	<wx/menu.h>
 	<wx/statusbr.h>
+	<wx/frame.h>
 
-1584904320 source:/home/michael/Jedi-VS-Sith/Jedi_VS_SithMain.cpp
+1584923971 source:/home/michael/Jedi-VS-Sith/Jedi_VS_SithMain.cpp
 	"Jedi_VS_SithMain.h"
 	<wx/msgdlg.h>
-	<wx/intl.h>
 	<wx/string.h>
+	<wx/intl.h>
 
 1584904320 source:/home/michael/Jedi-VS-Sith/Obstacle.cpp
 
@@ -1045,6 +1045,58 @@
 	"Characters.h"
 	"Cell.h"
 
-1584905006 /home/michael/Jedi-VS-Sith/Characters.h
+1584921818 /home/michael/Jedi-VS-Sith/Characters.h
 	"Cell.h"
+
+1584923248 source:/home/michael/Jedi-VS-Sith/MainCharacter.cpp
+	"MainCharacter.h"
+	<wx/msgdlg.h>
+	<cstdlib>
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<bits/stdc++.h>
+	"Characters.h"
+
+1584923970 /home/michael/Jedi-VS-Sith/MainCharacter.h
+	"Characters.h"
+
+1584917608 source:/home/michael/Jedi-VS-Sith/Jedi.cpp
+	"Jedi.h"
+	"Characters.h"
+	"MainCharacter.h"
+
+1584917303 /home/michael/Jedi-VS-Sith/Jedi.h
+	"Characters.h"
+	"MainCharacter.h"
+
+1584915490 source:/home/michael/Jedi-VS-Sith/Sith.cpp
+	"Sith.h"
+	"Characters.h"
+	"MainCharacter.h"
+
+1584915686 /home/michael/Jedi-VS-Sith/Sith.h
+	"Characters.h"
+	"MainCharacter.h"
+
+1568053608 /usr/include/wx-3.0/wx/toolbar.h
+	"wx/defs.h"
+	"wx/tbarbase.h"
+	"wx/univ/toolbar.h"
+	"wx/msw/toolbar.h"
+	"wx/msw/wince/tbarwce.h"
+	"wx/motif/toolbar.h"
+	"wx/gtk/toolbar.h"
+	"wx/gtk1/toolbar.h"
+	"wx/osx/toolbar.h"
+	"wx/cocoa/toolbar.h"
+	"wx/os2/toolbar.h"
+
+1568053608 /usr/include/wx-3.0/wx/tbarbase.h
+	"wx/defs.h"
+	"wx/bitmap.h"
+	"wx/list.h"
+	"wx/control.h"
+
+1568053608 /usr/include/wx-3.0/wx/gtk/toolbar.h
 
