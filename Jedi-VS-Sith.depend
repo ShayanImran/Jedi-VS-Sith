@@ -1314,6 +1314,23 @@
 
 1522244266 /usr/include/wx-3.0/wx/gtk/stattext.h
 
+
+adding this
+1584900397 source:/home/shayan/Desktop/Git/Jedi-VS-Sith/Jedi_VS_SithApp.cpp
+	"Jedi_VS_SithApp.h"
+	"Jedi_VS_SithMain.h"
+	<wx/image.h>
+
+1584900397 /home/shayan/Desktop/Git/Jedi-VS-Sith/Jedi_VS_SithApp.h
+	<wx/app.h>
+
+1584984533 /home/shayan/Desktop/Git/Jedi-VS-Sith/Jedi_VS_SithMain.h
+	<wx/frame.h>
+	<wx/menu.h>
+	<wx/panel.h>
+	<wx/sizer.h>
+	<wx/statusbr.h>
+
 1584975802 /home/shayan/Desktop/Git/Jedi-VS-Sith/SimulationDialog.h
 	<wx/button.h>
 	<wx/dialog.h>
