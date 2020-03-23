@@ -51,7 +51,10 @@
 		<Unit filename="MainCharacter.h" />
 		<Unit filename="Obstacle.cpp" />
 		<Unit filename="Obstacle.h" />
+		<Unit filename="SimulationDialog.cpp" />
+		<Unit filename="SimulationDialog.h" />
 		<Unit filename="wxsmith/Jedi_VS_Sithframe.wxs" />
+		<Unit filename="wxsmith/SimulationDialog.wxs" />
 		<Extensions>
 			<envvars />
 			<code_completion />
@@ -61,6 +64,7 @@
 				<gui name="wxWidgets" src="Jedi_VS_SithApp.cpp" main="Jedi_VS_SithFrame" init_handlers="necessary" language="CPP" />
 				<resources>
 					<wxFrame wxs="wxsmith/Jedi_VS_Sithframe.wxs" src="Jedi_VS_SithMain.cpp" hdr="Jedi_VS_SithMain.h" fwddecl="0" i18n="1" name="Jedi_VS_SithFrame" language="CPP" />
+					<wxDialog wxs="wxsmith/SimulationDialog.wxs" src="SimulationDialog.cpp" hdr="SimulationDialog.h" fwddecl="0" i18n="1" name="SimulationDialog" language="CPP" />
 				</resources>
 			</wxsmith>
 		</Extensions>
