@@ -124,7 +124,7 @@ void SithSMReset() //Reset Sith Special Move
     SSpecialDone = false;
 }
 /*      INSTRUCTIONS ---
-1) Call Spcial Attack Move, if
+1) Call Special Attack Move, if
 2) Character Attacks (doDamage)
 3) Call Reset Functions to Reset their stats back to before. Need loop to check
     if special attack was done, as if it wasnt in loop and reset was called this

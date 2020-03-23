@@ -1,9 +1,8 @@
 #ifndef CHARACTERS_H_INCLUDED
 #define CHARACTERS_H_INCLUDED
 
-#include "Cell.h"
 
-class Characters : public Cell
+class Characters
 {
     public:
 
@@ -11,21 +10,20 @@ class Characters : public Cell
         float getHealth();
         void setHealth(float vitality);
         int getDamage();
-
-
+        int attackRange = 0;
 
     private:
 
         float health;
         int damageGiven;
         int movementSpeed;
-        int attackRange;
+        //int attackRange;
         int specialRange;
 
     protected:
 
         void animate(Characters current);
-        void moveTo(Cell from, Cell to);
+       // void moveTo(Cell from, Cell to);
         void doDamage(Characters attacker, Characters hostile);
 
 };

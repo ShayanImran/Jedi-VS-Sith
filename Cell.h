@@ -1,6 +1,6 @@
 #ifndef CELL_H_INCLUDED
 #define CELL_H_INCLUDED
-
+#include "Characters.h"
 class Cell
 {
     public:
@@ -10,11 +10,16 @@ class Cell
         void setOffset(int** aCoord);
         char getImage();
         void setImage(char image);
+        //int test = 9;
+        Characters currentCharacter;
+
 
     private:
 
         int** offset;
         char image;
+
+
 
     protected:
         //Somehow need to access the First Arena member, its not a simple declaration like Arena Arena1;
