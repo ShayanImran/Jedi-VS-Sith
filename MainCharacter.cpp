@@ -5,7 +5,7 @@
 #include <stdlib.h> //Random
 #include <time.h> //Time
 #include <bits/stdc++.h>
-#include "Characters.h"
+//#include "Characters.h"
 
 // --- Variables ---
 float forcePower;
@@ -27,10 +27,12 @@ char SithImage = 'S';
 // --- Default Constructor ---
 MainCharacter::MainCharacter()
 {
+
     // this.health = ##
     //this.damageGiven == ##    These are examples of how to initialize variables upon creation of the object
 
 }
+//~MainCharacter;
 
 // --- Put functions in scope
 void JediSpecialMove();
@@ -40,6 +42,7 @@ void SithSMReset();
 void JediPowerLvlUp();
 void SithPowerLvlUp();
 void SidePick();
+
 // --- Main Character Function ---
 void MainCharacter::mainChar() //Make objects for sith and jedi
 {
@@ -50,35 +53,36 @@ void MainCharacter::mainChar() //Make objects for sith and jedi
         mChar.damageGiven;
         mChar.movementSpeed;
         mChar.attackRange;
+
     SidePick(); //Call SidePick to determine stats of Character
+
     //Loop to determine stats of characters
     if (JediChar == true) //Jedi stats
     {
+
         mChar.health = 12;
         mChar.damageGiven = 3;
         mChar.movementSpeed = 2;
         mChar.attackRange = 2;
+
     }
+
     if (SithChar == true) //Sith stats
     {
+
         mChar.health = 10;
         mChar.damageGiven = 4;
         mChar.movementSpeed = 2;
         mChar.attackRange = 2;
+
     }
 }
-/*
-~mainChar()
-{
-
-}
-*/
 
 // --- --- --- --- --- ---
 
 // --- Special Move Functions ---
 //Jedi Special Move, Works off % chance to determine if special move or not
-void JediSpecialMove() //Jedi Special Move
+void MainCharacter::JediSpecialMove() //Jedi Special Move
 {
     //Variables
     int rand();
@@ -93,6 +97,7 @@ void JediSpecialMove() //Jedi Special Move
     if (SMChance <= 25)
     {
         SM = true; //Change to true to run while loop
+
         while (SM == true)
         {
             //Temp increase stats for special move
@@ -101,19 +106,25 @@ void JediSpecialMove() //Jedi Special Move
             SM = false; //change to exit
             JSpecialDone = true; //To avoid Issue listed in instructions step 3
         }
+
         SMChance = 30; //Change SMChance to set number > 25 to exit if statement
     }
 }
-void JediSMReset() //Jedi Special Stats Remove
+void MainCharacter::JediSMReset() //Jedi Special Stats Remove
 {
     //Reset stats, subtract difference that was added
+    if (JSpecialDone == true) //Determine if special was done to avoid resetting unbuffed stats
+    {
+
     damageGiven - 8;
     attackRange - 2;
     JSpecialDone = false;
+
+    }
 }
 
 //Sith Special Moves, Same as Jedi but for Sith main characters
-void SithSpecialMove() //Sith Special Move
+void MainCharacter::SithSpecialMove() //Sith Special Move
 {
     //Variables
     int rand();
@@ -128,6 +139,7 @@ void SithSpecialMove() //Sith Special Move
     if (SMChance <= 20)
     {
         SM = true;
+
         //While loop to change stats
         while (SM == true)
         {
@@ -137,15 +149,21 @@ void SithSpecialMove() //Sith Special Move
             SM = false;
             SSpecialDone = true;
         }
+
         SMChance = 30; //Change SMChance to set number > 21 to exit if statement
     }
 }
-void SithSMReset() //Reset Sith Special Move
+void MainCharacter::SithSMReset() //Reset Sith Special Move
 {
     //Take away difference that was added to reset
+    if (SSpecialDone == true) //Determine if special was done to avoid resetting unbuffed stats
+    {
+
     damageGiven - 10;
     attackRange - 1;
     SSpecialDone = false;
+
+    }
 }
 /*      INSTRUCTIONS ---
 1) Call Special Attack Move, if
@@ -154,16 +172,11 @@ void SithSMReset() //Reset Sith Special Move
     if special attack was done, as if it wasnt in loop and reset was called this
     would subtract difference no matter, therefore calling reset would handicap
     character.
-    Loop should be as follows:
-    if (SSpecialDone == true) **For Jedi need corresponding
-    {
-        voidSithSMReset();
-    }
 // --- --- --- --- --- --- --- */
 
 // --- Level Up Functions ---
 //Stats when charatcters level up
-void JediPowerLvlUp()
+void MainCharacter::JediPowerLvlUp()
 {
     JlvlUp = true; //Sets JlvlUp true to run if statement
 
@@ -171,16 +184,19 @@ void JediPowerLvlUp()
     while(JlvlUp = true)
     {
         Jlvl++;
+
         if (Jlvl < 3) //Sets limit so characters cannot become overpowered
         {
         health = health + 2; //This is to heal by 2
         damageGiven = damageGiven + 1;
         break; //Force exit loop after one run through
         }
+
         JlvlUp = false; //Exit while loop
     }
 }
-void SithPowerLvlUp()
+
+void MainCharacter::SithPowerLvlUp()
 {
     SlvlUp = true; //Sets SlvlUp true to run if loop
 
@@ -188,12 +204,14 @@ void SithPowerLvlUp()
     while(SlvlUp = true)
     {
         Slvl++;
+
         if (Slvl < 3) //Sets limit so characters cannot become overpowered
         {
         health = health + 2; //This is to heal by 2
         damageGiven = damageGiven + 1;
         break; //Force exit if loop after one go through
         }
+
         SlvlUp = false; //Exit While Loop
     }
 }
@@ -207,21 +225,40 @@ void SithPowerLvlUp()
 // --- --- --- --- --- --- --- */
 
 // --- Determine if Jedi or Sith
-void SidePick()
+void MainCharacter::SidePick()
 {
     int rand();
     int side;
 
     //Random Generator
     srand((time(NULL)));
-    side = rand() %1;
+    side = rand() %1; //Generates random number either 0 or 1
 
-    if (side == 1)
+    if (side == 1) //If = 1, Jedi
     {
         JediChar = true;
     }
     else
-        SithChar = true;
+        SithChar = true; //If = 0, Sith
 }
 
+// --- Attack Functions
+//Attack function for buff. Need to inherit doDamage from Characters class
+void MainCharacter::CharAttack()
+{
+
+    if (JediChar == true) //If jedi, apply possible special move and reset
+    {
+        JediSpecialMove();
+        //doDamage();
+        JediSMReset();
+    }
+
+    if (SithChar == true) //If sith, apply possible special move and reset
+    {
+        SithSpecialMove();
+        //doDamage();
+        JediSMReset();
+    }
+}
 
