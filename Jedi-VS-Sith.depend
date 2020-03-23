@@ -1013,6 +1013,7 @@
 
 1584769794 source:/home/shayan/Desktop/Embedded GUI/Jedi-VS-Sith/Obstacle.cpp
 
+<<<<<<< HEAD
 1584935266 source:/home/shayan/Desktop/Git/Jedi-VS-Sith/Arena.cpp
 	"Arena.h"
 	"Cell.h"
@@ -1027,10 +1028,21 @@
 	"Characters.h"
 
 1584900397 source:/home/shayan/Desktop/Git/Jedi-VS-Sith/Jedi_VS_SithApp.cpp
+=======
+1584900085 source:/home/jason/Documents/Senior Project/Jedi-VS-Sith/Arena.cpp
+
+1584900085 source:/home/jason/Documents/Senior Project/Jedi-VS-Sith/Cell.cpp
+	"Cell.h"
+
+1584900085 /home/jason/Documents/Senior Project/Jedi-VS-Sith/Cell.h
+
+1584900085 source:/home/jason/Documents/Senior Project/Jedi-VS-Sith/Jedi_VS_SithApp.cpp
+>>>>>>> gui
 	"Jedi_VS_SithApp.h"
 	"Jedi_VS_SithMain.h"
 	<wx/image.h>
 
+<<<<<<< HEAD
 1584900397 /home/shayan/Desktop/Git/Jedi-VS-Sith/Jedi_VS_SithApp.h
 	<wx/app.h>
 
@@ -1046,6 +1058,26 @@
 	<wx/string.h>
 
 1584919562 source:/home/shayan/Desktop/Git/Jedi-VS-Sith/MainCharacter.cpp
+=======
+1584900085 /home/jason/Documents/Senior Project/Jedi-VS-Sith/Jedi_VS_SithApp.h
+	<wx/app.h>
+
+1584931511 /home/jason/Documents/Senior Project/Jedi-VS-Sith/Jedi_VS_SithMain.h
+	<wx/frame.h>
+	<wx/menu.h>
+	<wx/panel.h>
+	<wx/sizer.h>
+	<wx/statusbr.h>
+
+1584933065 source:/home/jason/Documents/Senior Project/Jedi-VS-Sith/Jedi_VS_SithMain.cpp
+	"Jedi_VS_SithMain.h"
+	<wx/msgdlg.h>
+	"SimulationDialog.h"
+	<wx/intl.h>
+	<wx/string.h>
+
+1584922106 source:/home/jason/Documents/Senior Project/Jedi-VS-Sith/MainCharacter.cpp
+>>>>>>> gui
 	"MainCharacter.h"
 	<wx/msgdlg.h>
 	<cstdlib>
@@ -1054,6 +1086,7 @@
 	<time.h>
 	<bits/stdc++.h>
 
+<<<<<<< HEAD
 1584900397 /home/shayan/Desktop/Git/Jedi-VS-Sith/MainCharacter.h
 	"Characters.h"
 
@@ -1068,4 +1101,209 @@
 1584935674 /home/shayan/Desktop/Git/Jedi-VS-Sith/Arena.h
 	"Cell.h"
 	<iostream>
+=======
+1584922105 /home/jason/Documents/Senior Project/Jedi-VS-Sith/MainCharacter.h
+	"Characters.h"
+
+1584900407 /home/jason/Documents/Senior Project/Jedi-VS-Sith/Characters.h
+	"Cell.h"
+
+1584900085 source:/home/jason/Documents/Senior Project/Jedi-VS-Sith/Obstacle.cpp
+
+1584900085 source:/home/jason/Documents/Senior Project/Jedi-VS-Sith/Characters.cpp
+	"Characters.h"
+	"Cell.h"
+
+1522244266 /usr/include/wx-3.0/wx/panel.h
+	"wx/window.h"
+	"wx/containr.h"
+	"wx/univ/panel.h"
+	"wx/msw/panel.h"
+	"wx/generic/panelg.h"
+
+1522244266 /usr/include/wx-3.0/wx/generic/panelg.h
+	"wx/bitmap.h"
+
+1522244266 /usr/include/wx-3.0/wx/sizer.h
+	"wx/defs.h"
+	"wx/window.h"
+
+1522244266 /usr/include/wx-3.0/wx/toolbar.h
+	"wx/defs.h"
+	"wx/tbarbase.h"
+	"wx/univ/toolbar.h"
+	"wx/msw/toolbar.h"
+	"wx/msw/wince/tbarwce.h"
+	"wx/motif/toolbar.h"
+	"wx/gtk/toolbar.h"
+	"wx/gtk1/toolbar.h"
+	"wx/osx/toolbar.h"
+	"wx/cocoa/toolbar.h"
+	"wx/os2/toolbar.h"
+
+1522244266 /usr/include/wx-3.0/wx/tbarbase.h
+	"wx/defs.h"
+	"wx/bitmap.h"
+	"wx/list.h"
+	"wx/control.h"
+
+1522244266 /usr/include/wx-3.0/wx/gtk/toolbar.h
+
+1522244266 /usr/include/wx-3.0/wx/popupwin.h
+	"wx/defs.h"
+	"wx/nonownedwnd.h"
+	"wx/msw/popupwin.h"
+	"wx/os2/popupwin.h"
+	"wx/gtk/popupwin.h"
+	"wx/gtk1/popupwin.h"
+	"wx/x11/popupwin.h"
+	"wx/motif/popupwin.h"
+	"wx/dfb/popupwin.h"
+	"wx/osx/popupwin.h"
+
+1522244266 /usr/include/wx-3.0/wx/gtk/popupwin.h
+
+1522244266 /usr/include/wx-3.0/wx/minifram.h
+	"wx/defs.h"
+	"wx/msw/minifram.h"
+	"wx/motif/minifram.h"
+	"wx/gtk/minifram.h"
+	"wx/gtk1/minifram.h"
+	"wx/x11/minifram.h"
+	"wx/osx/minifram.h"
+	"wx/os2/minifram.h"
+	"wx/frame.h"
+
+1522244266 /usr/include/wx-3.0/wx/gtk/minifram.h
+	"wx/bitmap.h"
+	"wx/frame.h"
+
+1584932581 source:/home/jason/Documents/Senior Project/Jedi-VS-Sith/SimulationDialog.cpp
+	"SimulationDialog.h"
+	<wx/msgdlg.h>
+	<wx/intl.h>
+	<wx/string.h>
+
+1584931885 /home/jason/Documents/Senior Project/Jedi-VS-Sith/SimulationDialog.h
+	<wx/button.h>
+	<wx/dialog.h>
+	<wx/spinctrl.h>
+	<wx/stattext.h>
+	"Jedi_VS_SithMain.h"
+
+1522244266 /usr/include/wx-3.0/wx/button.h
+	"wx/defs.h"
+	"wx/anybutton.h"
+	"wx/univ/button.h"
+	"wx/msw/button.h"
+	"wx/motif/button.h"
+	"wx/gtk/button.h"
+	"wx/gtk1/button.h"
+	"wx/osx/button.h"
+	"wx/cocoa/button.h"
+	"wx/os2/button.h"
+
+1522244266 /usr/include/wx-3.0/wx/anybutton.h
+	"wx/defs.h"
+	"wx/bitmap.h"
+	"wx/control.h"
+	"wx/univ/anybutton.h"
+	"wx/msw/anybutton.h"
+	"wx/gtk/anybutton.h"
+	"wx/osx/anybutton.h"
+
+1522244266 /usr/include/wx-3.0/wx/gtk/anybutton.h
+
+1522244266 /usr/include/wx-3.0/wx/gtk/button.h
+
+1522244266 /usr/include/wx-3.0/wx/spinctrl.h
+	"wx/defs.h"
+	"wx/spinbutt.h"
+	"wx/msw/spinctrl.h"
+	"wx/os2/spinctrl.h"
+	"wx/gtk/spinctrl.h"
+	"wx/gtk1/spinctrl.h"
+	"wx/generic/spinctlg.h"
+
+1522244266 /usr/include/wx-3.0/wx/spinbutt.h
+	"wx/defs.h"
+	"wx/control.h"
+	"wx/event.h"
+	"wx/range.h"
+	"wx/univ/spinbutt.h"
+	"wx/msw/spinbutt.h"
+	"wx/motif/spinbutt.h"
+	"wx/gtk/spinbutt.h"
+	"wx/gtk1/spinbutt.h"
+	"wx/osx/spinbutt.h"
+	"wx/cocoa/spinbutt.h"
+	"wx/os2/spinbutt.h"
+
+1522244266 /usr/include/wx-3.0/wx/range.h
+	"wx/defs.h"
+
+1522244266 /usr/include/wx-3.0/wx/gtk/spinbutt.h
+
+1522244266 /usr/include/wx-3.0/wx/gtk/spinctrl.h
+
+1522244266 /usr/include/wx-3.0/wx/generic/spinctlg.h
+	"wx/compositewin.h"
+	"wx/textctrl.h"
+
+1522244266 /usr/include/wx-3.0/wx/compositewin.h
+	"wx/window.h"
+	"wx/containr.h"
+
+1522244266 /usr/include/wx-3.0/wx/textctrl.h
+	"wx/defs.h"
+	"wx/control.h"
+	"wx/textentry.h"
+	"wx/dynarray.h"
+	"wx/gdicmn.h"
+	"wx/ioswrap.h"
+	"wx/x11/textctrl.h"
+	"wx/univ/textctrl.h"
+	"wx/msw/wince/textctrlce.h"
+	"wx/msw/textctrl.h"
+	"wx/motif/textctrl.h"
+	"wx/gtk/textctrl.h"
+	"wx/gtk1/textctrl.h"
+	"wx/osx/textctrl.h"
+	"wx/cocoa/textctrl.h"
+	"wx/os2/textctrl.h"
+
+1522244266 /usr/include/wx-3.0/wx/textentry.h
+	"wx/filefn.h"
+	"wx/gdicmn.h"
+	"wx/gtk/textentry.h"
+	"wx/osx/textentry.h"
+	"wx/msw/textentry.h"
+	"wx/motif/textentry.h"
+	"wx/os2/textentry.h"
+
+1522244266 /usr/include/wx-3.0/wx/gtk/textentry.h
+
+1522244266 /usr/include/wx-3.0/wx/ioswrap.h
+	"wx/beforestd.h"
+	<iostream.h>
+	<iostream>
+	"wx/afterstd.h"
+	"wx/msw/winundef.h"
+
+1522244266 /usr/include/wx-3.0/wx/gtk/textctrl.h
+
+1522244266 /usr/include/wx-3.0/wx/stattext.h
+	"wx/defs.h"
+	"wx/control.h"
+	"wx/univ/stattext.h"
+	"wx/msw/stattext.h"
+	"wx/motif/stattext.h"
+	"wx/gtk/stattext.h"
+	"wx/gtk1/stattext.h"
+	"wx/osx/stattext.h"
+	"wx/cocoa/stattext.h"
+	"wx/os2/stattext.h"
+
+1522244266 /usr/include/wx-3.0/wx/gtk/stattext.h
+>>>>>>> gui
 
