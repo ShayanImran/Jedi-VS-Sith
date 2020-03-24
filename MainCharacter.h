@@ -3,7 +3,7 @@
 
 //#include "Characters.h"
 
-class MainCharacter
+class MainCharacter //: public Characters
 {
     public:
 
@@ -22,8 +22,10 @@ class MainCharacter
 
     private:
 
+        // --- Variables
         float forcePower;
         float health;
+
         int damageGiven;
         int attackRange;
         int movementSpeed;

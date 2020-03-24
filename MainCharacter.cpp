@@ -8,13 +8,7 @@
 //#include "Characters.h"
 
 // --- Variables ---
-float forcePower;
-float health;
 
-int damageGiven;
-int attackRange;
-int movementSpeed;
-int powerLevel;
 int Jlvl,Slvl = 0; //This is to restrict level ups
 
 bool JSpecialDone,SSpecialDone = false; //Determine if special was done (point of reset)
@@ -44,6 +38,8 @@ void SithPowerLvlUp();
 void SidePick();
 
 // --- Main Character Function ---
+//***Need to make this a constructor and inherit. Having issues Inheriting from character class for some reason
+//Error comes when having #include Characters in MainCharacter.h
 void MainCharacter::mainChar() //Make objects for sith and jedi
 {
 
@@ -243,7 +239,7 @@ void MainCharacter::SidePick()
 }
 
 // --- Attack Functions
-//Attack function for buff. Need to inherit doDamage from Characters class
+//Attack function for buff. Need to inherit doDamage() from Characters class
 void MainCharacter::CharAttack()
 {
 
@@ -261,4 +257,5 @@ void MainCharacter::CharAttack()
         JediSMReset();
     }
 }
+
 
