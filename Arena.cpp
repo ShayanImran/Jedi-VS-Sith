@@ -49,7 +49,7 @@ void Arena::callTick()
         {
             for (int k = 0; k < dimX; k++)
             {
-                cellArray[0][0][0]->currentCharacter.attackRange = 0; // This line is throwing a seg fault #######FIX PLS#####
+              //  cellArray[0][0][0]->currentCharacter.attackRange = 0; // This line is throwing a seg fault #######FIX PLS#####
             }
             cout << endl;
         }

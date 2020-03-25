@@ -3,26 +3,7 @@
 
 class Characters
 {
-<<<<<<< HEAD
-public:
-    Characters(float vitality, int damageGiven, int mvmntSpeed, int attRange, int specRange);
-    float getHealth();
-    void setHealth(float vitality);
-    int getDamage();
-    int attackRange = 0;
 
-private:
-    float health;
-    int damageGiven;
-    int movementSpeed;
-    //int attackRange;
-    int specialRange;
-
-protected:
-    void animate(Characters current);
-    // void moveTo(Cell from, Cell to);
-    void doDamage(Characters attacker, Characters hostile);
-=======
     public:
 
         Characters(float vitality, int damageGiven, int mvmntSpeed, int attRange, int specRange);
@@ -41,9 +22,8 @@ protected:
     protected:
 
         void animate(Characters current);
-        void moveTo(Cell from, Cell to);
+      //  void moveTo(Cell from, Cell to);
         void doDamage(Characters attacker, Characters hostile);
 
->>>>>>> gui
 };
 #endif // CHARACTERS_H_INCLUDED
