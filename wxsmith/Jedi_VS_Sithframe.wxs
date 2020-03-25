@@ -1,59 +1,83 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <wxsmith>
 	<object class="wxFrame" name="Jedi_VS_SithFrame">
-<<<<<<< HEAD
-=======
+		<title>Frame</title>
 		<id_arg>0</id_arg>
 		<object class="wxBoxSizer" variable="BoxSizer1" member="no">
 			<object class="sizeritem">
 				<object class="wxPanel" name="ID_PANEL1" variable="Panel1" member="yes">
-					<size>480,222</size>
+					<size>480,250</size>
+					<object class="wxNotebook" name="ID_NOTEBOOK1" variable="Notebook1" member="yes">
+						<pos>0,0</pos>
+						<size>480,256</size>
+						<object class="notebookpage">
+							<object class="wxScrolledWindow" name="ID_SCROLLEDWINDOW1" variable="ScrolledWindow1" member="yes">
+								<pos>19,33</pos>
+								<size>470,216</size>
+							</object>
+							<label>Arena 1</label>
+						</object>
+						<object class="notebookpage">
+							<object class="wxScrolledWindow" name="ID_SCROLLEDWINDOW2" variable="ScrolledWindow2" member="yes" />
+							<label>Arena 2</label>
+						</object>
+						<object class="notebookpage">
+							<object class="wxScrolledWindow" name="ID_SCROLLEDWINDOW3" variable="ScrolledWindow3" member="yes" />
+							<label>Arena 3</label>
+						</object>
+						<object class="notebookpage">
+							<object class="wxScrolledWindow" name="ID_SCROLLEDWINDOW4" variable="ScrolledWindow4" member="yes" />
+							<label>Arena 4</label>
+						</object>
+						<object class="notebookpage">
+							<object class="wxScrolledWindow" name="ID_SCROLLEDWINDOW5" variable="ScrolledWindow5" member="yes" />
+							<label>Arena 5</label>
+						</object>
+						<object class="notebookpage">
+							<object class="wxScrolledWindow" name="ID_SCROLLEDWINDOW6" variable="ScrolledWindow6" member="yes" />
+							<label>Arena 6</label>
+						</object>
+					</object>
 				</object>
 				<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 				<border>5</border>
 				<option>1</option>
 			</object>
 		</object>
->>>>>>> gui
-		<object class="wxMenuBar" variable="MenuBar1" member="no">
-			<object class="wxMenu" variable="Menu1" member="no">
-				<label>&amp;File</label>
-				<object class="wxMenuItem" name="idMenuQuit" variable="MenuItem1" member="no">
+		<object class="wxMenuBar" variable="MenuBar1" member="yes">
+			<object class="wxMenu" variable="Menu1" member="yes">
+				<label>File</label>
+				<object class="wxMenuItem" name="ID_MENUITEM2" variable="MenuItem1" member="yes">
 					<label>Quit</label>
-					<accel>Alt-F4</accel>
-					<help>Quit the application</help>
+					<accel>Alt+F4</accel>
 					<handler function="OnQuit" entry="EVT_MENU" />
 				</object>
 			</object>
-			<object class="wxMenu" variable="Menu2" member="no">
+			<object class="wxMenu" variable="Menu2" member="yes">
 				<label>Help</label>
-				<object class="wxMenuItem" name="idMenuAbout" variable="MenuItem2" member="no">
-					<label>About</label>
+				<object class="wxMenuItem" name="ID_MENUITEM1" variable="MenuItem2" member="yes">
+					<label>Help</label>
 					<accel>F1</accel>
-					<help>Show info about this application</help>
 					<handler function="OnAbout" entry="EVT_MENU" />
 				</object>
 			</object>
-<<<<<<< HEAD
-=======
-			<object class="wxMenu" variable="Menu3" member="no">
-				<label>Simulation Paramaters</label>
-				<object class="wxMenuItem" name="idMenuSimulation" variable="MenuItem3" member="no">
+			<object class="wxMenu" variable="Menu3" member="yes">
+				<label>Simulation Parameters</label>
+				<object class="wxMenuItem" name="ID_MENUITEM3" variable="MenuItem3" member="yes">
 					<label>Set Data</label>
 					<accel>F2</accel>
-					<help>Set the initial values for each arena</help>
 					<handler function="OnSetData" entry="EVT_MENU" />
 				</object>
-				<object class="wxMenuItem" name="ID_MENUITEM1" variable="MenuItem4" member="yes">
+				<object class="wxMenuItem" name="ID_MENUITEM4" variable="MenuItem4" member="yes">
 					<label>Run</label>
 					<accel>F3</accel>
+					<handler function="OnRun" entry="EVT_MENU" />
 				</object>
 			</object>
->>>>>>> gui
 		</object>
 		<object class="wxStatusBar" name="ID_STATUSBAR1" variable="StatusBar1" member="yes">
 			<fields>1</fields>
-			<widths>-1</widths>
+			<widths>-10</widths>
 			<styles>wxSB_NORMAL</styles>
 		</object>
 	</object>
