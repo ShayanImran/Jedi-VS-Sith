@@ -7,7 +7,7 @@
 1584898573 /home/shayan/Desktop/Embedded GUI/Jedi-VS-Sith/Jedi_VS_SithApp.h
 	<wx/app.h>
 
-1522244266 /usr/include/wx-3.0/wx/app.h
+1568053608 /usr/include/wx-3.0/wx/app.h
 	"wx/event.h"
 	"wx/eventfilter.h"
 	"wx/build.h"
@@ -561,24 +561,24 @@
 
 1568053608 /usr/include/wx-3.0/wx/meta/removeref.h
 
-1522244266 /usr/include/wx-3.0/wx/eventfilter.h
+1568053608 /usr/include/wx-3.0/wx/eventfilter.h
 	"wx/defs.h"
 
-1522244266 /usr/include/wx-3.0/wx/build.h
+1568053608 /usr/include/wx-3.0/wx/build.h
 	"wx/version.h"
 
-1522244266 /usr/include/wx-3.0/wx/cmdargs.h
+1568053608 /usr/include/wx-3.0/wx/cmdargs.h
 	"wx/arrstr.h"
 
-1522244266 /usr/include/wx-3.0/wx/init.h
+1568053608 /usr/include/wx-3.0/wx/init.h
 	"wx/defs.h"
 	"wx/chartype.h"
 	"wx/msw/init.h"
 
-1522244266 /usr/include/wx-3.0/wx/unix/app.h
+1568053608 /usr/include/wx-3.0/wx/unix/app.h
 	<signal.h>
 
-1522244266 /usr/include/wx-3.0/wx/gtk/app.h
+1568053608 /usr/include/wx-3.0/wx/gtk/app.h
 
 1584898573 /home/shayan/Desktop/Embedded GUI/Jedi-VS-Sith/Jedi_VS_SithMain.h
 	<wx/frame.h>
@@ -1013,7 +1013,13 @@
 
 1584769794 source:/home/shayan/Desktop/Embedded GUI/Jedi-VS-Sith/Obstacle.cpp
 
-1584922106 D
+1585004595 D
+	<wx/frame.h>
+	<wx/frame.h>
+	<wx/menu.h>
+	<wx/panel.h>
+	<wx/sizer.h>
+	<wx/statusbr.h>
 
 1585106744 source:/home/shayan/Desktop/Git/Jedi-VS-Sith/Arena.cpp
 	"Arena.h"
@@ -1064,27 +1070,27 @@
 	<wx/app.h>
 	<wx/app.h>
 
-<<<<<<< HEAD
-1585106744 /home/shayan/Desktop/Git/Jedi-VS-Sith/Jedi_VS_SithMain.h
-	<wx/frame.h>
-=======
 1584984533 /home/shayan/Desktop/Git/Jedi-VS-Sith/Jedi_VS_SithMain.h
->>>>>>> Main-Characters2
+	<wx/frame.h>
+
+1585106744 h>
+
+1585004595 n-Characters2
 	<wx/menu.h>
 	<wx/notebook.h>
 	<wx/panel.h>
 	<wx/scrolwin.h>
 	<wx/sizer.h>
 	<wx/statusbr.h>
-<<<<<<< HEAD
-=======
-	<wx/frame.h>
-	<wx/frame.h>
-	<wx/menu.h>
-	<wx/panel.h>
-	<wx/sizer.h>
-	<wx/statusbr.h>
->>>>>>> Main-Characters2
+	<wx/button.h>
+	<wx/dialog.h>
+	<wx/spinctrl.h>
+	<wx/stattext.h>
+	"Jedi_VS_SithMain.h"
+	"SimulationDialog.h"
+	<wx/msgdlg.h>
+	<wx/intl.h>
+	<wx/string.h>
 
 1585106744 source:/home/shayan/Desktop/Git/Jedi-VS-Sith/Jedi_VS_SithMain.cpp
 	"Jedi_VS_SithMain.h"
@@ -1158,17 +1164,17 @@
 	"Characters.h"
 	"Cell.h"
 
-1522244266 /usr/include/wx-3.0/wx/panel.h
+1568053608 /usr/include/wx-3.0/wx/panel.h
 	"wx/window.h"
 	"wx/containr.h"
 	"wx/univ/panel.h"
 	"wx/msw/panel.h"
 	"wx/generic/panelg.h"
 
-1522244266 /usr/include/wx-3.0/wx/generic/panelg.h
+1568053608 /usr/include/wx-3.0/wx/generic/panelg.h
 	"wx/bitmap.h"
 
-1522244266 /usr/include/wx-3.0/wx/sizer.h
+1568053608 /usr/include/wx-3.0/wx/sizer.h
 	"wx/defs.h"
 	"wx/window.h"
 
@@ -1350,9 +1356,6 @@
 
 1568053608 /usr/include/wx-3.0/wx/gtk/stattext.h
 
-<<<<<<< HEAD
-1585106274 /home/shayan/Desktop/Git/Jedi-VS-Sith/SimulationDialog.h
-=======
 1584975802 /home/shayan/Desktop/Git/Jedi-VS-Sith/SimulationDialog.h
 	<wx/button.h>
 	<wx/dialog.h>
@@ -1360,66 +1363,66 @@
 	<wx/stattext.h>
 	"Jedi_VS_SithMain.h"
 
-1584982719 source:/home/shayan/Desktop/Git/Jedi-VS-Sith/SimulationDialog.cpp
+1585106274 source:/home/shayan/Desktop/Git/Jedi-VS-Sith/SimulationDialog.cpp
 	"SimulationDialog.h"
 	<wx/msgdlg.h>
 	<wx/intl.h>
 	<wx/string.h>
 
-1585004595 source:/home/michael/Jedi-VS-Sith/Arena.cpp
+1585171497 source:/home/michael/Jedi-VS-Sith/Arena.cpp
 	"Arena.h"
 	"Cell.h"
 	<iostream>
 
-1585004595 /home/michael/Jedi-VS-Sith/Arena.h
+1585171497 /home/michael/Jedi-VS-Sith/Arena.h
 	"Cell.h"
 	<iostream>
 
-1585004595 /home/michael/Jedi-VS-Sith/Cell.h
+1585171497 /home/michael/Jedi-VS-Sith/Cell.h
 	"Characters.h"
 
-1585004595 /home/michael/Jedi-VS-Sith/Characters.h
+1585171497 /home/michael/Jedi-VS-Sith/Characters.h
 
-1585004595 source:/home/michael/Jedi-VS-Sith/Cell.cpp
+1585171497 source:/home/michael/Jedi-VS-Sith/Cell.cpp
 	"Cell.h"
 	"Characters.h"
 	<iostream>
 
-1585004595 source:/home/michael/Jedi-VS-Sith/Characters.cpp
+1585171497 source:/home/michael/Jedi-VS-Sith/Characters.cpp
 	"Characters.h"
 	"Cell.h"
 
-1585004595 source:/home/michael/Jedi-VS-Sith/Jedi_VS_SithApp.cpp
+1585171497 source:/home/michael/Jedi-VS-Sith/Jedi_VS_SithApp.cpp
 	"Jedi_VS_SithApp.h"
 	"Jedi_VS_SithMain.h"
 	<wx/image.h>
 
-1585004595 /home/michael/Jedi-VS-Sith/Jedi_VS_SithApp.h
+1585171497 /home/michael/Jedi-VS-Sith/Jedi_VS_SithApp.h
 	<wx/app.h>
 
-1585004595 /home/michael/Jedi-VS-Sith/Jedi_VS_SithMain.h
-	<wx/menu.h>
-	<wx/statusbr.h>
+1585171497 /home/michael/Jedi-VS-Sith/Jedi_VS_SithMain.h
 	<wx/frame.h>
+	<wx/menu.h>
+	<wx/notebook.h>
+	<wx/panel.h>
+	<wx/scrolwin.h>
+	<wx/sizer.h>
+	<wx/statusbr.h>
 
-1585004595 source:/home/michael/Jedi-VS-Sith/Jedi_VS_SithMain.cpp
+1585171497 source:/home/michael/Jedi-VS-Sith/Jedi_VS_SithMain.cpp
 	"Jedi_VS_SithMain.h"
 	<wx/msgdlg.h>
 	"SimulationDialog.h"
-	<wx/string.h>
 	<wx/intl.h>
+	<wx/string.h>
 
-1585004595 /home/michael/Jedi-VS-Sith/SimulationDialog.h
->>>>>>> Main-Characters2
+1585171497 /home/michael/Jedi-VS-Sith/SimulationDialog.h
 	<wx/button.h>
 	<wx/dialog.h>
 	<wx/spinctrl.h>
 	<wx/stattext.h>
 	"Jedi_VS_SithMain.h"
 
-<<<<<<< HEAD
-1585106274 source:/home/shayan/Desktop/Git/Jedi-VS-Sith/SimulationDialog.cpp
-=======
 1585004595 source:/home/michael/Jedi-VS-Sith/MainCharacter.cpp
 	"MainCharacter.h"
 	<wx/msgdlg.h>
@@ -1433,10 +1436,9 @@
 1585004595 /home/michael/Jedi-VS-Sith/MainCharacter.h
 	"Characters.h"
 
-1585004595 source:/home/michael/Jedi-VS-Sith/Obstacle.cpp
+1585171497 source:/home/michael/Jedi-VS-Sith/Obstacle.cpp
 
-1585004595 source:/home/michael/Jedi-VS-Sith/SimulationDialog.cpp
->>>>>>> Main-Characters2
+1585171497 source:/home/michael/Jedi-VS-Sith/SimulationDialog.cpp
 	"SimulationDialog.h"
 	<wx/msgdlg.h>
 	<wx/intl.h>
@@ -1446,7 +1448,7 @@
 	"Cell.h"
 	<iostream>
 
-1522244266 /usr/include/wx-3.0/wx/notebook.h
+1568053608 /usr/include/wx-3.0/wx/notebook.h
 	"wx/defs.h"
 	"wx/bookctrl.h"
 	"wx/univ/notebook.h"
@@ -1458,7 +1460,7 @@
 	"wx/cocoa/notebook.h"
 	"wx/os2/notebook.h"
 
-1522244266 /usr/include/wx-3.0/wx/bookctrl.h
+1568053608 /usr/include/wx-3.0/wx/bookctrl.h
 	"wx/defs.h"
 	"wx/control.h"
 	"wx/dynarray.h"
@@ -1466,27 +1468,27 @@
 	"wx/notebook.h"
 	"wx/choicebk.h"
 
-1522244266 /usr/include/wx-3.0/wx/withimages.h
+1568053608 /usr/include/wx-3.0/wx/withimages.h
 	"wx/defs.h"
 	"wx/icon.h"
 	"wx/imaglist.h"
 
-1522244266 /usr/include/wx-3.0/wx/imaglist.h
+1568053608 /usr/include/wx-3.0/wx/imaglist.h
 	"wx/defs.h"
 	"wx/generic/imaglist.h"
 	"wx/msw/imaglist.h"
 	"wx/osx/imaglist.h"
 
-1522244266 /usr/include/wx-3.0/wx/generic/imaglist.h
+1568053608 /usr/include/wx-3.0/wx/generic/imaglist.h
 	"wx/list.h"
 
-1522244266 /usr/include/wx-3.0/wx/choicebk.h
+1568053608 /usr/include/wx-3.0/wx/choicebk.h
 	"wx/defs.h"
 	"wx/bookctrl.h"
 	"wx/choice.h"
 	"wx/containr.h"
 
-1522244266 /usr/include/wx-3.0/wx/choice.h
+1568053608 /usr/include/wx-3.0/wx/choice.h
 	"wx/defs.h"
 	"wx/ctrlsub.h"
 	"wx/univ/choice.h"
@@ -1499,29 +1501,29 @@
 	"wx/cocoa/choice.h"
 	"wx/os2/choice.h"
 
-1522244266 /usr/include/wx-3.0/wx/ctrlsub.h
+1568053608 /usr/include/wx-3.0/wx/ctrlsub.h
 	"wx/defs.h"
 	"wx/arrstr.h"
 	"wx/control.h"
 	"wx/msw/ctrlsub.h"
 	"wx/motif/ctrlsub.h"
 
-1522244266 /usr/include/wx-3.0/wx/gtk/choice.h
+1568053608 /usr/include/wx-3.0/wx/gtk/choice.h
 
-1522244266 /usr/include/wx-3.0/wx/generic/notebook.h
+1568053608 /usr/include/wx-3.0/wx/generic/notebook.h
 	"wx/event.h"
 	"wx/control.h"
 
-1522244266 /usr/include/wx-3.0/wx/gtk/notebook.h
+1568053608 /usr/include/wx-3.0/wx/gtk/notebook.h
 	"wx/list.h"
 
-1522244266 /usr/include/wx-3.0/wx/scrolwin.h
+1568053608 /usr/include/wx-3.0/wx/scrolwin.h
 	"wx/panel.h"
 	"wx/gtk/scrolwin.h"
 	"wx/gtk1/scrolwin.h"
 	"wx/generic/scrolwin.h"
 
-1522244266 /usr/include/wx-3.0/wx/gtk/scrolwin.h
+1568053608 /usr/include/wx-3.0/wx/gtk/scrolwin.h
 
-1522244266 /usr/include/wx-3.0/wx/generic/scrolwin.h
+1568053608 /usr/include/wx-3.0/wx/generic/scrolwin.h
 

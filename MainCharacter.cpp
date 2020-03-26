@@ -1,5 +1,4 @@
 #include "MainCharacter.h"
-
 #include <wx/msgdlg.h>
 #include <cstdlib>
 #include <stdio.h>
@@ -7,16 +6,6 @@
 #include <time.h> //Time
 #include <bits/stdc++.h>
 //#include "Characters.h"
-
-// --- Variables ---
-
-int Jlvl,Slvl = 0; //This is to restrict level ups
-
-//Characters to display when running
-char JediImage = 'J';
-char SithImage = 'S';
-char LegJediImage = 'LJ';
-char LegSithImage = 'LS';
 
 // --- Default Constructor ---
 MainCharacter::MainCharacter()
@@ -37,6 +26,7 @@ MainCharacter::MainCharacter()
     //Loop to determine stats of characters
     if (JediChar == true) //Jedi stats
     {
+
         JediImage; //Image
         mChar.health = 12;
         mChar.damageGiven = 3;
@@ -47,6 +37,7 @@ MainCharacter::MainCharacter()
 
     if (SithChar == true) //Sith stats
     {
+
         SithImage; //Image
         mChar.health = 10;
         mChar.damageGiven = 4;
@@ -55,7 +46,8 @@ MainCharacter::MainCharacter()
 
     }
     //Legendary Characters
-    //** Need counter for this
+    //** Need counter for this (See instructions associated with function)
+    //Legendary Jedi
     if (numLegJedi <= 2) //Restrict number of legendary jedi. See instructions below
     {
         //Jedi Legendary. Same but with incresed stats
@@ -69,7 +61,7 @@ MainCharacter::MainCharacter()
 
         }
     }
-
+    //Legendary Sith
     if (numLegSith <= 2) //restrict number of legendary sith
     {
         //Sith Legendary
@@ -288,6 +280,7 @@ void MainCharacter::CharAttack()
 void MainCharacter::LegendaryChar()
 {
     //Moved to default constructor. Kept just in case
+
 }
 /*      INSTRUCTIONS ---
 1) Make button to spawn legendary (user only can spawn 2 per side)
