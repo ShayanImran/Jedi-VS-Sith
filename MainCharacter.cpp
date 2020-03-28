@@ -11,9 +11,6 @@
 MainCharacter::MainCharacter()
 {
 
-    //this.health = ##
-    //this.damageGiven == ##    These are examples of how to initialize variables upon creation of the object
-
     //Character Object
     MainCharacter mChar; //Object character for Jedi
         mChar.health;
@@ -50,9 +47,11 @@ MainCharacter::MainCharacter()
     //Legendary Jedi
     if (numLegJedi <= 2) //Restrict number of legendary jedi. See instructions below
     {
+        numLegJedi++;
         //Jedi Legendary. Same but with incresed stats
         if (JediChar == true && Legendary == true) //Checks if Jedi and Legendary
         {
+
             LegJediImage; //Image
             mChar.health = 20;
             mChar.damageGiven = 5;
@@ -64,6 +63,7 @@ MainCharacter::MainCharacter()
     //Legendary Sith
     if (numLegSith <= 2) //restrict number of legendary sith
     {
+        numLegSith++;
         //Sith Legendary
         if (SithChar == true && Legendary == true) //Checks if Sith and Legendary
         {
@@ -78,15 +78,18 @@ MainCharacter::MainCharacter()
     }
 
 }
-//~MainCharacter;
-
-
-// --- Main Character Function ---
-void MainCharacter::mainChar() //Make objects for sith and jedi
+/*
+//Deconstructor
+MainCharacter::~MainCharacter()
 {
 
 }
 
+void MainCharacter::mainChar(MainCharacter Obj)
+{
+
+}
+*/
 // --- --- --- --- --- ---
 
 // --- Special Move Functions ---
@@ -184,8 +187,6 @@ void MainCharacter::SithSMReset() //Reset Sith Special Move
     character.
 // --- --- --- --- --- --- --- */
 
-// --- --- --- --- --- --- --- ---
-
 // --- Level Up Functions ---
 //Stats when charatcters level up
 void MainCharacter::JediPowerLvlUp()
@@ -199,9 +200,11 @@ void MainCharacter::JediPowerLvlUp()
 
         if (Jlvl < 3) //Sets limit so characters cannot become overpowered
         {
+
         health = health + 2; //This is to heal by 2
         damageGiven = damageGiven + 1;
         break; //Force exit loop after one run through
+
         }
 
         JlvlUp = false; //Exit while loop
@@ -219,9 +222,11 @@ void MainCharacter::SithPowerLvlUp()
 
         if (Slvl < 3) //Sets limit so characters cannot become overpowered
         {
+
         health = health + 2; //This is to heal by 2
         damageGiven = damageGiven + 1;
         break; //Force exit if loop after one go through
+
         }
 
         SlvlUp = false; //Exit While Loop
@@ -248,8 +253,11 @@ void MainCharacter::SidePick()
 
     if (side == 1) //If = 1, Jedi
     {
+
         JediChar = true;
+
     }
+
     else
         SithChar = true; //If = 0, Sith
 }

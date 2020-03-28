@@ -10,7 +10,7 @@ class MainCharacter //: public Characters
        MainCharacter();
 
        // --- Functions
-       void mainChar();
+       //void mainChar(MainCharacter Obj);
        //Special move + reset
        void JediSpecialMove();
        void JediSMReset();
