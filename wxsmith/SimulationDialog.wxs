@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxDialog" name="SimulationDialog">
+		<title>Simulation Parameters</title>
+		<size>400,200</size>
+		<id_arg>0</id_arg>
+		<object class="wxSpinCtrl" name="ID_SPINCTRL1" variable="SpinCtrl1" member="yes">
+			<value>200</value>
+			<max>2000</max>
+			<pos>100,25</pos>
+			<size>60,25</size>
+			<handler function="OnSpinCtrl1Change" entry="EVT_SPINCTRL" />
+		</object>
+		<object class="wxSpinCtrl" name="ID_SPINCTRL2" variable="SpinCtrl2" member="yes">
+			<value>200</value>
+			<max>2000</max>
+			<pos>100,65</pos>
+			<size>60,25</size>
+			<handler function="OnSpinCtrl2Change" entry="EVT_SPINCTRL" />
+		</object>
+		<object class="wxSpinCtrl" name="ID_SPINCTRL3" variable="SpinCtrl3" member="yes">
+			<value>1</value>
+			<min>1</min>
+			<max>6</max>
+			<pos>100,105</pos>
+			<size>60,25</size>
+			<handler function="OnSpinCtrl3Change" entry="EVT_SPINCTRL" />
+		</object>
+		<object class="wxSpinCtrl" name="ID_SPINCTRL4" variable="SpinCtrl4" member="yes">
+			<value>500</value>
+			<min>1</min>
+			<max>2000</max>
+			<pos>100,145</pos>
+			<size>60,25</size>
+			<handler function="OnSpinCtrl4Change" entry="EVT_SPINCTRL" />
+		</object>
+		<object class="wxSpinCtrl" name="ID_SPINCTRL5" variable="SpinCtrl5" member="yes">
+			<value>70</value>
+			<min>10</min>
+			<max>70</max>
+			<pos>304,25</pos>
+			<size>60,25</size>
+			<handler function="OnSpinCtrl5Change" entry="EVT_SPINCTRL" />
+		</object>
+		<object class="wxSpinCtrl" name="ID_SPINCTRL6" variable="SpinCtrl6" member="yes">
+			<value>25</value>
+			<min>2</min>
+			<max>25</max>
+			<pos>304,65</pos>
+			<size>60,25</size>
+			<handler function="OnSpinCtrl6Change" entry="EVT_SPINCTRL" />
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT1" variable="StaticText1" member="yes">
+			<label>Jedi: </label>
+			<pos>16,30</pos>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT2" variable="StaticText2" member="yes">
+			<label>Sith: </label>
+			<pos>16,70</pos>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT3" variable="StaticText3" member="yes">
+			<label>Arenas: </label>
+			<pos>16,110</pos>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT4" variable="StaticText4" member="yes">
+			<label>Obstacles: </label>
+			<pos>16,150</pos>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT5" variable="StaticText5" member="yes">
+			<label>Columns: </label>
+			<pos>225,30</pos>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT6" variable="StaticText6" member="yes">
+			<label>Rows: </label>
+			<pos>225,70</pos>
+		</object>
+		<object class="wxSpinCtrl" name="ID_SPINCTRL7" variable="SpinCtrl7" member="yes">
+			<value>1000</value>
+			<min>1</min>
+			<max>10000</max>
+			<pos>304,105</pos>
+			<size>60,25</size>
+			<handler function="OnSpinCtrl7Change" entry="EVT_SPINCTRL" />
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT7" variable="StaticText7" member="yes">
+			<label>Iterations: </label>
+			<pos>225,110</pos>
+		</object>
+		<object class="wxButton" name="ID_BUTTON1" variable="Button1" member="yes">
+			<label>Done</label>
+			<pos>250,145</pos>
+			<handler function="OnButton1Click" entry="EVT_BUTTON" />
+		</object>
+	</object>
+</wxsmith>

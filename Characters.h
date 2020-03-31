@@ -1,9 +1,9 @@
 #ifndef CHARACTERS_H_INCLUDED
 #define CHARACTERS_H_INCLUDED
 
-
 class Characters
 {
+
     public:
 
         Characters(float vitality, int damageGiven, int mvmntSpeed, int attRange, int specRange, char team);
@@ -21,13 +21,12 @@ class Characters
         float health;
         int damageGiven;
         int movementSpeed;
-        //int attackRange;
+        int attackRange;
         int specialRange;
 
     protected:
 
         void animate(Characters current);
-
         void doDamage(Characters attacker, Characters hostile);
 
 };
