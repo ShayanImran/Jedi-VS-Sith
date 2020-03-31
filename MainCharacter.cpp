@@ -5,7 +5,7 @@
 #include <stdlib.h> //Random
 #include <time.h> //Time
 #include <bits/stdc++.h>
-//#include "Characters.h"
+#include "Characters.h"
 
 // --- Default Constructor ---
 MainCharacter::MainCharacter()
@@ -78,13 +78,13 @@ MainCharacter::MainCharacter()
     }
 
 }
-/*
+
 //Deconstructor
 MainCharacter::~MainCharacter()
 {
 
 }
-
+/*
 void MainCharacter::mainChar(MainCharacter Obj)
 {
 

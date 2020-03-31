@@ -1,14 +1,14 @@
 #ifndef MAINCHARACTER_H_INCLUDED
 #define MAINCHARACTER_H_INCLUDED
 
-//#include "Characters.h" //Causing issue
+#include "Characters.h"
 
 class MainCharacter //: public Characters
 {
     public:
 
        MainCharacter();
-
+        ~MainCharacter();
        // --- Functions
        //void mainChar(MainCharacter Obj);
        //Special move + reset
