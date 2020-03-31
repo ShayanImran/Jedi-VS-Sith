@@ -1,16 +1,16 @@
 #ifndef MAINCHARACTER_H_INCLUDED
 #define MAINCHARACTER_H_INCLUDED
 
-//#include "Characters.h" //Causing issue
+#include "Characters.h"
 
-class MainCharacter //: public Characters
+class MainCharacter //: public Characters //Causing Issue when including
 {
     public:
 
        MainCharacter();
-
+        ~MainCharacter();
        // --- Functions
-       void mainChar();
+       //void mainChar(MainCharacter Obj);
        //Special move + reset
        void JediSpecialMove();
        void JediSMReset();
@@ -37,17 +37,24 @@ class MainCharacter //: public Characters
         int movementSpeed;
         int numLegJedi;
         int numLegSith;
+        int Jlvl,Slvl = 0; //This is to restrict level ups
 
         bool JSpecialDone,SSpecialDone = false; //Determine if special was done (point of reset)
         bool JlvlUp, SlvlUp = false; //Determine if jedi levels up
         bool JediChar,SithChar = false;
         bool Legendary = false;
+        //Images
+        char JediImage = 'J';
+        char SithImage = 'S';
+        char LegJediImage = 'LJ';
+        char LegSithImage = 'LS';
 
     protected:
 
         void specialMove();
         void process();
         void moveFrom(int** from, int** to);
+
 };
 
 #endif // MAINCHARACTER_H_INCLUDED
