@@ -11,7 +11,9 @@ class Cell
         char getImage();
         void setImage(char image);
         //int test = 9;
-        Characters currentCharacter;
+        bool isCharacter = true;
+        //Characters testCHAR;
+          void hello();
 
 
     private:
