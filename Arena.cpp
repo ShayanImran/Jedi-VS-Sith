@@ -1,28 +1,68 @@
 #include "Arena.h"
-#include "Cell.h"
+#include "CellPRJ.h"
+#include "Characters.h"
+#include <time.h>
 #include <iostream>
+
+
 using namespace std;
-Arena::Arena(int x,int y, int z)
+Arena::Arena(int dimX, int dimY, int dimZ)
 {
-    dimX = x;
-    dimY = y;
-    dimZ = z;
-    //ctor
+    this->dimX = dimX;
+    this->dimY = dimY;
+    this->dimZ = dimZ;
+
+    srand(time(NULL));
 
 }
+
+Arena::~Arena()
+{
+ deletePointers();
+}
+
+void Arena::printArena()
+{
+     for (int i = 0; i < dimX; i++)
+    {
+        for(int j = 0; j < dimY; j++)
+        {
+            for(int k = 0; k < dimZ; k++)
+                {
+                    if(gameWorld[i][j][k]== NULL)
+                    {
+                         cout << "[" << " "<< "]";
+                    }
+                    else
+                        {
+                            cout << "[" << gameWorld[i][j][k]->teamIcon << "]";
+                        }
+
+
+                }
+                cout << endl;
+        }
+        cout << endl;
+    }
+
+
+}
+
 // Create 3D array dynamically with type "Cell"
 void Arena::create3DArray()
 {
 
-    cellArray = new Cell ***[dimX];
+    gameWorld = new Characters ***[dimX];
     for (int i = 0; i < dimX; i++)
     {
-        cellArray[i] = new Cell **[dimY];
+        gameWorld[i] = new Characters **[dimY];
         for (int j = 0; j < dimY; j++)
         {
-            cellArray[i][j] = new Cell *[dimZ];
+            gameWorld[i][j] = new Characters *[dimZ];
+
         }
     }
+
 }
 
 // Fills array with "Cell" Objects
@@ -34,8 +74,39 @@ void Arena::fill3DArray()
         for (int j = 0; j < dimY; j++)
         {
             for (int k = 0; k < dimZ; k++)
-                cellArray[i][j][k] = new Cell();//creates new cell obj?
+                gameWorld[i][j][k] = new Characters(1,1,1,1,1,'j');//creates new cell obj?
+
+
         }
+    }
+}
+
+// Fills array with "Character" Objects randomly
+void Arena::fill3DArrayRandomly()
+{
+
+    for (int i = 0; i < dimX; i++)
+    {
+        for (int j = 0; j < dimY; j++)
+        {
+            for (int k = 0; k < dimZ; k++)
+                randomX = rand() % dimX;
+                randomY = rand() % dimY;
+                randomZ = rand() % dimZ;
+                randomCharacterType = rand() % 2;
+
+                if(randomCharacterType==0)
+                {
+                    gameWorld[randomX][randomY][randomZ] = new Characters(1,1,1,1,1,'j');//creates new character
+                }
+                else
+                {
+                    gameWorld[randomX][randomY][randomZ] = new Characters(1,1,1,1,1,'s');
+                }
+
+
+        }
+
     }
 }
 
@@ -49,7 +120,7 @@ void Arena::callTick()
         {
             for (int k = 0; k < dimX; k++)
             {
-                cellArray[0][0][0]->currentCharacter.attackRange = 0; // This line is throwing a seg fault #######FIX PLS#####
+                //gameWorld[i][j][k].moveTo(i,j,z,3,3,3)
             }
             cout << endl;
         }
@@ -58,17 +129,21 @@ void Arena::callTick()
 }
 
 void Arena::deletePointers()
-{
+{/*
     //deletes pointers backwards
     for (int i = 0; i < dimX; i++)
     {
         for (int j = 0; j < dimY; j++)
         {
 
-            delete[] cellArray[i][j];
+            delete[] gameWorld[i][j];
         }
-        delete[] cellArray[i];
+        delete[] gameWorld[i];
     }
 
-    delete[] cellArray;
+    delete[] gameWorld;
+    */
 }
+
+
+

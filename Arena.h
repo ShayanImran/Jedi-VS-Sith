@@ -1,41 +1,50 @@
 #ifndef ARENA_H_INCLUDED
 #define ARENA_H_INCLUDED
-#include "Cell.h"
+#include "CellPRJ.h"
+#include "Characters.h"
 #include <iostream>
+
 class Arena
 {
     public:
-        Arena(int x,int y, int z);
-        Cell ****cellArray; // Array of cells
+        Arena(int dimX,int dimY, int dimZ);
+        ~Arena();
         int getNumJedi();
         void setNumJedi(int num);
         int getNumSith();
         void setNumSith(int num);
+        void printArena();
+        int dimX;
+        int dimY;
+        int dimZ;
+        int randomX, randomY, randomZ;
+        int randomCharacterType; // Random roll for either a jedi or sith character type
+
+       Characters ****gameWorld; //Array of characters
 
         //test functions from assignment 3
         void create3DArray();
         void fill3DArray();
         void callTick();
         void deletePointers();
+        void fill3DArrayRandomly();
+
     private:
 
-        int dimX;
-        int dimY;
-        int dimZ;
         int Size;
         int numJedi;
         int numSith;
-        int numObstacles;
+        int numObsticals;
         int random;
         int numLandMines;
 
     protected:
 
-        void generateObstacle();
+        void generateObsticals();
         void spawnDebris();
         void initialize();
         void initCharacters();
-        void addObstacle(int numObs);
+        void addObsticals(int numObs);
         void addSith(int numSith);
         void addJedi(int numJedi);
         void displayBorder();
