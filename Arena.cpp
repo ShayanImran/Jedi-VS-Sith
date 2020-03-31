@@ -1,5 +1,5 @@
 #include "Arena.h"
-#include "CellPRJ.h"
+#include "Cell.h"
 #include "Characters.h"
 #include <time.h>
 #include <iostream>

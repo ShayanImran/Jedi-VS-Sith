@@ -1,6 +1,6 @@
 #ifndef ARENA_H_INCLUDED
 #define ARENA_H_INCLUDED
-#include "CellPRJ.h"
+#include "Cell.h"
 #include "Characters.h"
 #include <iostream>
 
