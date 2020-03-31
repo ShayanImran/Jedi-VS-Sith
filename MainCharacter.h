@@ -3,7 +3,7 @@
 
 #include "Characters.h"
 
-class MainCharacter //: public Characters
+class MainCharacter //: public Characters //Causing Issue when including
 {
     public:
 

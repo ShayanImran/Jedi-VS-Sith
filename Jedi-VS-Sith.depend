@@ -1381,7 +1381,7 @@
 1585171497 /home/michael/Jedi-VS-Sith/Cell.h
 	"Characters.h"
 
-1585171497 /home/michael/Jedi-VS-Sith/Characters.h
+1585633115 /home/michael/Jedi-VS-Sith/Characters.h
 
 1585171497 source:/home/michael/Jedi-VS-Sith/Cell.cpp
 	"Cell.h"
@@ -1423,7 +1423,7 @@
 	<wx/stattext.h>
 	"Jedi_VS_SithMain.h"
 
-1585629142 source:/home/michael/Jedi-VS-Sith/MainCharacter.cpp
+1585635583 source:/home/michael/Jedi-VS-Sith/MainCharacter.cpp
 	"MainCharacter.h"
 	<wx/msgdlg.h>
 	<cstdlib>
@@ -1431,9 +1431,8 @@
 	<stdlib.h>
 	<time.h>
 	<bits/stdc++.h>
-	"Characters.h"
 
-1585629177 /home/michael/Jedi-VS-Sith/MainCharacter.h
+1585635625 /home/michael/Jedi-VS-Sith/MainCharacter.h
 	"Characters.h"
 
 1585171497 source:/home/michael/Jedi-VS-Sith/Obstacle.cpp

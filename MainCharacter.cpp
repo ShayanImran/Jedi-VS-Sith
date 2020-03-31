@@ -5,6 +5,7 @@
 #include <stdlib.h> //Random
 #include <time.h> //Time
 #include <bits/stdc++.h>
+
 #include "Characters.h"
 
 // --- Default Constructor ---
@@ -103,7 +104,7 @@ void MainCharacter::JediSpecialMove() //Jedi Special Move
 
     //Random Chance Generator
     srand((time(NULL)));
-    SMChance = rand() %101; //% chance of special move
+    SMChance = rand() %100 + 1; //% chance of special move
 
     //Determine if Special Attack, 25% chance
     if (SMChance <= 25)
@@ -141,12 +142,12 @@ void MainCharacter::SithSpecialMove() //Sith Special Move
 {
     //Variables
     int rand();
-    int SMChance = 0;
+    int SMChance = 0; //Resets special move chance
     bool SM = false;
 
     //Random Generator
     srand((time(NULL)));
-    SMChance = rand() %101; //25% chance of special move
+    SMChance = rand() %100 + 1; //% chance of special move
 
     //Determine if special attack happens, 20% chance
     if (SMChance <= 20)
@@ -249,7 +250,7 @@ void MainCharacter::SidePick()
 
     //Random Generator
     srand((time(NULL)));
-    side = rand() %1; //Generates random number either 0 or 1
+    side = rand() %2; //Generates random number either 0 or 1
 
     if (side == 1) //If = 1, Jedi
     {
@@ -269,16 +270,20 @@ void MainCharacter::CharAttack()
 
     if (JediChar == true) //If jedi, apply possible special move and reset
     {
+
         JediSpecialMove();
         //doDamage();
         JediSMReset();
+
     }
 
     if (SithChar == true) //If sith, apply possible special move and reset
     {
+
         SithSpecialMove();
         //doDamage();
         JediSMReset();
+
     }
 }
 
