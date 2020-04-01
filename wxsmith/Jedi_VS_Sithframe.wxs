@@ -12,8 +12,10 @@
 						<size>480,256</size>
 						<object class="notebookpage">
 							<object class="wxScrolledWindow" name="ID_SCROLLEDWINDOW1" variable="ScrolledWindow1" member="yes">
-								<pos>19,33</pos>
+								<pos>52,68</pos>
 								<size>470,216</size>
+								<handler function="OnScrolledWindow1Paint" entry="EVT_PAINT" />
+								<handler function="OnScrolledWindow1Resize" entry="EVT_SIZE" />
 							</object>
 							<label>Arena 1</label>
 						</object>

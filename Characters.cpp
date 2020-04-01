@@ -49,15 +49,19 @@
 
     }
 
-    void Characters::moveTo(int currentX, int currentY, int currentZ, int moveToX,int moveToY, int moveToZ)
-    {/*
+    void Characters::moveTo(Characters one, Characters two)
+    {
         Characters temp;
-        temp.setOffset(from.getOffset());
 
-        from.setOffset(to.getOffset());
+        temp.xVal = one.xVal;
+        temp.yVal = one.yVal;
 
-        to.setOffset(temp.getOffset());
-*/
+        one.xVal = two.xVal;
+        one.yVal = two.yVal;
+
+        two.xVal = temp.xVal;
+        two.xVal = one.xVal;
+
     }
 
 

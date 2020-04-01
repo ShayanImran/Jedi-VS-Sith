@@ -34,6 +34,8 @@ class Jedi_VS_SithFrame: public wxFrame
         void OnAbout(wxCommandEvent& event);
         void OnSetData(wxCommandEvent& event);
         void OnRun(wxCommandEvent& event);
+        void OnScrolledWindow1Paint(wxPaintEvent& event);
+        void OnScrolledWindow1Resize(wxSizeEvent& event);
         //*)
 
         //(*Identifiers(Jedi_VS_SithFrame)
@@ -79,6 +81,7 @@ class Jedi_VS_SithFrame: public wxFrame
 		int columns;
 		int rows;
 		int numIterations;
+		void updateVirtualSize();
 
         DECLARE_EVENT_TABLE()
 };

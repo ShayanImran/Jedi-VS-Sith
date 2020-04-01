@@ -27,7 +27,7 @@ class Arena
         void fill3DArray();
         void callTick();
         void deletePointers();
-        void fill3DArrayRandomly();
+        void fill3DArrayRandomly(int numSpawns);
 
     private:
 
