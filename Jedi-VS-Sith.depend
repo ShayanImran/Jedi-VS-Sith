@@ -1472,7 +1472,9 @@
 
 1585004595 source:/home/michael/Jedi-VS-Sith/SimulationDialog.cpp
 
+
 1585701102 /home/jason/Documents/Senior Project/Jedi-VS-Sith/Arena.h
+
 	"Cell.h"
 	"Characters.h"
 	<iostream>
@@ -1553,6 +1555,7 @@
 	"wx/generic/scrolwin.h"
 
 1522244266 /usr/include/wx-3.0/wx/gtk/scrolwin.h
+
 
 1522244266 /usr/include/wx-3.0/wx/generic/scrolwin.h
 
@@ -1728,4 +1731,5 @@
 	<wx/image.h>
 	<wx/string.h>
 	<wx/intl.h>
+
 

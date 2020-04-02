@@ -19,6 +19,8 @@ class Arena
         int dimZ;
         int randomX, randomY, randomZ;
         int randomCharacterType; // Random roll for either a jedi or sith character type
+        int numJedi;
+        int numSith;
 
        Characters ****gameWorld; //Array of characters
 
@@ -27,13 +29,20 @@ class Arena
         void fill3DArray();
         void callTick();
         void deletePointers();
-        void fill3DArrayRandomly(int numSpawns);
+
+        void fill3DArrayRandomly(int numJedi, int numSith);
+        void moveUp(int a,int b,int c);
+        void moveDown(int a,int b,int c);
+        void moveLeft(int a,int b,int c);
+        void moveRight(int a,int b,int c);
+        void moveRandomly(int a, int b, int c, int randomDirection);
+
+
 
     private:
 
         int Size;
-        int numJedi;
-        int numSith;
+
         int numObsticals;
         int random;
         int numLandMines;

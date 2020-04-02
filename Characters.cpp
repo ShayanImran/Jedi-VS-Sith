@@ -1,8 +1,9 @@
 #include "Characters.h"
 #include "Cell.h"
-
+#include <utility>
     Characters::Characters(float vitality, int damage, int mvmntSpeed, int attRange, int specRange, char team)
     {
+        isCellOpen = true;
         health = vitality;
         damageGiven = damage;
         movementSpeed = mvmntSpeed;
@@ -48,22 +49,14 @@
     {
 
     }
-
-    void Characters::moveTo(Characters one, Characters two)
+/*
+    void Characters::moveUp(Characters ****gboard)
     {
-        Characters temp;
+        std::swap(gboard[0][0][0],gboard[1][0][0]);
 
-        temp.xVal = one.xVal;
-        temp.yVal = one.yVal;
-
-        one.xVal = two.xVal;
-        one.yVal = two.yVal;
-
-        two.xVal = temp.xVal;
-        two.xVal = one.xVal;
 
     }
-
+*/
 
     void Characters::doDamage(Characters attacker, Characters hostile)
     {

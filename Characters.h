@@ -15,9 +15,10 @@ class Characters
         char teamIcon; // J for jedi and S for Sith
         bool isJedi;
         bool isSith;
-        void moveTo(Characters one, Characters two);
-        int xVal;
-        int yVal;
+
+        bool isCellOpen;
+        void moveUp(Characters gboard);
+
 
     private:
 
