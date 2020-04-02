@@ -1,64 +1,67 @@
 #include "Characters.h"
 #include "Cell.h"
 #include <utility>
-    Characters::Characters(float vitality, int damage, int mvmntSpeed, int attRange, int specRange, char team)
-    {
-        isCellOpen = true;
-        health = vitality;
-        damageGiven = damage;
-        movementSpeed = mvmntSpeed;
-        attackRange = attRange;
-        specialRange =  specRange;
-        teamIcon = team;
+Characters::Characters(char team)
+{
+    isCellOpen = true;
+    teamIcon = team;
+    ticked = false;
 
-        if (teamIcon == 's')
-        {
-            this->isSith = true;
-            this->isJedi = false;
-        }
-        if (teamIcon == 'j')
-        {
-            this->isSith = false;
-            this->isJedi = true;
-        }
+    if (teamIcon == 's')
+    {
+        this->isSith = true;
+        this->isJedi = false;
+        this->health = 9;
+        this->damageGiven = 11;
+    }
+    if (teamIcon == 'j')
+    {
+        this->isSith = false;
+        this->isJedi = true;
+        this->health = 11;
+        this->damageGiven = 9;
     }
 
-
-    Characters::Characters()
+    if (teamIcon == '#')
     {
-
-
+        this->isSith = true;
+        this->isJedi = true;
+        this->health = 1000000;
+        this->damageGiven = 0;
     }
+}
 
-    float Characters::getHealth()
+Characters::Characters()
+{
+}
+
+Characters::~Characters()
+{
+    if (teamIcon == 's')
     {
-        return health;
     }
-
-    void Characters::setHealth(float vitality)
+    if (teamIcon == 'j')
     {
-        health = vitality;
     }
+}
 
-    int Characters::getDamage()
-    {
-        return damageGiven;
-    }
+float Characters::getHealth()
+{
+    return this->health;
+}
 
-    void Characters::animate(Characters curr)
-    {
+void Characters::setHealth(float vitality)
+{
+    this->health = vitality;
+}
 
-    }
-/*
-    void Characters::moveUp(Characters ****gboard)
-    {
-        std::swap(gboard[0][0][0],gboard[1][0][0]);
+int Characters::getDamage()
+{
+    return damageGiven;
+}
 
+float Characters::doDamage(int attackerDamage, float hostileHealth)
+{
 
-    }
-*/
-
-    void Characters::doDamage(Characters attacker, Characters hostile)
-    {
-        hostile.setHealth(hostile.getHealth() - attacker.getDamage());
-    }
+    return hostileHealth - attackerDamage;
+}

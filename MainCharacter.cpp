@@ -1,97 +1,30 @@
 #include "MainCharacter.h"
-#include <wx/msgdlg.h>
 #include <cstdlib>
 #include <stdio.h>
 #include <stdlib.h> //Random
-#include <time.h> //Time
+#include <time.h>   //Time
 #include <bits/stdc++.h>
-
 #include "Characters.h"
-
 // --- Default Constructor ---
-MainCharacter::MainCharacter()
+MainCharacter::MainCharacter(char teamIcon) : Characters()
 {
-
-    //Character Object
-    MainCharacter mChar; //Object character for Jedi
-        mChar.health;
-        mChar.damageGiven;
-        mChar.movementSpeed;
-        mChar.attackRange;
-
-    SidePick(); //Call SidePick to determine stats of Character
+    this->teamIcon = teamIcon;
+    this->health;
+    this->damageGiven;
 
     //Loop to determine stats of characters
-    if (JediChar == true) //Jedi stats
+    if (teamIcon == 'M')
     {
 
-        JediImage; //Image
-        mChar.health = 12;
-        mChar.damageGiven = 3;
-        mChar.movementSpeed = 2;
-        mChar.attackRange = 2;
-
+        this->health = 30;
+        this->damageGiven = 20;
     }
-
-    if (SithChar == true) //Sith stats
-    {
-
-        SithImage; //Image
-        mChar.health = 10;
-        mChar.damageGiven = 4;
-        mChar.movementSpeed = 2;
-        mChar.attackRange = 2;
-
-    }
-    //Legendary Characters
-    //** Need counter for this (See instructions associated with function)
-    //Legendary Jedi
-    if (numLegJedi <= 2) //Restrict number of legendary jedi. See instructions below
-    {
-        numLegJedi++;
-        //Jedi Legendary. Same but with incresed stats
-        if (JediChar == true && Legendary == true) //Checks if Jedi and Legendary
-        {
-
-            LegJediImage; //Image
-            mChar.health = 20;
-            mChar.damageGiven = 5;
-            mChar.movementSpeed = 3;
-            mChar.attackRange = 3;
-
-        }
-    }
-    //Legendary Sith
-    if (numLegSith <= 2) //restrict number of legendary sith
-    {
-        numLegSith++;
-        //Sith Legendary
-        if (SithChar == true && Legendary == true) //Checks if Sith and Legendary
-        {
-
-            LegSithImage; //Image
-            mChar.health = 18;
-            mChar.damageGiven = 6;
-            mChar.movementSpeed = 3;
-            mChar.attackRange = 3;
-
-        }
-    }
-
 }
 
-//Deconstructor
+//Destructor
 MainCharacter::~MainCharacter()
 {
-
 }
-/*
-void MainCharacter::mainChar(MainCharacter Obj)
-{
-
-}
-*/
-// --- --- --- --- --- ---
 
 // --- Special Move Functions ---
 //Jedi Special Move, Works off % chance to determine if special move or not
@@ -104,7 +37,7 @@ void MainCharacter::JediSpecialMove() //Jedi Special Move
 
     //Random Chance Generator
     srand((time(NULL)));
-    SMChance = rand() %100 + 1; //% chance of special move
+    SMChance = rand() % 100 + 1; //% chance of special move
 
     //Determine if Special Attack, 25% chance
     if (SMChance <= 25)
@@ -114,9 +47,8 @@ void MainCharacter::JediSpecialMove() //Jedi Special Move
         while (SM == true)
         {
             //Temp increase stats for special move
-            damageGiven + 8;
-            attackRange + 2;
-            SM = false; //change to exit
+            damageGiven + 40;
+            SM = false;          //change to exit
             JSpecialDone = true; //To avoid Issue listed in instructions step 3
         }
 
@@ -130,10 +62,8 @@ void MainCharacter::JediSMReset() //Jedi Special Stats Remove
     if (JSpecialDone == true) //Determine if special was done to avoid resetting unbuffed stats
     {
 
-    damageGiven - 8;
-    attackRange - 2;
-    JSpecialDone = false;
-
+        damageGiven - 40;
+        JSpecialDone = false;
     }
 }
 
@@ -147,7 +77,7 @@ void MainCharacter::SithSpecialMove() //Sith Special Move
 
     //Random Generator
     srand((time(NULL)));
-    SMChance = rand() %100 + 1; //% chance of special move
+    SMChance = rand() % 100 + 1; //% chance of special move
 
     //Determine if special attack happens, 20% chance
     if (SMChance <= 20)
@@ -158,8 +88,8 @@ void MainCharacter::SithSpecialMove() //Sith Special Move
         while (SM == true)
         {
             //Temp increase stats
-            damageGiven + 10;
-            attackRange + 1;
+            damageGiven + 45;
+
             SM = false;
             SSpecialDone = true;
         }
@@ -173,10 +103,8 @@ void MainCharacter::SithSMReset() //Reset Sith Special Move
     if (SSpecialDone == true) //Determine if special was done to avoid resetting unbuffed stats
     {
 
-    damageGiven - 10;
-    attackRange - 1;
-    SSpecialDone = false;
-
+        damageGiven - 45;
+        SSpecialDone = false;
     }
 }
 /*      INSTRUCTIONS ---
@@ -195,17 +123,16 @@ void MainCharacter::JediPowerLvlUp()
     JlvlUp = true; //Sets JlvlUp true to run if statement
 
     //If statement for increasing stats
-    while(JlvlUp = true)
+    while (JlvlUp = true)
     {
         Jlvl++;
 
         if (Jlvl < 3) //Sets limit so characters cannot become overpowered
         {
 
-        health = health + 2; //This is to heal by 2
-        damageGiven = damageGiven + 1;
-        break; //Force exit loop after one run through
-
+            health = health + 2; //This is to heal by 2
+            damageGiven = damageGiven + 1;
+            break; //Force exit loop after one run through
         }
 
         JlvlUp = false; //Exit while loop
@@ -217,17 +144,16 @@ void MainCharacter::SithPowerLvlUp()
     SlvlUp = true; //Sets SlvlUp true to run if loop
 
     //If statements to increase stats and heal
-    while(SlvlUp = true)
+    while (SlvlUp = true)
     {
         Slvl++;
 
         if (Slvl < 3) //Sets limit so characters cannot become overpowered
         {
 
-        health = health + 2; //This is to heal by 2
-        damageGiven = damageGiven + 1;
-        break; //Force exit if loop after one go through
-
+            health = health + 2; //This is to heal by 2
+            damageGiven = damageGiven + 1;
+            break; //Force exit if loop after one go through
         }
 
         SlvlUp = false; //Exit While Loop
@@ -250,13 +176,12 @@ void MainCharacter::SidePick()
 
     //Random Generator
     srand((time(NULL)));
-    side = rand() %2; //Generates random number either 0 or 1
+    side = rand() % 2; //Generates random number either 0 or 1
 
     if (side == 1) //If = 1, Jedi
     {
 
         JediChar = true;
-
     }
 
     else
@@ -274,7 +199,6 @@ void MainCharacter::CharAttack()
         JediSpecialMove();
         //doDamage();
         JediSMReset();
-
     }
 
     if (SithChar == true) //If sith, apply possible special move and reset
@@ -283,7 +207,6 @@ void MainCharacter::CharAttack()
         SithSpecialMove();
         //doDamage();
         JediSMReset();
-
     }
 }
 
@@ -293,7 +216,6 @@ void MainCharacter::CharAttack()
 void MainCharacter::LegendaryChar()
 {
     //Moved to default constructor. Kept just in case
-
 }
 /*      INSTRUCTIONS ---
 1) Make button to spawn legendary (user only can spawn 2 per side)
@@ -304,5 +226,3 @@ void MainCharacter::LegendaryChar()
     then spawn it
 3) Fill random cell with them (or somehow drag and drop them in)?
 // --- --- --- --- --- --- --- */
-
-

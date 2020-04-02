@@ -3,11 +3,11 @@
 
 #include "Characters.h"
 
-class MainCharacter //: public Characters //Causing Issue when including
+class MainCharacter : public Characters //Causing Issue when including
 {
     public:
 
-       MainCharacter();
+       MainCharacter(char teamIcon);
         ~MainCharacter();
        // --- Functions
        //void mainChar(MainCharacter Obj);
@@ -26,15 +26,12 @@ class MainCharacter //: public Characters //Causing Issue when including
        //Spawn Legendary
        void LegendaryChar();
 
+
+
     private:
 
         // --- Variables
         float forcePower;
-        float health;
-
-        int damageGiven;
-        int attackRange;
-        int movementSpeed;
         int numLegJedi;
         int numLegSith;
         int Jlvl,Slvl = 0; //This is to restrict level ups
@@ -44,10 +41,7 @@ class MainCharacter //: public Characters //Causing Issue when including
         bool JediChar,SithChar = false;
         bool Legendary = false;
         //Images
-        char JediImage = 'J';
-        char SithImage = 'S';
-        char LegJediImage = 'LJ';
-        char LegSithImage = 'LS';
+
 
     protected:
 
