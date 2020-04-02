@@ -3,7 +3,7 @@
 #include "Cell.h"
 #include "Characters.h"
 #include <iostream>
-
+#include "MainCharacter.h"
 class Arena
 {
     public:
@@ -21,6 +21,7 @@ class Arena
         int randomCharacterType; // Random roll for either a jedi or sith character type
         int numJedi;
         int numSith;
+        int numMonsters;
 
        Characters ****gameWorld; //Array of characters
 
@@ -29,19 +30,20 @@ class Arena
         void fill3DArray();
         void callTick();
         void deletePointers();
-        void fill3DArrayRandomly(int numJedi, int numSith);
+        void fill3DArrayRandomly(int numJedi, int numSith, int numMonsters,int numObstacles);
         void moveUp(int a,int b,int c);
         void moveDown(int a,int b,int c);
         void moveLeft(int a,int b,int c);
         void moveRight(int a,int b,int c);
         void moveRandomly(int a, int b, int c, int randomDirection);
+        bool doDamage(int a, int b, int c);
 
 
     private:
 
         int Size;
 
-        int numObsticals;
+        int numObstacals;
         int random;
         int numLandMines;
 
