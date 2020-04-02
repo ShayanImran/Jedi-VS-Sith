@@ -1062,17 +1062,19 @@
 	"Jedi_VS_SithMain.h"
 	<wx/image.h>
 
-1584987811 source:/home/jason/Documents/Senior Project/Jedi-VS-Sith/Arena.cpp
+1585701110 source:/home/jason/Documents/Senior Project/Jedi-VS-Sith/Arena.cpp
 	"Arena.h"
 	"Cell.h"
+	"Characters.h"
+	<time.h>
 	<iostream>
 
-1584987811 source:/home/jason/Documents/Senior Project/Jedi-VS-Sith/Cell.cpp
+1585682216 source:/home/jason/Documents/Senior Project/Jedi-VS-Sith/Cell.cpp
 	"Cell.h"
 	"Characters.h"
 	<iostream>
 
-1584987811 /home/jason/Documents/Senior Project/Jedi-VS-Sith/Cell.h
+1585682216 /home/jason/Documents/Senior Project/Jedi-VS-Sith/Cell.h
 	"Characters.h"
 
 1584900085 source:/home/jason/Documents/Senior Project/Jedi-VS-Sith/Jedi_VS_SithApp.cpp
@@ -1140,7 +1142,7 @@
 1584900085 /home/jason/Documents/Senior Project/Jedi-VS-Sith/Jedi_VS_SithApp.h
 	<wx/app.h>
 
-1585098132 /home/jason/Documents/Senior Project/Jedi-VS-Sith/Jedi_VS_SithMain.h
+1585682483 /home/jason/Documents/Senior Project/Jedi-VS-Sith/Jedi_VS_SithMain.h
 	<wx/frame.h>
 	<wx/menu.h>
 	<wx/notebook.h>
@@ -1149,9 +1151,28 @@
 	<wx/sizer.h>
 	<wx/statusbr.h>
 
-1585098164 source:/home/jason/Documents/Senior Project/Jedi-VS-Sith/Jedi_VS_SithMain.cpp
+1585701119 source:/home/jason/Documents/Senior Project/Jedi-VS-Sith/Jedi_VS_SithMain.cpp
+	"Jedi_VS_SithMain.h"
+	"SimulationDialog.h"
+	"Arena.h"
+	<vector>
+	<wx/msgdlg.h>
+	<wx/dcclient.h>
+	<wx/scrolwin.h>
+	<wx/app.h>
+	<wx/image.h>
+	<wx/intl.h>
+	<wx/string.h>
 
-1584987811 source:/home/jason/Documents/Senior Project/Jedi-VS-Sith/MainCharacter.cpp
+1585682216 source:/home/jason/Documents/Senior Project/Jedi-VS-Sith/MainCharacter.cpp
+	"MainCharacter.h"
+	<wx/msgdlg.h>
+	<cstdlib>
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<bits/stdc++.h>
+	"Characters.h"
 
 1585681607 /home/shayan/Desktop/Git/Jedi-VS-Sith/MainCharacter.h
 
@@ -1170,14 +1191,14 @@
 
 1585681537 s.h"
 
-1584987811 /home/jason/Documents/Senior Project/Jedi-VS-Sith/MainCharacter.h
+1585682216 /home/jason/Documents/Senior Project/Jedi-VS-Sith/MainCharacter.h
 	"Characters.h"
 
-1584987811 /home/jason/Documents/Senior Project/Jedi-VS-Sith/Characters.h
+1585686620 /home/jason/Documents/Senior Project/Jedi-VS-Sith/Characters.h
 
 1584900085 source:/home/jason/Documents/Senior Project/Jedi-VS-Sith/Obstacle.cpp
 
-1584987811 source:/home/jason/Documents/Senior Project/Jedi-VS-Sith/Characters.cpp
+1585686596 source:/home/jason/Documents/Senior Project/Jedi-VS-Sith/Characters.cpp
 	"Characters.h"
 	"Cell.h"
 
@@ -1245,7 +1266,7 @@
 	"wx/bitmap.h"
 	"wx/frame.h"
 
-1584987811 source:/home/jason/Documents/Senior Project/Jedi-VS-Sith/SimulationDialog.cpp
+1585686345 source:/home/jason/Documents/Senior Project/Jedi-VS-Sith/SimulationDialog.cpp
 	"SimulationDialog.h"
 	<wx/msgdlg.h>
 	<wx/intl.h>
@@ -1451,8 +1472,11 @@
 
 1585004595 source:/home/michael/Jedi-VS-Sith/SimulationDialog.cpp
 
-1584987811 /home/jason/Documents/Senior Project/Jedi-VS-Sith/Arena.h
+
+1585701102 /home/jason/Documents/Senior Project/Jedi-VS-Sith/Arena.h
+
 	"Cell.h"
+	"Characters.h"
 	<iostream>
 
 1522244266 /usr/include/wx-3.0/wx/notebook.h
@@ -1532,5 +1556,180 @@
 
 1522244266 /usr/include/wx-3.0/wx/gtk/scrolwin.h
 
+
 1522244266 /usr/include/wx-3.0/wx/generic/scrolwin.h
+
+1522244266 /usr/include/wx-3.0/wx/dcclient.h
+	"wx/dc.h"
+
+1522244266 /usr/include/wx-3.0/wx/dc.h
+	"wx/object.h"
+	"wx/intl.h"
+	"wx/cursor.h"
+	"wx/font.h"
+	"wx/colour.h"
+	"wx/bitmap.h"
+	"wx/brush.h"
+	"wx/pen.h"
+	"wx/palette.h"
+	"wx/dynarray.h"
+	"wx/math.h"
+	"wx/image.h"
+	"wx/region.h"
+	"wx/affinematrix2d.h"
+
+1522244266 /usr/include/wx-3.0/wx/brush.h
+	"wx/defs.h"
+	"wx/object.h"
+	"wx/gdiobj.h"
+	"wx/gdicmn.h"
+	"wx/msw/brush.h"
+	"wx/x11/brush.h"
+	"wx/gtk/brush.h"
+	"wx/gtk1/brush.h"
+	"wx/dfb/brush.h"
+	"wx/osx/brush.h"
+	"wx/cocoa/brush.h"
+	"wx/os2/brush.h"
+
+1522244266 /usr/include/wx-3.0/wx/gtk/brush.h
+
+1522244266 /usr/include/wx-3.0/wx/affinematrix2d.h
+	"wx/defs.h"
+	"wx/affinematrix2dbase.h"
+
+1522244266 /usr/include/wx-3.0/wx/affinematrix2dbase.h
+	"wx/defs.h"
+	"wx/geometry.h"
+
+1522244266 /usr/include/wx-3.0/wx/geometry.h
+	"wx/defs.h"
+	"wx/utils.h"
+	"wx/gdicmn.h"
+	"wx/math.h"
+
+1585698520 source:/home/jason/Documents/Senior Project/Jedi-VS-Sith/ProgressDialog.cpp
+	"ProgressDialog.h"
+	<wx/intl.h>
+	<wx/string.h>
+
+1585698519 /home/jason/Documents/Senior Project/Jedi-VS-Sith/ProgressDialog.h
+	<wx/dialog.h>
+	<wx/gauge.h>
+	<wx/panel.h>
+	<wx/sizer.h>
+	<wx/stattext.h>
+
+1522244266 /usr/include/wx-3.0/wx/gauge.h
+	"wx/defs.h"
+	"wx/control.h"
+	"wx/univ/gauge.h"
+	"wx/msw/gauge.h"
+	"wx/motif/gauge.h"
+	"wx/gtk/gauge.h"
+	"wx/gtk1/gauge.h"
+	"wx/osx/gauge.h"
+	"wx/cocoa/gauge.h"
+	"wx/os2/gauge.h"
+
+1522244266 /usr/include/wx-3.0/wx/gtk/gauge.h
+
+1585700205 /home/jason/Documents/Senior Project/Jedi-VS-Sith/ProgressFrame.h
+	<wx/frame.h>
+	<wx/gauge.h>
+	<wx/panel.h>
+	<wx/sizer.h>
+	<wx/stattext.h>
+	<wx/app.h>
+
+1585699684 source:/home/jason/Documents/Senior Project/Jedi-VS-Sith/ProgressFrame.cpp
+	"ProgressFrame.h"
+	<wx/intl.h>
+	<wx/string.h>
+
+1585706652 source:/home/j/Documents/wxAids/Jedi-VS-Sith/SimulationDialog.cpp
+	"SimulationDialog.h"
+	<wx/msgdlg.h>
+	<wx/intl.h>
+	<wx/string.h>
+
+1585706652 /home/j/Documents/wxAids/Jedi-VS-Sith/SimulationDialog.h
+	<wx/button.h>
+	<wx/dialog.h>
+	<wx/spinctrl.h>
+	<wx/stattext.h>
+	"Jedi_VS_SithMain.h"
+
+1585772925 /home/j/Documents/wxAids/Jedi-VS-Sith/Jedi_VS_SithMain.h
+	<wx/sizer.h>
+	<wx/notebook.h>
+	<wx/menu.h>
+	<wx/panel.h>
+	<wx/scrolwin.h>
+	<wx/statusbr.h>
+	<wx/frame.h>
+	"wx/dc.h"
+
+1585785782 source:/home/j/Documents/wxAids/Jedi-VS-Sith/Arena.cpp
+	"Arena.h"
+	"Cell.h"
+	"Characters.h"
+	<time.h>
+	<iostream>
+
+1585706673 /home/j/Documents/wxAids/Jedi-VS-Sith/Arena.h
+	"Cell.h"
+	"Characters.h"
+	<iostream>
+
+1585706652 /home/j/Documents/wxAids/Jedi-VS-Sith/Cell.h
+	"Characters.h"
+
+1585706673 /home/j/Documents/wxAids/Jedi-VS-Sith/Characters.h
+
+1585706652 source:/home/j/Documents/wxAids/Jedi-VS-Sith/Cell.cpp
+	"Cell.h"
+	"Characters.h"
+	<iostream>
+
+1585706673 source:/home/j/Documents/wxAids/Jedi-VS-Sith/Characters.cpp
+	"Characters.h"
+	"Cell.h"
+
+1585706652 source:/home/j/Documents/wxAids/Jedi-VS-Sith/Jedi_VS_SithApp.cpp
+	"Jedi_VS_SithApp.h"
+	"Jedi_VS_SithMain.h"
+	<wx/image.h>
+
+1585706652 /home/j/Documents/wxAids/Jedi-VS-Sith/Jedi_VS_SithApp.h
+	<wx/app.h>
+
+1585706652 source:/home/j/Documents/wxAids/Jedi-VS-Sith/MainCharacter.cpp
+	"MainCharacter.h"
+	<wx/msgdlg.h>
+	<cstdlib>
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<bits/stdc++.h>
+	"Characters.h"
+
+1585706652 /home/j/Documents/wxAids/Jedi-VS-Sith/MainCharacter.h
+	"Characters.h"
+
+1585706652 source:/home/j/Documents/wxAids/Jedi-VS-Sith/Obstacle.cpp
+
+1585786126 source:/home/j/Documents/wxAids/Jedi-VS-Sith/Jedi_VS_SithMain.cpp
+	"Jedi_VS_SithMain.h"
+	"SimulationDialog.h"
+	"Arena.h"
+	<vector>
+	<wx/msgdlg.h>
+	<wx/dcclient.h>
+	<wx/scrolwin.h>
+	<wx/app.h>
+	<wx/image.h>
+	<wx/string.h>
+	<wx/intl.h>
+
 

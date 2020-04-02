@@ -29,12 +29,14 @@ class Arena
         void fill3DArray();
         void callTick();
         void deletePointers();
+
         void fill3DArrayRandomly(int numJedi, int numSith);
         void moveUp(int a,int b,int c);
         void moveDown(int a,int b,int c);
         void moveLeft(int a,int b,int c);
         void moveRight(int a,int b,int c);
         void moveRandomly(int a, int b, int c, int randomDirection);
+
 
 
     private:

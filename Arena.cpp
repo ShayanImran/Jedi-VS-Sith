@@ -6,7 +6,7 @@
 
 
 using namespace std;
-Arena::Arena(int dimX, int dimY, int dimZ)
+Arena::Arena(int dimZ, int dimY, int dimX)
 {
     this->dimX = dimX;
     this->dimY = dimY;
@@ -31,16 +31,16 @@ void Arena::printArena()
                 {
                     if(gameWorld[i][j][k]== NULL)
                     {
-                         cout << "[" << " "<< "]";
+                         //cout << "[" << " "<< "]";
                     }
                     else
                         {
-                            cout << "[" << gameWorld[i][j][k]->teamIcon << "]";
+                            //cout << "[" << gameWorld[i][j][k]->teamIcon << "]";
                         }
                 }
-                cout << endl;
+                //cout << endl;
         }
-        cout << endl;
+        //cout << endl;
     }
 }
 
@@ -72,15 +72,17 @@ void Arena::fill3DArray()
     int b = 0;
     int c = 0;
 
-    for (int i = 0; i < dimX; i++)
+    for (int i = 0; i < dimZ; i++)
     {
-        for (int j = 0; j < dimY; j++)
+        for (int j = 0; j < dimX; j++)
         {
+
             for (int k = 0; k < dimZ; k++)
                {
 
                // gameWorld[i][j][k] = new Characters(1,1,1,1,1,'j');//creates new cell obj?
                 gameWorld[a][b][c] = new Characters(1,1,1,1,1,'s');
+
 
 
                }
@@ -91,6 +93,7 @@ void Arena::fill3DArray()
 }
 
 // Fills array with "Character" Objects randomly
+
 void Arena::fill3DArrayRandomly(int numJedi, int numSith)
 {
 
@@ -172,6 +175,8 @@ void Arena::callTick()
 
 void Arena::deletePointers()
 {
+
+
     //deletes pointers backwards
     for (int i = 0; i < dimX; i++)
     {
@@ -184,7 +189,6 @@ void Arena::deletePointers()
     }
 
     delete[] gameWorld;
-
 }
 
 // intention is to pass array into here and do the swap on each loop iteration
