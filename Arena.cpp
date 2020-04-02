@@ -69,13 +69,12 @@ void Arena::create3DArray()
 void Arena::fill3DArray()
 {
 
-    for (int i = 0; i < dimX; i++)
+    for (int i = 0; i < dimZ; i++)
     {
-        for (int j = 0; j < dimY; j++)
+        for (int j = 0; j < dimX; j++)
         {
-            for (int k = 0; k < dimZ; k++)
-                gameWorld[i][j][k] = new Characters(1,1,1,1,1,'j');//creates new cell obj?
-
+            for (int k = 0; k < dimY; k++)
+                gameWorld[j][k][i] = new Characters(1,1,1,1,1,'j');//creates new cell obj?
 
         }
     }

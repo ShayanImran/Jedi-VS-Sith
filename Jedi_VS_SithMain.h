@@ -11,14 +11,15 @@
 #define JEDI_VS_SITHMAIN_H
 
 //(*Headers(Jedi_VS_SithFrame)
-#include <wx/frame.h>
-#include <wx/menu.h>
+#include <wx/sizer.h>
 #include <wx/notebook.h>
+#include <wx/menu.h>
 #include <wx/panel.h>
 #include <wx/scrolwin.h>
-#include <wx/sizer.h>
 #include <wx/statusbr.h>
+#include <wx/frame.h>
 //*)
+#include "wx/dc.h"
 
 class Jedi_VS_SithFrame: public wxFrame
 {
@@ -36,14 +37,30 @@ class Jedi_VS_SithFrame: public wxFrame
         void OnRun(wxCommandEvent& event);
         void OnScrolledWindow1Paint(wxPaintEvent& event);
         void OnScrolledWindow1Resize(wxSizeEvent& event);
+        void OnMathPlot1Paint(wxPaintEvent& event);
+        void OnPanel2Paint(wxPaintEvent& event);
+        void OnScrolledWindow1MouseMove(wxMouseEvent& event);
+        void OnPanel2LeftUp(wxMouseEvent& event);
+        void OnScrolledWindow2LeftUp(wxMouseEvent& event);
+        void OnScrolledWindow3LeftUp(wxMouseEvent& event);
+        void OnScrolledWindow4LeftUp(wxMouseEvent& event);
+        void OnScrolledWindow5LeftUp(wxMouseEvent& event);
+        void OnScrolledWindow6LeftUp(wxMouseEvent& event);
+        void OnScrolledWindow6MouseWheel(wxMouseEvent& event);
         //*)
 
         //(*Identifiers(Jedi_VS_SithFrame)
+        static const long ID_PANEL2;
         static const long ID_SCROLLEDWINDOW1;
+        static const long ID_PANEL3;
         static const long ID_SCROLLEDWINDOW2;
+        static const long ID_PANEL4;
         static const long ID_SCROLLEDWINDOW3;
+        static const long ID_PANEL5;
         static const long ID_SCROLLEDWINDOW4;
+        static const long ID_PANEL6;
         static const long ID_SCROLLEDWINDOW5;
+        static const long ID_PANEL7;
         static const long ID_SCROLLEDWINDOW6;
         static const long ID_NOTEBOOK1;
         static const long ID_PANEL1;
@@ -55,23 +72,29 @@ class Jedi_VS_SithFrame: public wxFrame
         //*)
 
         //(*Declarations(Jedi_VS_SithFrame)
-        wxMenu* Menu1;
-        wxMenu* Menu2;
-        wxMenu* Menu3;
-        wxMenuBar* MenuBar1;
-        wxMenuItem* MenuItem1;
         wxMenuItem* MenuItem2;
-        wxMenuItem* MenuItem3;
-        wxMenuItem* MenuItem4;
-        wxNotebook* Notebook1;
+        wxMenuItem* MenuItem1;
         wxPanel* Panel1;
+        wxPanel* Panel6;
+        wxPanel* Panel7;
         wxScrolledWindow* ScrolledWindow1;
-        wxScrolledWindow* ScrolledWindow2;
-        wxScrolledWindow* ScrolledWindow3;
-        wxScrolledWindow* ScrolledWindow4;
-        wxScrolledWindow* ScrolledWindow5;
-        wxScrolledWindow* ScrolledWindow6;
+        wxMenu* Menu1;
         wxStatusBar* StatusBar1;
+        wxScrolledWindow* ScrolledWindow5;
+        wxMenu* Menu3;
+        wxScrolledWindow* ScrolledWindow4;
+        wxPanel* Panel2;
+        wxPanel* Panel4;
+        wxMenuItem* MenuItem3;
+        wxPanel* Panel5;
+        wxScrolledWindow* ScrolledWindow6;
+        wxPanel* Panel3;
+        wxScrolledWindow* ScrolledWindow3;
+        wxScrolledWindow* ScrolledWindow2;
+        wxMenuBar* MenuBar1;
+        wxNotebook* Notebook1;
+        wxMenuItem* MenuItem4;
+        wxMenu* Menu2;
         //*)
 
         int numJedi;
