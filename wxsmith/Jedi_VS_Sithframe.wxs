@@ -3,38 +3,79 @@
 	<object class="wxFrame" name="Jedi_VS_SithFrame">
 		<title>Frame</title>
 		<id_arg>0</id_arg>
+		<handler function="OnScrolledWindow6MouseWheel" entry="EVT_MOUSEWHEEL" />
 		<object class="wxBoxSizer" variable="BoxSizer1" member="no">
 			<object class="sizeritem">
 				<object class="wxPanel" name="ID_PANEL1" variable="Panel1" member="yes">
-					<size>480,250</size>
+					<size>479,261</size>
 					<object class="wxNotebook" name="ID_NOTEBOOK1" variable="Notebook1" member="yes">
 						<pos>0,0</pos>
 						<size>480,256</size>
 						<object class="notebookpage">
 							<object class="wxScrolledWindow" name="ID_SCROLLEDWINDOW1" variable="ScrolledWindow1" member="yes">
-								<pos>19,33</pos>
-								<size>470,216</size>
+								<pos>52,68</pos>
+								<size>476,169</size>
+								<handler function="OnScrolledWindow1Resize" entry="EVT_SIZE" />
+								<object class="wxPanel" name="ID_PANEL2" variable="Panel2" member="yes">
+									<size>1439,1500</size>
+								</object>
 							</object>
 							<label>Arena 1</label>
 						</object>
 						<object class="notebookpage">
-							<object class="wxScrolledWindow" name="ID_SCROLLEDWINDOW2" variable="ScrolledWindow2" member="yes" />
+							<object class="wxScrolledWindow" name="ID_SCROLLEDWINDOW2" variable="ScrolledWindow2" member="yes">
+								<pos>29,73</pos>
+								<object class="wxPanel" name="ID_PANEL3" variable="Panel3" member="yes">
+									<size>1439,1500</size>
+									<handler function="OnScrolledWindow1MouseMove" entry="EVT_LEFT_DOWN" />
+									<handler function="OnScrolledWindow2LeftUp" entry="EVT_LEFT_UP" />
+								</object>
+							</object>
 							<label>Arena 2</label>
 						</object>
 						<object class="notebookpage">
-							<object class="wxScrolledWindow" name="ID_SCROLLEDWINDOW3" variable="ScrolledWindow3" member="yes" />
+							<object class="wxScrolledWindow" name="ID_SCROLLEDWINDOW3" variable="ScrolledWindow3" member="yes">
+								<pos>83,112</pos>
+								<object class="wxPanel" name="ID_PANEL4" variable="Panel4" member="yes">
+									<size>1439,1500</size>
+									<handler function="OnScrolledWindow1MouseMove" entry="EVT_LEFT_DOWN" />
+									<handler function="OnScrolledWindow3LeftUp" entry="EVT_LEFT_UP" />
+								</object>
+							</object>
 							<label>Arena 3</label>
 						</object>
 						<object class="notebookpage">
-							<object class="wxScrolledWindow" name="ID_SCROLLEDWINDOW4" variable="ScrolledWindow4" member="yes" />
+							<object class="wxScrolledWindow" name="ID_SCROLLEDWINDOW4" variable="ScrolledWindow4" member="yes">
+								<pos>94,117</pos>
+								<object class="wxPanel" name="ID_PANEL5" variable="Panel5" member="yes">
+									<size>1439,1500</size>
+									<handler function="OnScrolledWindow1MouseMove" entry="EVT_LEFT_DOWN" />
+									<handler function="OnScrolledWindow4LeftUp" entry="EVT_LEFT_UP" />
+								</object>
+							</object>
 							<label>Arena 4</label>
 						</object>
 						<object class="notebookpage">
-							<object class="wxScrolledWindow" name="ID_SCROLLEDWINDOW5" variable="ScrolledWindow5" member="yes" />
+							<object class="wxScrolledWindow" name="ID_SCROLLEDWINDOW5" variable="ScrolledWindow5" member="yes">
+								<pos>85,129</pos>
+								<object class="wxPanel" name="ID_PANEL6" variable="Panel6" member="yes">
+									<size>1439,1500</size>
+									<handler function="OnScrolledWindow1MouseMove" entry="EVT_LEFT_DOWN" />
+									<handler function="OnScrolledWindow5LeftUp" entry="EVT_LEFT_UP" />
+								</object>
+							</object>
 							<label>Arena 5</label>
 						</object>
 						<object class="notebookpage">
-							<object class="wxScrolledWindow" name="ID_SCROLLEDWINDOW6" variable="ScrolledWindow6" member="yes" />
+							<object class="wxScrolledWindow" name="ID_SCROLLEDWINDOW6" variable="ScrolledWindow6" member="yes">
+								<pos>63,111</pos>
+								<handler function="OnScrolledWindow6MouseWheel" entry="EVT_MOUSEWHEEL" />
+								<object class="wxPanel" name="ID_PANEL7" variable="Panel7" member="yes">
+									<size>1439,1500</size>
+									<handler function="OnScrolledWindow1MouseMove" entry="EVT_LEFT_DOWN" />
+									<handler function="OnScrolledWindow6LeftUp" entry="EVT_LEFT_UP" />
+								</object>
+							</object>
 							<label>Arena 6</label>
 						</object>
 					</object>
