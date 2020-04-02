@@ -1,8 +1,9 @@
 #include "Characters.h"
 #include "Cell.h"
-
+#include <utility>
     Characters::Characters(float vitality, int damage, int mvmntSpeed, int attRange, int specRange, char team)
     {
+        isCellOpen = true;
         health = vitality;
         damageGiven = damage;
         movementSpeed = mvmntSpeed;
@@ -48,18 +49,14 @@
     {
 
     }
+/*
+    void Characters::moveUp(Characters ****gboard)
+    {
+        std::swap(gboard[0][0][0],gboard[1][0][0]);
 
-    void Characters::moveTo(int currentX, int currentY, int currentZ, int moveToX,int moveToY, int moveToZ)
-    {/*
-        Characters temp;
-        temp.setOffset(from.getOffset());
 
-        from.setOffset(to.getOffset());
-
-        to.setOffset(temp.getOffset());
-*/
     }
-
+*/
 
     void Characters::doDamage(Characters attacker, Characters hostile)
     {
