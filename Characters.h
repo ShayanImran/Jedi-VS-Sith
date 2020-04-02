@@ -5,7 +5,6 @@
 class Characters
 {
     public:
-
         Characters(char team);
         Characters();
         ~Characters();
@@ -22,7 +21,6 @@ class Characters
         bool isCellOpen;
         bool ticked;
         void setHealth(float vitality);
-
 
     private:
 

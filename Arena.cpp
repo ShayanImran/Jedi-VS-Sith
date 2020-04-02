@@ -42,7 +42,6 @@ void Arena::printArena()
             }
             cout << endl;
         }
-        cout << endl;
     }
 }
 
@@ -94,8 +93,11 @@ void Arena::fill3DArrayRandomly(int numJedi, int numSith, int numMonsters, int n
             }
             gameWorld[randomX][randomY][randomZ] = new Characters('j'); //creates new character
             gameWorld[randomX][randomY][randomZ]->isCellOpen = false;
+
+
         }
     }
+
 
     for (int k = 0; k < numMonsters; k++)
     {
@@ -225,6 +227,8 @@ void Arena::callTick()
 
 void Arena::deletePointers()
 {
+
+
     //deletes pointers backwards
     for (int i = 0; i < dimX; i++)
     {

@@ -30,6 +30,7 @@ class Arena
         void fill3DArray();
         void callTick();
         void deletePointers();
+
         void fill3DArrayRandomly(int numJedi, int numSith, int numMonsters,int numObstacles);
         void moveUp(int a,int b,int c);
         void moveDown(int a,int b,int c);
@@ -39,10 +40,10 @@ class Arena
         bool doDamage(int a, int b, int c);
 
 
+
     private:
 
         int Size;
-
         int numObstacals;
         int random;
         int numLandMines;
