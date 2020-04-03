@@ -347,7 +347,6 @@ void Jedi_VS_SithFrame::OnRun(wxCommandEvent& event)
         ScrolledWindow6->Show(true);
     }
     /*
-        for each window
             callDrawArenaFunction()
             displayCurrentStats()
             runArenaSimulation()
@@ -360,7 +359,7 @@ void Jedi_VS_SithFrame::OnRun(wxCommandEvent& event)
     for(int r = 0; r < numArenas; r++)
     {
         //wxMessageBox(std::to_string(arenaHolder.size()));
-        arenaHolder.push_back( Arena(2, rows, columns) );
+        arenaHolder.push_back( Arena(6, rows, columns) );
         arenaHolder[r].create3DArray();
         arenaHolder[r].fill3DArrayRandomly(1, 1, 1, 1);
 
@@ -369,30 +368,29 @@ void Jedi_VS_SithFrame::OnRun(wxCommandEvent& event)
     wxClientDC canvas1(Panel2);
     PrepareDC(canvas1);
 
-        int offsetX = 250;
-        int offsetY = 10;
-        for(int i = 0; i < 2; i++)
+    int offsetX = 250;
+    int offsetY = 10;
+    for(int i = 0; i < 6; i++)
+    {
+        for(int j = 0; j < rows; j++)
         {
-            for(int j = 0; j < rows; j++)
+            for(int k = 0;k < columns; k++)
             {
-                for(int k = 0;k < columns; k++)
+                if(arenaHolder[0].gameWorld[i][j][k] == 0)
                 {
-                    //char test = arenaHolder[r].gameWorld[i][k][j]->teamIcon;
-                    //wxMessageBox(test);
-                    if(arenaHolder[0].gameWorld[i][j][k] == 0)
-                    {
-                        canvas1.DrawText("--", j * 15 + offsetX, (k * 17) + offsetY);
-                    }
-                    else
-                    {
-                        canvas1.DrawText(arenaHolder[0].gameWorld[i][j][k]->teamIcon, j * 15 + offsetX, (k * 17) + offsetY);
-                    }
-
+                    canvas1.DrawText("--", j * 15 + offsetX, (k * 17) + offsetY);
                 }
-            }
+                else
+                {
+                    canvas1.DrawText(arenaHolder[0].gameWorld[i][j][k]->teamIcon, j * 15 + offsetX, (k * 17) + offsetY);
+                }
 
-            offsetY = offsetY + (columns * 20);
+            }
         }
+
+        offsetY = offsetY + (columns * 20);
+    }
+
 }
 
 void Jedi_VS_SithFrame::OnScrolledWindow1Paint(wxPaintEvent& event)
@@ -426,25 +424,28 @@ void Jedi_VS_SithFrame::OnPanel2LeftUp(wxMouseEvent& event)
     wxClientDC canvas1(Panel2);
     PrepareDC(canvas1);
 
-    for(int r = 0; r < numArenas; r++)
+    int offsetX = 250;
+    int offsetY = 10;
+    for(int i = 0; i < 6; i++)
     {
-        int offset = 5;
-        for(int i = 0; i < 3; i++)
+        for(int j = 0; j < rows; j++)
         {
-            for(int k = 0; k < columns; k++)
+            for(int k = 0;k < columns; k++)
             {
-                for(int j = 0;j < rows; j++)
+                if(arenaHolder[0].gameWorld[i][j][k] == 0)
                 {
-                    //char test = arenaHolder[r].gameWorld[i][k][j]->teamIcon;
-                    //wxMessageBox(test);
-                    canvas1.DrawText(arenaHolder[r].gameWorld[k][j][i]->teamIcon, k * 12 + 5, (j * 17) + offset);
+                    canvas1.DrawText("--", j * 15 + offsetX, (k * 17) + offsetY);
                 }
+                else
+                {
+                    canvas1.DrawText(arenaHolder[0].gameWorld[i][j][k]->teamIcon, j * 15 + offsetX, (k * 17) + offsetY);
+                }
+
             }
-
-            offset = offset + 460;
         }
-    }
 
+        offsetY = offsetY + (columns * 20);
+    }
 }
 
 void Jedi_VS_SithFrame::OnScrolledWindow2LeftUp(wxMouseEvent& event)
@@ -453,23 +454,27 @@ void Jedi_VS_SithFrame::OnScrolledWindow2LeftUp(wxMouseEvent& event)
     wxClientDC canvas1(Panel3);
     PrepareDC(canvas1);
 
-    for(int r = 0; r < numArenas; r++)
+    int offsetX = 250;
+    int offsetY = 10;
+    for(int i = 0; i < 6; i++)
     {
-        int offset = 5;
-        for(int i = 0; i < 3; i++)
+        for(int j = 0; j < rows; j++)
         {
-            for(int k = 0; k < columns; k++)
+            for(int k = 0;k < columns; k++)
             {
-                for(int j = 0;j < rows; j++)
+                if(arenaHolder[0].gameWorld[i][j][k] == 0)
                 {
-                    //char test = arenaHolder[r].gameWorld[i][k][j]->teamIcon;
-                    //wxMessageBox(test);
-                    canvas1.DrawText(arenaHolder[r].gameWorld[k][j][i]->teamIcon, k * 12 + 5, (j * 17) + offset);
+                    canvas1.DrawText("--", j * 15 + offsetX, (k * 17) + offsetY);
                 }
-            }
+                else
+                {
+                    canvas1.DrawText(arenaHolder[0].gameWorld[i][j][k]->teamIcon, j * 15 + offsetX, (k * 17) + offsetY);
+                }
 
-            offset = offset + 460;
+            }
         }
+
+        offsetY = offsetY + (columns * 20);
     }
 }
 
@@ -479,25 +484,28 @@ void Jedi_VS_SithFrame::OnScrolledWindow3LeftUp(wxMouseEvent& event)
     wxClientDC canvas1(Panel4);
     PrepareDC(canvas1);
 
-    for(int r = 0; r < numArenas; r++)
+    int offsetX = 250;
+    int offsetY = 10;
+    for(int i = 0; i < 6; i++)
     {
-        int offset = 5;
-        for(int i = 0; i < 3; i++)
+        for(int j = 0; j < rows; j++)
         {
-            for(int k = 0; k < columns; k++)
+            for(int k = 0;k < columns; k++)
             {
-                for(int j = 0;j < rows; j++)
+                if(arenaHolder[0].gameWorld[i][j][k] == 0)
                 {
-                    //char test = arenaHolder[r].gameWorld[i][k][j]->teamIcon;
-                    //wxMessageBox(test);
-                    canvas1.DrawText(arenaHolder[r].gameWorld[k][j][i]->teamIcon, k * 12 + 5, (j * 17) + offset);
+                    canvas1.DrawText("--", j * 15 + offsetX, (k * 17) + offsetY);
                 }
+                else
+                {
+                    canvas1.DrawText(arenaHolder[0].gameWorld[i][j][k]->teamIcon, j * 15 + offsetX, (k * 17) + offsetY);
+                }
+
             }
-
-            offset = offset + 460;
         }
-    }
 
+        offsetY = offsetY + (columns * 20);
+    }
 }
 
 
@@ -507,25 +515,28 @@ void Jedi_VS_SithFrame::OnScrolledWindow4LeftUp(wxMouseEvent& event)
     wxClientDC canvas1(Panel5);
     PrepareDC(canvas1);
 
-    for(int r = 0; r < numArenas; r++)
+    int offsetX = 250;
+    int offsetY = 10;
+    for(int i = 0; i < 6; i++)
     {
-        int offset = 5;
-        for(int i = 0; i < 3; i++)
+        for(int j = 0; j < rows; j++)
         {
-            for(int k = 0; k < columns; k++)
+            for(int k = 0;k < columns; k++)
             {
-                for(int j = 0;j < rows; j++)
+                if(arenaHolder[0].gameWorld[i][j][k] == 0)
                 {
-                    //char test = arenaHolder[r].gameWorld[i][k][j]->teamIcon;
-                    //wxMessageBox(test);
-                    canvas1.DrawText(arenaHolder[r].gameWorld[k][j][i]->teamIcon, k * 12 + 5, (j * 17) + offset);
+                    canvas1.DrawText("--", j * 15 + offsetX, (k * 17) + offsetY);
                 }
+                else
+                {
+                    canvas1.DrawText(arenaHolder[0].gameWorld[i][j][k]->teamIcon, j * 15 + offsetX, (k * 17) + offsetY);
+                }
+
             }
-
-            offset = offset + 460;
         }
-    }
 
+        offsetY = offsetY + (columns * 20);
+    }
 }
 
 void Jedi_VS_SithFrame::OnScrolledWindow5LeftUp(wxMouseEvent& event)
@@ -533,23 +544,27 @@ void Jedi_VS_SithFrame::OnScrolledWindow5LeftUp(wxMouseEvent& event)
     wxClientDC canvas1(Panel6);
     PrepareDC(canvas1);
 
-    for(int r = 0; r < numArenas; r++)
+    int offsetX = 250;
+    int offsetY = 10;
+    for(int i = 0; i < 6; i++)
     {
-        int offset = 5;
-        for(int i = 0; i < 3; i++)
+        for(int j = 0; j < rows; j++)
         {
-            for(int k = 0; k < columns; k++)
+            for(int k = 0;k < columns; k++)
             {
-                for(int j = 0;j < rows; j++)
+                if(arenaHolder[0].gameWorld[i][j][k] == 0)
                 {
-                    //char test = arenaHolder[r].gameWorld[i][k][j]->teamIcon;
-                    //wxMessageBox(test);
-                    canvas1.DrawText(arenaHolder[r].gameWorld[k][j][i]->teamIcon, k * 12 + 5, (j * 17) + offset);
+                    canvas1.DrawText("--", j * 15 + offsetX, (k * 17) + offsetY);
                 }
-            }
+                else
+                {
+                    canvas1.DrawText(arenaHolder[0].gameWorld[i][j][k]->teamIcon, j * 15 + offsetX, (k * 17) + offsetY);
+                }
 
-            offset = offset + 460;
+            }
         }
+
+        offsetY = offsetY + (columns * 20);
     }
 }
 /* Replace "F" with the image of the character in the arena object */
@@ -558,23 +573,27 @@ void Jedi_VS_SithFrame::OnScrolledWindow6LeftUp(wxMouseEvent& event)
     wxClientDC canvas1(Panel7);
     PrepareDC(canvas1);
 
-    for(int r = 0; r < numArenas; r++)
+    int offsetX = 250;
+    int offsetY = 10;
+    for(int i = 0; i < 6; i++)
     {
-        int offset = 5;
-        for(int i = 0; i < 3; i++)
+        for(int j = 0; j < rows; j++)
         {
-            for(int k = 0; k < columns; k++)
+            for(int k = 0;k < columns; k++)
             {
-                for(int j = 0;j < rows; j++)
+                if(arenaHolder[0].gameWorld[i][j][k] == 0)
                 {
-                    //char test = arenaHolder[r].gameWorld[i][k][j]->teamIcon;
-                    //wxMessageBox(test);
-                    canvas1.DrawText(arenaHolder[r].gameWorld[k][j][i]->teamIcon, k * 12 + 5, (j * 17) + offset);
+                    canvas1.DrawText("--", j * 15 + offsetX, (k * 17) + offsetY);
                 }
-            }
+                else
+                {
+                    canvas1.DrawText(arenaHolder[0].gameWorld[i][j][k]->teamIcon, j * 15 + offsetX, (k * 17) + offsetY);
+                }
 
-            offset = offset + 460;
+            }
         }
+
+        offsetY = offsetY + (columns * 20);
     }
 }
 
