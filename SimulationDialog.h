@@ -2,9 +2,9 @@
 #define SIMULATIONDIALOG_H
 
 //(*Headers(SimulationDialog)
-#include <wx/button.h>
-#include <wx/dialog.h>
 #include <wx/spinctrl.h>
+#include <wx/dialog.h>
+#include <wx/button.h>
 #include <wx/stattext.h>
 //*)
 #include "Jedi_VS_SithMain.h"
@@ -17,21 +17,21 @@ class SimulationDialog: public wxDialog
 		virtual ~SimulationDialog();
 
 		//(*Declarations(SimulationDialog)
-		wxButton* Button1;
-		wxSpinCtrl* SpinCtrl1;
-		wxSpinCtrl* SpinCtrl2;
-		wxSpinCtrl* SpinCtrl3;
 		wxSpinCtrl* SpinCtrl4;
-		wxSpinCtrl* SpinCtrl5;
-		wxSpinCtrl* SpinCtrl6;
 		wxSpinCtrl* SpinCtrl7;
+		wxButton* Button1;
 		wxStaticText* StaticText1;
-		wxStaticText* StaticText2;
 		wxStaticText* StaticText3;
+		wxSpinCtrl* SpinCtrl3;
+		wxSpinCtrl* SpinCtrl5;
+		wxStaticText* StaticText7;
+		wxSpinCtrl* SpinCtrl2;
 		wxStaticText* StaticText4;
 		wxStaticText* StaticText5;
+		wxStaticText* StaticText2;
 		wxStaticText* StaticText6;
-		wxStaticText* StaticText7;
+		wxSpinCtrl* SpinCtrl1;
+		wxSpinCtrl* SpinCtrl6;
 		//*)
 
 	protected:

@@ -1,9 +1,9 @@
 #ifndef ARENA_H_INCLUDED
 #define ARENA_H_INCLUDED
-#include "Cell.h"
 #include "Characters.h"
 #include <iostream>
 #include "MainCharacter.h"
+#include "Jedi_VS_SithMain.h"
 class Arena
 {
     public:
@@ -13,7 +13,7 @@ class Arena
         void setNumJedi(int num);
         int getNumSith();
         void setNumSith(int num);
-        void printArena();
+        void printArena(wxFrame frame);
         int dimX;
         int dimY;
         int dimZ;

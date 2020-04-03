@@ -143,12 +143,12 @@ Jedi_VS_SithFrame::Jedi_VS_SithFrame(wxWindow* parent,wxWindowID id)
     //*)
 
     //Initialize the values to their defaults
-    numJedi = 200;
-    numSith = 200;
+    numJedi = 1;
+    numSith = 1;
     numArenas = 1;
-    numObstacles = 500;
-    columns = 70;
-    rows = 25;
+    numObstacles = 1;
+    columns = 5;
+    rows = 3;
     numIterations = 1000;
 
     //All this just initializes the windows and scroll bars
@@ -298,33 +298,39 @@ void Jedi_VS_SithFrame::OnRun(wxCommandEvent& event)
 
     for(int r = 0; r < numArenas; r++)
     {
-        arenaHolder.push_back( Arena(3, rows, columns) );
+        //wxMessageBox(std::to_string(arenaHolder.size()));
+        arenaHolder.push_back( Arena(1, rows, columns) );
         arenaHolder[r].create3DArray();
-        arenaHolder[r].fill3DArray();
+        arenaHolder[r].fill3DArrayRandomly(1, 1, 1, 1);
 
     }
 
     wxClientDC canvas1(Panel2);
     PrepareDC(canvas1);
 
-    for(int r = 0; r < numArenas; r++)
-    {
         int offset = 5;
-        for(int i = 0; i < 3; i++)
+        for(int i = 0; i < 1; i++)
         {
-            for(int k = 0; k < columns; k++)
+            for(int j = 0; j < rows; j++)
             {
-                for(int j = 0;j < rows; j++)
+                for(int k = 0;k < columns; k++)
                 {
                     //char test = arenaHolder[r].gameWorld[i][k][j]->teamIcon;
                     //wxMessageBox(test);
-                    canvas1.DrawText(arenaHolder[r].gameWorld[k][j][i]->teamIcon, k * 12 + 5, (j * 17) + offset);
+                    if(arenaHolder[0].gameWorld[i][j][k] == 0)
+                    {
+                        canvas1.DrawText("-", j * 12 + 5, (k * 17) + offset);
+                    }
+                    else
+                    {
+                        canvas1.DrawText(arenaHolder[0].gameWorld[i][j][k]->teamIcon, j * 12 + 5, (k * 17) + offset);
+                    }
+
                 }
             }
 
             offset = offset + 460;
         }
-    }
 }
 
 void Jedi_VS_SithFrame::OnScrolledWindow1Paint(wxPaintEvent& event)

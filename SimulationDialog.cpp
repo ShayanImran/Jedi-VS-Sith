@@ -1,8 +1,8 @@
 #include "SimulationDialog.h"
 #include <wx/msgdlg.h>
 //(*InternalHeaders(SimulationDialog)
-#include <wx/intl.h>
 #include <wx/string.h>
+#include <wx/intl.h>
 //*)
 
 //(*IdInit(SimulationDialog)

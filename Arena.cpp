@@ -1,11 +1,10 @@
 #include "Arena.h"
-#include "Cell.h"
 #include "Characters.h"
-#include "Obstacles.h"
+#include "Jedi_VS_SithMain.h"
 #include <time.h>
 #include <iostream>
 #include <vector>
-using namespace std;
+
 
 Arena::Arena(int dimX, int dimY, int dimZ)
 {
@@ -13,7 +12,7 @@ Arena::Arena(int dimX, int dimY, int dimZ)
     this->dimY = dimY;
     this->dimZ = dimZ;
 
-    srand(time(NULL));
+    //srand(time(NULL));
 }
 
 Arena::~Arena()
@@ -21,7 +20,7 @@ Arena::~Arena()
     deletePointers();
 }
 
-void Arena::printArena()
+void Arena::printArena(wxFrame frame)
 {
     for (int i = 0; i < dimX; i++)
     {
@@ -31,16 +30,16 @@ void Arena::printArena()
             {
                 if (gameWorld[i][j][k] == NULL)
                 {
-                    cout << "["
-                         << " "
-                         << "]";
+                    //cout << "["
+                         //<< " "
+                         //<< "]";
                 }
                 else
                 {
-                    cout << "[" << gameWorld[i][j][k]->teamIcon << "]";
+                    //cout << "[" << gameWorld[i][j][k]->teamIcon << "]";
                 }
             }
-            cout << endl;
+            //cout << endl;
         }
     }
 }
@@ -219,16 +218,14 @@ void Arena::callTick()
                     }
                 }
             }
-            cout << endl;
+            //cout << endl;
         }
-        cout << endl;
+        //cout << endl;
     }
 }
 
 void Arena::deletePointers()
-{
-
-
+{/*
     //deletes pointers backwards
     for (int i = 0; i < dimX; i++)
     {
@@ -240,7 +237,7 @@ void Arena::deletePointers()
         delete[] gameWorld[i];
     }
 
-    delete[] gameWorld;
+    delete[] gameWorld;*/
 }
 
 // intention is to pass array into here and do the swap on each loop iteration
