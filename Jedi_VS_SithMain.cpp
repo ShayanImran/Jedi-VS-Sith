@@ -17,7 +17,7 @@
 #include <wx/app.h>
 #include <wx/image.h>
 
-typedef wxScrolledWindow fuckThisShit;
+
 
 //(*InternalHeaders(Jedi_VS_SithFrame)
 #include <wx/string.h>
@@ -65,7 +65,6 @@ BEGIN_EVENT_TABLE(Jedi_VS_SithFrame,wxFrame)
     //EVT_DRAW(Jedi_VS_SithFrame::OnDraw)
 END_EVENT_TABLE()
 
-fuckThisShit winArry[6];
 
 Jedi_VS_SithFrame::Jedi_VS_SithFrame(wxWindow* parent,wxWindowID id)
 {
