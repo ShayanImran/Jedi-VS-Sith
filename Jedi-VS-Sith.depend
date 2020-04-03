@@ -1817,3 +1817,57 @@
 	<wx/string.h>
 	<wx/intl.h>
 
+1585882062 source:/home/j/Documents/wxWidgets/Jedi-VS-Sith/Characters.cpp
+	"Characters.h"
+	"Cell.h"
+	<utility>
+
+1585882062 /home/j/Documents/wxWidgets/Jedi-VS-Sith/Characters.h
+
+1585706652 /home/j/Documents/wxWidgets/Jedi-VS-Sith/Cell.h
+	"Characters.h"
+
+1585706652 source:/home/j/Documents/wxWidgets/Jedi-VS-Sith/Jedi_VS_SithApp.cpp
+	"Jedi_VS_SithApp.h"
+	"Jedi_VS_SithMain.h"
+	<wx/image.h>
+
+1585706652 /home/j/Documents/wxWidgets/Jedi-VS-Sith/Jedi_VS_SithApp.h
+	<wx/app.h>
+
+1585904292 /home/j/Documents/wxWidgets/Jedi-VS-Sith/Jedi_VS_SithMain.h
+	<wx/sizer.h>
+	<wx/notebook.h>
+	<wx/menu.h>
+	<wx/panel.h>
+	<wx/scrolwin.h>
+	<wx/statusbr.h>
+	<wx/frame.h>
+	<wx/stattext.h>
+	"wx/dc.h"
+
+1585882062 source:/home/j/Documents/wxWidgets/Jedi-VS-Sith/MainCharacter.cpp
+	"MainCharacter.h"
+	<cstdlib>
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<bits/stdc++.h>
+	"Characters.h"
+
+1585882062 /home/j/Documents/wxWidgets/Jedi-VS-Sith/MainCharacter.h
+	"Characters.h"
+
+1585904292 source:/home/j/Documents/wxWidgets/Jedi-VS-Sith/SimulationDialog.cpp
+	"SimulationDialog.h"
+	<wx/msgdlg.h>
+	<wx/string.h>
+	<wx/intl.h>
+
+1585904292 /home/j/Documents/wxWidgets/Jedi-VS-Sith/SimulationDialog.h
+	<wx/spinctrl.h>
+	<wx/dialog.h>
+	<wx/button.h>
+	<wx/stattext.h>
+	"Jedi_VS_SithMain.h"
+
