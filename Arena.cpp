@@ -17,7 +17,7 @@ Arena::Arena(int dimX, int dimY, int dimZ)
 
 Arena::~Arena()
 {
-    deletePointers();
+    //deletePointers();
 }
 
 void Arena::printArena(wxFrame frame)

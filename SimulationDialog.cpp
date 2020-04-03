@@ -67,13 +67,13 @@ SimulationDialog::SimulationDialog(wxWindow* parent,wxWindowID id)
 	//*)
 
 	//Initialize the values to their defaults
-    numJedi = 200;
-    numSith = 200;
-    numArenas = 1;
-    numObstacles = 500;
+    numJedi = 1;
+    numSith = 1;
+    numArenas = 2;
+    numObstacles = 0;
     columns = 70;
     rows = 25;
-    numIterations = 1000;
+    numIterations = 100;
 }
 
 SimulationDialog::~SimulationDialog()
