@@ -17,8 +17,6 @@
 #include <wx/app.h>
 #include <wx/image.h>
 
-
-
 //(*InternalHeaders(Jedi_VS_SithFrame)
 #include <wx/string.h>
 #include <wx/intl.h>
@@ -37,6 +35,13 @@ wxString wxbuildinfo(wxbuildinfoformat format)
 }
 
 //(*IdInit(Jedi_VS_SithFrame)
+const long Jedi_VS_SithFrame::ID_STATICTEXT1 = wxNewId();
+const long Jedi_VS_SithFrame::ID_STATICTEXT2 = wxNewId();
+const long Jedi_VS_SithFrame::ID_STATICTEXT3 = wxNewId();
+const long Jedi_VS_SithFrame::ID_STATICTEXT4 = wxNewId();
+const long Jedi_VS_SithFrame::ID_STATICTEXT5 = wxNewId();
+const long Jedi_VS_SithFrame::ID_STATICTEXT6 = wxNewId();
+const long Jedi_VS_SithFrame::ID_STATICTEXT7 = wxNewId();
 const long Jedi_VS_SithFrame::ID_PANEL2 = wxNewId();
 const long Jedi_VS_SithFrame::ID_SCROLLEDWINDOW1 = wxNewId();
 const long Jedi_VS_SithFrame::ID_PANEL3 = wxNewId();
@@ -65,6 +70,8 @@ BEGIN_EVENT_TABLE(Jedi_VS_SithFrame,wxFrame)
     //EVT_DRAW(Jedi_VS_SithFrame::OnDraw)
 END_EVENT_TABLE()
 
+bool started = false;
+int subArena = 2;
 
 Jedi_VS_SithFrame::Jedi_VS_SithFrame(wxWindow* parent,wxWindowID id)
 {
@@ -73,20 +80,27 @@ Jedi_VS_SithFrame::Jedi_VS_SithFrame(wxWindow* parent,wxWindowID id)
 
     Create(parent, wxID_ANY, _("Frame"), wxDefaultPosition, wxDefaultSize, wxDEFAULT_FRAME_STYLE, _T("wxID_ANY"));
     BoxSizer1 = new wxBoxSizer(wxHORIZONTAL);
-    Panel1 = new wxPanel(this, ID_PANEL1, wxDefaultPosition, wxSize(479,261), wxTAB_TRAVERSAL, _T("ID_PANEL1"));
-    Notebook1 = new wxNotebook(Panel1, ID_NOTEBOOK1, wxPoint(0,0), wxSize(480,256), 0, _T("ID_NOTEBOOK1"));
+    Panel1 = new wxPanel(this, ID_PANEL1, wxDefaultPosition, wxSize(984,650), wxTAB_TRAVERSAL, _T("ID_PANEL1"));
+    Notebook1 = new wxNotebook(Panel1, ID_NOTEBOOK1, wxPoint(0,0), wxSize(984,645), 0, _T("ID_NOTEBOOK1"));
     ScrolledWindow1 = new wxScrolledWindow(Notebook1, ID_SCROLLEDWINDOW1, wxPoint(52,68), wxSize(476,169), wxVSCROLL|wxHSCROLL, _T("ID_SCROLLEDWINDOW1"));
-    Panel2 = new wxPanel(ScrolledWindow1, ID_PANEL2, wxDefaultPosition, wxSize(1439,1500), wxTAB_TRAVERSAL, _T("ID_PANEL2"));
+    Panel2 = new wxPanel(ScrolledWindow1, ID_PANEL2, wxDefaultPosition, wxSize(1439,9500), wxTAB_TRAVERSAL|wxFULL_REPAINT_ON_RESIZE, _T("ID_PANEL2"));
+    StaticText1 = new wxStaticText(Panel2, ID_STATICTEXT1, _("Remaining Jedi: "), wxPoint(40,500), wxDefaultSize, 0, _T("ID_STATICTEXT1"));
+    StaticText2 = new wxStaticText(Panel2, ID_STATICTEXT2, _("Remaining Sith: "), wxPoint(40,525), wxDefaultSize, 0, _T("ID_STATICTEXT2"));
+    StaticText3 = new wxStaticText(Panel2, ID_STATICTEXT3, _("Remaining Monsters: "), wxPoint(40,550), wxDefaultSize, 0, _T("ID_STATICTEXT3"));
+    StaticText4 = new wxStaticText(Panel2, ID_STATICTEXT4, _("None"), wxPoint(240,500), wxDefaultSize, 0, _T("ID_STATICTEXT4"));
+    StaticText5 = new wxStaticText(Panel2, ID_STATICTEXT5, _("None"), wxPoint(240,525), wxDefaultSize, 0, _T("ID_STATICTEXT5"));
+    StaticText6 = new wxStaticText(Panel2, ID_STATICTEXT6, _("None"), wxPoint(240,550), wxDefaultSize, 0, _T("ID_STATICTEXT6"));
+    StaticText7 = new wxStaticText(Panel2, ID_STATICTEXT7, _("Press F3 to run, or use the Simulation Parameters menu to start. Setting the parameters is currently disabled, due to wxWidgets complications."), wxPoint(8,450), wxDefaultSize, 0, _T("ID_STATICTEXT7"));
     ScrolledWindow2 = new wxScrolledWindow(Notebook1, ID_SCROLLEDWINDOW2, wxPoint(29,73), wxDefaultSize, wxVSCROLL|wxHSCROLL, _T("ID_SCROLLEDWINDOW2"));
-    Panel3 = new wxPanel(ScrolledWindow2, ID_PANEL3, wxDefaultPosition, wxSize(1439,1500), wxTAB_TRAVERSAL, _T("ID_PANEL3"));
+    Panel3 = new wxPanel(ScrolledWindow2, ID_PANEL3, wxDefaultPosition, wxSize(1439,1500), wxTAB_TRAVERSAL|wxFULL_REPAINT_ON_RESIZE, _T("ID_PANEL3"));
     ScrolledWindow3 = new wxScrolledWindow(Notebook1, ID_SCROLLEDWINDOW3, wxPoint(83,112), wxDefaultSize, wxVSCROLL|wxHSCROLL, _T("ID_SCROLLEDWINDOW3"));
-    Panel4 = new wxPanel(ScrolledWindow3, ID_PANEL4, wxDefaultPosition, wxSize(1439,1500), wxTAB_TRAVERSAL, _T("ID_PANEL4"));
+    Panel4 = new wxPanel(ScrolledWindow3, ID_PANEL4, wxDefaultPosition, wxSize(1439,1500), wxTAB_TRAVERSAL|wxFULL_REPAINT_ON_RESIZE, _T("ID_PANEL4"));
     ScrolledWindow4 = new wxScrolledWindow(Notebook1, ID_SCROLLEDWINDOW4, wxPoint(94,117), wxDefaultSize, wxVSCROLL|wxHSCROLL, _T("ID_SCROLLEDWINDOW4"));
-    Panel5 = new wxPanel(ScrolledWindow4, ID_PANEL5, wxDefaultPosition, wxSize(1439,1500), wxTAB_TRAVERSAL, _T("ID_PANEL5"));
+    Panel5 = new wxPanel(ScrolledWindow4, ID_PANEL5, wxDefaultPosition, wxSize(1439,1500), wxTAB_TRAVERSAL|wxFULL_REPAINT_ON_RESIZE, _T("ID_PANEL5"));
     ScrolledWindow5 = new wxScrolledWindow(Notebook1, ID_SCROLLEDWINDOW5, wxPoint(85,129), wxDefaultSize, wxVSCROLL|wxHSCROLL, _T("ID_SCROLLEDWINDOW5"));
-    Panel6 = new wxPanel(ScrolledWindow5, ID_PANEL6, wxDefaultPosition, wxSize(1439,1500), wxTAB_TRAVERSAL, _T("ID_PANEL6"));
+    Panel6 = new wxPanel(ScrolledWindow5, ID_PANEL6, wxDefaultPosition, wxSize(1439,1500), wxTAB_TRAVERSAL|wxFULL_REPAINT_ON_RESIZE, _T("ID_PANEL6"));
     ScrolledWindow6 = new wxScrolledWindow(Notebook1, ID_SCROLLEDWINDOW6, wxPoint(63,111), wxDefaultSize, wxVSCROLL|wxHSCROLL, _T("ID_SCROLLEDWINDOW6"));
-    Panel7 = new wxPanel(ScrolledWindow6, ID_PANEL7, wxDefaultPosition, wxSize(1439,1500), wxTAB_TRAVERSAL, _T("ID_PANEL7"));
+    Panel7 = new wxPanel(ScrolledWindow6, ID_PANEL7, wxDefaultPosition, wxSize(1439,1500), wxTAB_TRAVERSAL|wxFULL_REPAINT_ON_RESIZE, _T("ID_PANEL7"));
     Notebook1->AddPage(ScrolledWindow1, _("Arena 1"), false);
     Notebook1->AddPage(ScrolledWindow2, _("Arena 2"), false);
     Notebook1->AddPage(ScrolledWindow3, _("Arena 3"), false);
@@ -120,19 +134,13 @@ Jedi_VS_SithFrame::Jedi_VS_SithFrame(wxWindow* parent,wxWindowID id)
     BoxSizer1->Fit(this);
     BoxSizer1->SetSizeHints(this);
 
-    Panel2->Connect(wxEVT_LEFT_DOWN,(wxObjectEventFunction)&Jedi_VS_SithFrame::OnScrolledWindow1MouseMove,0,this);
-    Panel2->Connect(wxEVT_LEFT_UP,(wxObjectEventFunction)&Jedi_VS_SithFrame::OnPanel2LeftUp,0,this);
+    Panel2->Connect(wxEVT_PAINT,(wxObjectEventFunction)&Jedi_VS_SithFrame::OnPanel2Paint,0,this);
     ScrolledWindow1->Connect(wxEVT_SIZE,(wxObjectEventFunction)&Jedi_VS_SithFrame::OnScrolledWindow1Resize,0,this);
-    Panel3->Connect(wxEVT_LEFT_DOWN,(wxObjectEventFunction)&Jedi_VS_SithFrame::OnScrolledWindow1MouseMove,0,this);
-    Panel3->Connect(wxEVT_LEFT_UP,(wxObjectEventFunction)&Jedi_VS_SithFrame::OnScrolledWindow2LeftUp,0,this);
-    Panel4->Connect(wxEVT_LEFT_DOWN,(wxObjectEventFunction)&Jedi_VS_SithFrame::OnScrolledWindow1MouseMove,0,this);
-    Panel4->Connect(wxEVT_LEFT_UP,(wxObjectEventFunction)&Jedi_VS_SithFrame::OnScrolledWindow3LeftUp,0,this);
-    Panel5->Connect(wxEVT_LEFT_DOWN,(wxObjectEventFunction)&Jedi_VS_SithFrame::OnScrolledWindow1MouseMove,0,this);
-    Panel5->Connect(wxEVT_LEFT_UP,(wxObjectEventFunction)&Jedi_VS_SithFrame::OnScrolledWindow4LeftUp,0,this);
-    Panel6->Connect(wxEVT_LEFT_DOWN,(wxObjectEventFunction)&Jedi_VS_SithFrame::OnScrolledWindow1MouseMove,0,this);
-    Panel6->Connect(wxEVT_LEFT_UP,(wxObjectEventFunction)&Jedi_VS_SithFrame::OnScrolledWindow5LeftUp,0,this);
-    Panel7->Connect(wxEVT_LEFT_DOWN,(wxObjectEventFunction)&Jedi_VS_SithFrame::OnScrolledWindow1MouseMove,0,this);
-    Panel7->Connect(wxEVT_LEFT_UP,(wxObjectEventFunction)&Jedi_VS_SithFrame::OnScrolledWindow6LeftUp,0,this);
+    Panel3->Connect(wxEVT_PAINT,(wxObjectEventFunction)&Jedi_VS_SithFrame::OnPanel3Paint,0,this);
+    Panel4->Connect(wxEVT_PAINT,(wxObjectEventFunction)&Jedi_VS_SithFrame::OnPanel4Paint,0,this);
+    Panel5->Connect(wxEVT_PAINT,(wxObjectEventFunction)&Jedi_VS_SithFrame::OnPanel5Paint,0,this);
+    Panel6->Connect(wxEVT_PAINT,(wxObjectEventFunction)&Jedi_VS_SithFrame::OnPanel6Paint,0,this);
+    Panel7->Connect(wxEVT_PAINT,(wxObjectEventFunction)&Jedi_VS_SithFrame::OnPanel7Paint,0,this);
     ScrolledWindow6->Connect(wxEVT_MOUSEWHEEL,(wxObjectEventFunction)&Jedi_VS_SithFrame::OnScrolledWindow6MouseWheel,0,this);
     Connect(ID_MENUITEM2,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&Jedi_VS_SithFrame::OnQuit);
     Connect(ID_MENUITEM1,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&Jedi_VS_SithFrame::OnAbout);
@@ -142,29 +150,27 @@ Jedi_VS_SithFrame::Jedi_VS_SithFrame(wxWindow* parent,wxWindowID id)
     //*)
 
     //Initialize the values to their defaults
-    numJedi = 200;
-    numSith = 200;
-    numArenas = 1;
-    numObstacles = 500;
-    columns = 70;
+    numJedi = 300;
+    numSith = 300;
+    numArenas = 6;
+    numObstacles = 300;
+    columns = 25;
     rows = 25;
-    numIterations = 1000;
+    numIterations = 100;
 
     //All this just initializes the windows and scroll bars
-    ScrolledWindow1->SetVirtualSize(900, 1500);
-    ScrolledWindow1->SetScrollbar(wxVERTICAL, 0, 25, 75);
+    ScrolledWindow1->SetVirtualSize(900, 9500);
+    ScrolledWindow1->SetScrollbar(wxVERTICAL, 0, 25, 1500);
     ScrolledWindow1->SetScrollbar(wxHORIZONTAL, 0, 10, 15);
     ScrolledWindow1->AlwaysShowScrollbars();
-    ScrolledWindow1->SetScrollRate(1,1);
+    ScrolledWindow1->SetScrollRate(1,20);
     ScrolledWindow2->Show(false);
-    //winArry[0] = ScrolledWindow1;
 
     ScrolledWindow2->SetVirtualSize(900,1500);
     ScrolledWindow2->SetScrollbar(wxVERTICAL, 0, 25, 162);
     ScrolledWindow2->SetScrollbar(wxHORIZONTAL, 0, 10, 45);
     ScrolledWindow2->AlwaysShowScrollbars();
     ScrolledWindow2->SetScrollRate(1,1);
-    //winArry[1] = ScrolledWindow2;
 
     ScrolledWindow3->Show(false);
     ScrolledWindow3->SetVirtualSize(900,1500);
@@ -172,7 +178,6 @@ Jedi_VS_SithFrame::Jedi_VS_SithFrame(wxWindow* parent,wxWindowID id)
     ScrolledWindow3->SetScrollbar(wxHORIZONTAL, 0, 10, 45);
     ScrolledWindow3->AlwaysShowScrollbars();
     ScrolledWindow3->SetScrollRate(1,1);
-    //winArry[2] = ScrolledWindow3;
 
     ScrolledWindow4->Show(false);
     ScrolledWindow4->SetVirtualSize(900,1500);
@@ -180,7 +185,6 @@ Jedi_VS_SithFrame::Jedi_VS_SithFrame(wxWindow* parent,wxWindowID id)
     ScrolledWindow4->SetScrollbar(wxHORIZONTAL, 0, 10, 45);
     ScrolledWindow4->AlwaysShowScrollbars();
     ScrolledWindow4->SetScrollRate(1,1);
-    //winArry[3] = ScrolledWindow4;
 
     ScrolledWindow5->Show(false);
     ScrolledWindow5->SetVirtualSize(900,1500);
@@ -188,7 +192,6 @@ Jedi_VS_SithFrame::Jedi_VS_SithFrame(wxWindow* parent,wxWindowID id)
     ScrolledWindow5->SetScrollbar(wxHORIZONTAL, 0, 10, 45);
     ScrolledWindow5->AlwaysShowScrollbars();
     ScrolledWindow5->SetScrollRate(1,1);
-    //winArry[4] = ScrolledWindow5;
 
     ScrolledWindow6->Show(false);
     ScrolledWindow6->SetVirtualSize(900,1500);
@@ -196,7 +199,6 @@ Jedi_VS_SithFrame::Jedi_VS_SithFrame(wxWindow* parent,wxWindowID id)
     ScrolledWindow6->SetScrollbar(wxHORIZONTAL, 0, 10, 45);
     ScrolledWindow6->AlwaysShowScrollbars();
     ScrolledWindow6->SetScrollRate(1,1);
-    //winArry[5] = ScrolledWindow6;
 }
 
 
@@ -239,7 +241,7 @@ void Jedi_VS_SithFrame::OnSetData(wxCommandEvent& event)
     {
 
     }
-
+/*
     this->numJedi = temp.numJedi;
     this->numSith = temp.numSith;
     this->numArenas = temp.numArenas;
@@ -247,13 +249,14 @@ void Jedi_VS_SithFrame::OnSetData(wxCommandEvent& event)
     this->columns = temp.columns;
     this->rows = temp.rows;
     this->numIterations = temp.numIterations;
-
+*/
 
 }
 
 
 void Jedi_VS_SithFrame::OnRun(wxCommandEvent& event)
 {
+    started = true;
     if(numArenas == 2)
     {
         ScrolledWindow2->Show(true);
@@ -284,46 +287,68 @@ void Jedi_VS_SithFrame::OnRun(wxCommandEvent& event)
         ScrolledWindow5->Show(true);
         ScrolledWindow6->Show(true);
     }
-    /*
-        for each window
-            callDrawArenaFunction()
-            displayCurrentStats()
-            runArenaSimulation()
-                while(!done)
-                    displayCurrentStats()
-            executeOrder66()
-    */
-
 
     for(int r = 0; r < numArenas; r++)
     {
-        arenaHolder.push_back( Arena(3, rows, columns) );
+        arenaHolder.push_back( Arena(subArena, rows, columns) );
         arenaHolder[r].create3DArray();
-        arenaHolder[r].fill3DArray();
+        arenaHolder[r].fill3DArrayRandomly(numJedi, numSith, 20, numObstacles);
 
     }
 
     wxClientDC canvas1(Panel2);
     PrepareDC(canvas1);
 
-    for(int r = 0; r < numArenas; r++)
-    {
-        int offset = 5;
-        for(int i = 0; i < 3; i++)
+
+        int offsetX = 5;
+        int offsetY = 5;
+        for(int i = 0; i < subArena; i++)
         {
-            for(int k = 0; k < columns; k++)
+            for(int j = 0; j < rows; j++)
             {
-                for(int j = 0;j < rows; j++)
+                for(int k = 0;k < columns; k++)
                 {
-                    //char test = arenaHolder[r].gameWorld[i][k][j]->teamIcon;
-                    //wxMessageBox(test);
-                    canvas1.DrawText(arenaHolder[r].gameWorld[k][j][i]->teamIcon, k * 12 + 5, (j * 17) + offset);
+                    if(arenaHolder[0].gameWorld[i][j][k] == 0)
+                    {
+                        canvas1.DrawText("--", j * 15 + offsetX, (k * 17) + offsetY);
+                    }
+                    else
+                    {
+                        canvas1.DrawText(arenaHolder[0].gameWorld[i][j][k]->teamIcon, j * 15 + offsetX, (k * 17) + offsetY);
+                    }
+
                 }
             }
 
-            offset = offset + 460;
+            offsetX = offsetX + (rows * 17);
         }
+
+    for(int t = 0; t < numIterations; t++)
+    {
+        arenaHolder[0].callTick();
+        arenaHolder[1].callTick();
+        arenaHolder[2].callTick();
+        arenaHolder[3].callTick();
+        arenaHolder[4].callTick();
+        arenaHolder[5].callTick();
+        sleep(1);
+        StaticText4->SetLabel(std::to_string(arenaHolder[0].numJedi));
+        StaticText5->SetLabel(std::to_string(arenaHolder[0].numSith));
+        StaticText6->SetLabel(std::to_string(arenaHolder[0].numMonsters));
+        Panel2->Update();
+        Panel2->Refresh();
+        Panel3->Update();
+        Panel3->Refresh();
+        Panel4->Update();
+        Panel4->Refresh();
+        Panel5->Update();
+        Panel5->Refresh();
+        Panel6->Update();
+        Panel6->Refresh();
+        Panel7->Update();
+        Panel7->Refresh();
     }
+
 }
 
 void Jedi_VS_SithFrame::OnScrolledWindow1Paint(wxPaintEvent& event)
@@ -352,82 +377,49 @@ void Jedi_VS_SithFrame::OnScrolledWindow1MouseMove(wxMouseEvent& event)
     this->Update();
 }
 
-void Jedi_VS_SithFrame::OnPanel2LeftUp(wxMouseEvent& event)
+void Jedi_VS_SithFrame::OnPanel2Paint(wxPaintEvent& event)
 {
+    if(!started)
+    {
+        //Prevents crashes
+    }
+    else{
     wxClientDC canvas1(Panel2);
     PrepareDC(canvas1);
 
-    for(int r = 0; r < numArenas; r++)
-    {
-        int offset = 5;
-        for(int i = 0; i < 3; i++)
+
+        int offsetX = 5;
+        int offsetY = 5;
+        for(int i = 0; i < subArena; i++)
         {
-            for(int k = 0; k < columns; k++)
+            for(int j = 0; j < rows; j++)
             {
-                for(int j = 0;j < rows; j++)
+                for(int k = 0;k < columns; k++)
                 {
-                    //char test = arenaHolder[r].gameWorld[i][k][j]->teamIcon;
-                    //wxMessageBox(test);
-                    canvas1.DrawText(arenaHolder[r].gameWorld[k][j][i]->teamIcon, k * 12 + 5, (j * 17) + offset);
+                    if(arenaHolder[0].gameWorld[i][j][k] == 0)
+                    {
+                        canvas1.DrawText("--", j * 15 + offsetX, (k * 17) + offsetY);
+                    }
+                    else
+                    {
+                        canvas1.DrawText(arenaHolder[0].gameWorld[i][j][k]->teamIcon, j * 15 + offsetX, (k * 17) + offsetY);
+                    }
+
                 }
             }
 
-            offset = offset + 460;
+            offsetX = offsetX + (rows * 17);
         }
     }
-
 }
 
 void Jedi_VS_SithFrame::OnScrolledWindow2LeftUp(wxMouseEvent& event)
 {
 
-    wxClientDC canvas1(Panel3);
-    PrepareDC(canvas1);
-
-    for(int r = 0; r < numArenas; r++)
-    {
-        int offset = 5;
-        for(int i = 0; i < 3; i++)
-        {
-            for(int k = 0; k < columns; k++)
-            {
-                for(int j = 0;j < rows; j++)
-                {
-                    //char test = arenaHolder[r].gameWorld[i][k][j]->teamIcon;
-                    //wxMessageBox(test);
-                    canvas1.DrawText(arenaHolder[r].gameWorld[k][j][i]->teamIcon, k * 12 + 5, (j * 17) + offset);
-                }
-            }
-
-            offset = offset + 460;
-        }
-    }
 }
 
 void Jedi_VS_SithFrame::OnScrolledWindow3LeftUp(wxMouseEvent& event)
 {
-
-    wxClientDC canvas1(Panel4);
-    PrepareDC(canvas1);
-
-    for(int r = 0; r < numArenas; r++)
-    {
-        int offset = 5;
-        for(int i = 0; i < 3; i++)
-        {
-            for(int k = 0; k < columns; k++)
-            {
-                for(int j = 0;j < rows; j++)
-                {
-                    //char test = arenaHolder[r].gameWorld[i][k][j]->teamIcon;
-                    //wxMessageBox(test);
-                    canvas1.DrawText(arenaHolder[r].gameWorld[k][j][i]->teamIcon, k * 12 + 5, (j * 17) + offset);
-                }
-            }
-
-            offset = offset + 460;
-        }
-    }
 
 }
 
@@ -435,85 +427,206 @@ void Jedi_VS_SithFrame::OnScrolledWindow3LeftUp(wxMouseEvent& event)
 void Jedi_VS_SithFrame::OnScrolledWindow4LeftUp(wxMouseEvent& event)
 {
 
-    wxClientDC canvas1(Panel5);
-    PrepareDC(canvas1);
-
-    for(int r = 0; r < numArenas; r++)
-    {
-        int offset = 5;
-        for(int i = 0; i < 3; i++)
-        {
-            for(int k = 0; k < columns; k++)
-            {
-                for(int j = 0;j < rows; j++)
-                {
-                    //char test = arenaHolder[r].gameWorld[i][k][j]->teamIcon;
-                    //wxMessageBox(test);
-                    canvas1.DrawText(arenaHolder[r].gameWorld[k][j][i]->teamIcon, k * 12 + 5, (j * 17) + offset);
-                }
-            }
-
-            offset = offset + 460;
-        }
-    }
 
 }
 
 void Jedi_VS_SithFrame::OnScrolledWindow5LeftUp(wxMouseEvent& event)
 {
-    wxClientDC canvas1(Panel6);
-    PrepareDC(canvas1);
 
-    for(int r = 0; r < numArenas; r++)
-    {
-        int offset = 5;
-        for(int i = 0; i < 3; i++)
-        {
-            for(int k = 0; k < columns; k++)
-            {
-                for(int j = 0;j < rows; j++)
-                {
-                    //char test = arenaHolder[r].gameWorld[i][k][j]->teamIcon;
-                    //wxMessageBox(test);
-                    canvas1.DrawText(arenaHolder[r].gameWorld[k][j][i]->teamIcon, k * 12 + 5, (j * 17) + offset);
-                }
-            }
-
-            offset = offset + 460;
-        }
-    }
 }
-/* Replace "F" with the image of the character in the arena object */
+
 void Jedi_VS_SithFrame::OnScrolledWindow6LeftUp(wxMouseEvent& event)
 {
-    wxClientDC canvas1(Panel7);
-    PrepareDC(canvas1);
 
-    for(int r = 0; r < numArenas; r++)
-    {
-        int offset = 5;
-        for(int i = 0; i < 3; i++)
-        {
-            for(int k = 0; k < columns; k++)
-            {
-                for(int j = 0;j < rows; j++)
-                {
-                    //char test = arenaHolder[r].gameWorld[i][k][j]->teamIcon;
-                    //wxMessageBox(test);
-                    canvas1.DrawText(arenaHolder[r].gameWorld[k][j][i]->teamIcon, k * 12 + 5, (j * 17) + offset);
-                }
-            }
-
-            offset = offset + 460;
-        }
-    }
 }
 
 void Jedi_VS_SithFrame::OnScrolledWindow6MouseWheel(wxMouseEvent& event)
 {
-  //Gotem
+  //Disables mouse scroll but does nothing.
     for(int i = 0; i< 10; i++)
     {
         std::cout<<"This does nothing";
+    }
+}
+
+void Jedi_VS_SithFrame::OnPanel3Paint(wxPaintEvent& event)
+{
+
+    if(!started)
+    {
+        //Prevents crashes
+    }
+    else{
+    wxClientDC canvas1(Panel3);
+    PrepareDC(canvas1);
+
+
+        int offsetX = 5;
+        int offsetY = 5;
+        for(int i = 0; i < subArena; i++)
+        {
+            for(int j = 0; j < rows; j++)
+            {
+                for(int k = 0;k < columns; k++)
+                {
+                    if(arenaHolder[1].gameWorld[i][j][k] == 0)
+                    {
+                        canvas1.DrawText("--", j * 15 + offsetX, (k * 17) + offsetY);
+                    }
+                    else
+                    {
+                        canvas1.DrawText(arenaHolder[1].gameWorld[i][j][k]->teamIcon, j * 15 + offsetX, (k * 17) + offsetY);
+                    }
+
+                }
+            }
+
+            offsetX = offsetX + (rows * 17);
+        }
+    }
+}
+
+void Jedi_VS_SithFrame::OnPanel4Paint(wxPaintEvent& event)
+{
+
+    if(!started)
+    {
+        //Prevents crashes
+    }
+    else{
+    wxClientDC canvas1(Panel4);
+    PrepareDC(canvas1);
+
+
+        int offsetX = 5;
+        int offsetY = 5;
+        for(int i = 0; i < subArena; i++)
+        {
+            for(int j = 0; j < rows; j++)
+            {
+                for(int k = 0;k < columns; k++)
+                {
+                    if(arenaHolder[2].gameWorld[i][j][k] == 0)
+                    {
+                        canvas1.DrawText("--", j * 15 + offsetX, (k * 17) + offsetY);
+                    }
+                    else
+                    {
+                        canvas1.DrawText(arenaHolder[2].gameWorld[i][j][k]->teamIcon, j * 15 + offsetX, (k * 17) + offsetY);
+                    }
+
+                }
+            }
+
+            offsetX = offsetX + (rows * 17);
+        }
+    }
+}
+
+void Jedi_VS_SithFrame::OnPanel5Paint(wxPaintEvent& event)
+{
+        if(!started)
+    {
+        //Prevents crashes
+    }
+    else{
+    wxClientDC canvas1(Panel5);
+    PrepareDC(canvas1);
+
+
+        int offsetX = 5;
+        int offsetY = 5;
+        for(int i = 0; i < subArena; i++)
+        {
+            for(int j = 0; j < rows; j++)
+            {
+                for(int k = 0;k < columns; k++)
+                {
+                    if(arenaHolder[3].gameWorld[i][j][k] == 0)
+                    {
+                        canvas1.DrawText("--", j * 15 + offsetX, (k * 17) + offsetY);
+                    }
+                    else
+                    {
+                        canvas1.DrawText(arenaHolder[3].gameWorld[i][j][k]->teamIcon, j * 15 + offsetX, (k * 17) + offsetY);
+                    }
+
+                }
+            }
+
+            offsetX = offsetX + (rows * 17);
+        }
+    }
+}
+
+void Jedi_VS_SithFrame::OnPanel6Paint(wxPaintEvent& event)
+{
+    if(!started)
+    {
+        //Prevents crashes
+    }
+    else{
+    wxClientDC canvas1(Panel6);
+    PrepareDC(canvas1);
+
+
+        int offsetX = 5;
+        int offsetY = 5;
+        for(int i = 0; i < subArena; i++)
+        {
+            for(int j = 0; j < rows; j++)
+            {
+                for(int k = 0;k < columns; k++)
+                {
+                    if(arenaHolder[4].gameWorld[i][j][k] == 0)
+                    {
+                        canvas1.DrawText("--", j * 15 + offsetX, (k * 17) + offsetY);
+                    }
+                    else
+                    {
+                        canvas1.DrawText(arenaHolder[4].gameWorld[i][j][k]->teamIcon, j * 15 + offsetX, (k * 17) + offsetY);
+                    }
+
+                }
+            }
+
+            offsetX = offsetX + (rows * 17);
+        }
+    }
+}
+
+void Jedi_VS_SithFrame::OnPanel7Paint(wxPaintEvent& event)
+{
+    if(!started)
+    {
+        //Prevents crashes
+    }
+    else{
+    wxClientDC canvas1(Panel7);
+    PrepareDC(canvas1);
+
+
+        int offsetX = 5;
+        int offsetY = 5;
+        for(int i = 0; i < subArena; i++)
+        {
+            for(int j = 0; j < rows; j++)
+            {
+                for(int k = 0;k < columns; k++)
+                {
+                    if(arenaHolder[5].gameWorld[i][j][k] == 0)
+                    {
+                        canvas1.DrawText("--", j * 15 + offsetX, (k * 17) + offsetY);
+                    }
+                    else
+                    {
+                        canvas1.DrawText(arenaHolder[5].gameWorld[i][j][k]->teamIcon, j * 15 + offsetX, (k * 17) + offsetY);
+                    }
+
+                }
+            }
+
+            offsetX = offsetX + (rows * 17);
+        }
     }
 }

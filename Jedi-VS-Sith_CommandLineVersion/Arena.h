@@ -1,9 +1,8 @@
 #ifndef ARENA_H_INCLUDED
-#define ARENA_H_INCLUDED
+
 #include "Characters.h"
 #include <iostream>
 #include "MainCharacter.h"
-#include "Jedi_VS_SithMain.h"
 class Arena
 {
     public:
@@ -13,7 +12,7 @@ class Arena
         void setNumJedi(int num);
         int getNumSith();
         void setNumSith(int num);
-        void printArena(wxFrame frame);
+        void printArena();
         int dimX;
         int dimY;
         int dimZ;
@@ -30,7 +29,6 @@ class Arena
         void fill3DArray();
         void callTick();
         void deletePointers();
-
         void fill3DArrayRandomly(int numJedi, int numSith, int numMonsters,int numObstacles);
         void moveUp(int a,int b,int c);
         void moveDown(int a,int b,int c);
@@ -40,10 +38,10 @@ class Arena
         bool doDamage(int a, int b, int c);
 
 
-
     private:
 
         int Size;
+
         int numObstacals;
         int random;
         int numLandMines;

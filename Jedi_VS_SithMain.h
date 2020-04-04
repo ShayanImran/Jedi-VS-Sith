@@ -18,6 +18,7 @@
 #include <wx/scrolwin.h>
 #include <wx/statusbr.h>
 #include <wx/frame.h>
+#include <wx/stattext.h>
 //*)
 #include "wx/dc.h"
 
@@ -47,9 +48,21 @@ class Jedi_VS_SithFrame: public wxFrame
         void OnScrolledWindow5LeftUp(wxMouseEvent& event);
         void OnScrolledWindow6LeftUp(wxMouseEvent& event);
         void OnScrolledWindow6MouseWheel(wxMouseEvent& event);
+        void OnPanel3Paint(wxPaintEvent& event);
+        void OnPanel4Paint(wxPaintEvent& event);
+        void OnPanel5Paint(wxPaintEvent& event);
+        void OnPanel6Paint(wxPaintEvent& event);
+        void OnPanel7Paint(wxPaintEvent& event);
         //*)
 
         //(*Identifiers(Jedi_VS_SithFrame)
+        static const long ID_STATICTEXT1;
+        static const long ID_STATICTEXT2;
+        static const long ID_STATICTEXT3;
+        static const long ID_STATICTEXT4;
+        static const long ID_STATICTEXT5;
+        static const long ID_STATICTEXT6;
+        static const long ID_STATICTEXT7;
         static const long ID_PANEL2;
         static const long ID_SCROLLEDWINDOW1;
         static const long ID_PANEL3;
@@ -83,17 +96,24 @@ class Jedi_VS_SithFrame: public wxFrame
         wxScrolledWindow* ScrolledWindow5;
         wxMenu* Menu3;
         wxScrolledWindow* ScrolledWindow4;
+        wxStaticText* StaticText1;
         wxPanel* Panel2;
+        wxStaticText* StaticText3;
         wxPanel* Panel4;
         wxMenuItem* MenuItem3;
         wxPanel* Panel5;
         wxScrolledWindow* ScrolledWindow6;
         wxPanel* Panel3;
+        wxStaticText* StaticText7;
         wxScrolledWindow* ScrolledWindow3;
         wxScrolledWindow* ScrolledWindow2;
+        wxStaticText* StaticText4;
+        wxStaticText* StaticText5;
         wxMenuBar* MenuBar1;
+        wxStaticText* StaticText2;
         wxNotebook* Notebook1;
         wxMenuItem* MenuItem4;
+        wxStaticText* StaticText6;
         wxMenu* Menu2;
         //*)
 

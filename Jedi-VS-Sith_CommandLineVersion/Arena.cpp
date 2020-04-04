@@ -1,10 +1,11 @@
 #include "Arena.h"
+
 #include "Characters.h"
-#include "Jedi_VS_SithMain.h"
+
 #include <time.h>
 #include <iostream>
 #include <vector>
-
+using namespace std;
 
 Arena::Arena(int dimX, int dimY, int dimZ)
 {
@@ -12,15 +13,15 @@ Arena::Arena(int dimX, int dimY, int dimZ)
     this->dimY = dimY;
     this->dimZ = dimZ;
 
-    //srand(time(NULL));
+    srand(time(NULL));
 }
 
 Arena::~Arena()
 {
-    //deletePointers();
+    deletePointers();
 }
 
-void Arena::printArena(wxFrame frame)
+void Arena::printArena()
 {
     for (int i = 0; i < dimX; i++)
     {
@@ -30,17 +31,18 @@ void Arena::printArena(wxFrame frame)
             {
                 if (gameWorld[i][j][k] == NULL)
                 {
-                    //cout << "["
-                         //<< " "
-                         //<< "]";
+                    cout << "["
+                         << " "
+                         << "]";
                 }
                 else
                 {
-                    //cout << "[" << gameWorld[i][j][k]->teamIcon << "]";
+                    cout << "[" << gameWorld[i][j][k]->teamIcon << "]";
                 }
             }
-            //cout << endl;
+            cout << endl;
         }
+        cout << endl;
     }
 }
 
@@ -92,11 +94,8 @@ void Arena::fill3DArrayRandomly(int numJedi, int numSith, int numMonsters, int n
             }
             gameWorld[randomX][randomY][randomZ] = new Characters('j'); //creates new character
             gameWorld[randomX][randomY][randomZ]->isCellOpen = false;
-
-
         }
     }
-
 
     for (int k = 0; k < numMonsters; k++)
     {
@@ -218,14 +217,14 @@ void Arena::callTick()
                     }
                 }
             }
-            //cout << endl;
+            cout << endl;
         }
-        //cout << endl;
+        cout << endl;
     }
 }
 
 void Arena::deletePointers()
-{/*
+{
     //deletes pointers backwards
     for (int i = 0; i < dimX; i++)
     {
@@ -237,7 +236,7 @@ void Arena::deletePointers()
         delete[] gameWorld[i];
     }
 
-    delete[] gameWorld;*/
+    delete[] gameWorld;
 }
 
 // intention is to pass array into here and do the swap on each loop iteration

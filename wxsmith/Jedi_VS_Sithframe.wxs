@@ -7,17 +7,43 @@
 		<object class="wxBoxSizer" variable="BoxSizer1" member="no">
 			<object class="sizeritem">
 				<object class="wxPanel" name="ID_PANEL1" variable="Panel1" member="yes">
-					<size>479,261</size>
+					<size>984,650</size>
 					<object class="wxNotebook" name="ID_NOTEBOOK1" variable="Notebook1" member="yes">
 						<pos>0,0</pos>
-						<size>480,256</size>
+						<size>984,645</size>
 						<object class="notebookpage">
 							<object class="wxScrolledWindow" name="ID_SCROLLEDWINDOW1" variable="ScrolledWindow1" member="yes">
 								<pos>52,68</pos>
 								<size>476,169</size>
 								<handler function="OnScrolledWindow1Resize" entry="EVT_SIZE" />
 								<object class="wxPanel" name="ID_PANEL2" variable="Panel2" member="yes">
-									<size>1439,1500</size>
+									<size>1439,9500</size>
+									<style>wxTAB_TRAVERSAL|wxFULL_REPAINT_ON_RESIZE</style>
+									<handler function="OnPanel2Paint" entry="EVT_PAINT" />
+									<object class="wxStaticText" name="ID_STATICTEXT1" variable="StaticText1" member="yes">
+										<label>Remaining Jedi: </label>
+										<pos>40,500</pos>
+									</object>
+									<object class="wxStaticText" name="ID_STATICTEXT2" variable="StaticText2" member="yes">
+										<label>Remaining Sith: </label>
+										<pos>40,525</pos>
+									</object>
+									<object class="wxStaticText" name="ID_STATICTEXT3" variable="StaticText3" member="yes">
+										<label>Remaining Monsters: </label>
+										<pos>40,550</pos>
+									</object>
+									<object class="wxStaticText" name="ID_STATICTEXT4" variable="StaticText4" member="yes">
+										<label></label>
+										<pos>240,500</pos>
+									</object>
+									<object class="wxStaticText" name="ID_STATICTEXT5" variable="StaticText5" member="yes">
+										<label></label>
+										<pos>240,525</pos>
+									</object>
+									<object class="wxStaticText" name="ID_STATICTEXT6" variable="StaticText6" member="yes">
+										<label></label>
+										<pos>240,550</pos>
+									</object>
 								</object>
 							</object>
 							<label>Arena 1</label>
@@ -27,8 +53,8 @@
 								<pos>29,73</pos>
 								<object class="wxPanel" name="ID_PANEL3" variable="Panel3" member="yes">
 									<size>1439,1500</size>
-									<handler function="OnScrolledWindow1MouseMove" entry="EVT_LEFT_DOWN" />
-									<handler function="OnScrolledWindow2LeftUp" entry="EVT_LEFT_UP" />
+									<style>wxTAB_TRAVERSAL|wxFULL_REPAINT_ON_RESIZE</style>
+									<handler function="OnPanel3Paint" entry="EVT_PAINT" />
 								</object>
 							</object>
 							<label>Arena 2</label>
@@ -38,8 +64,8 @@
 								<pos>83,112</pos>
 								<object class="wxPanel" name="ID_PANEL4" variable="Panel4" member="yes">
 									<size>1439,1500</size>
-									<handler function="OnScrolledWindow1MouseMove" entry="EVT_LEFT_DOWN" />
-									<handler function="OnScrolledWindow3LeftUp" entry="EVT_LEFT_UP" />
+									<style>wxTAB_TRAVERSAL|wxFULL_REPAINT_ON_RESIZE</style>
+									<handler function="OnPanel4Paint" entry="EVT_PAINT" />
 								</object>
 							</object>
 							<label>Arena 3</label>
@@ -49,8 +75,8 @@
 								<pos>94,117</pos>
 								<object class="wxPanel" name="ID_PANEL5" variable="Panel5" member="yes">
 									<size>1439,1500</size>
-									<handler function="OnScrolledWindow1MouseMove" entry="EVT_LEFT_DOWN" />
-									<handler function="OnScrolledWindow4LeftUp" entry="EVT_LEFT_UP" />
+									<style>wxTAB_TRAVERSAL|wxFULL_REPAINT_ON_RESIZE</style>
+									<handler function="OnPanel5Paint" entry="EVT_PAINT" />
 								</object>
 							</object>
 							<label>Arena 4</label>
@@ -60,8 +86,8 @@
 								<pos>85,129</pos>
 								<object class="wxPanel" name="ID_PANEL6" variable="Panel6" member="yes">
 									<size>1439,1500</size>
-									<handler function="OnScrolledWindow1MouseMove" entry="EVT_LEFT_DOWN" />
-									<handler function="OnScrolledWindow5LeftUp" entry="EVT_LEFT_UP" />
+									<style>wxTAB_TRAVERSAL|wxFULL_REPAINT_ON_RESIZE</style>
+									<handler function="OnPanel6Paint" entry="EVT_PAINT" />
 								</object>
 							</object>
 							<label>Arena 5</label>
@@ -72,8 +98,8 @@
 								<handler function="OnScrolledWindow6MouseWheel" entry="EVT_MOUSEWHEEL" />
 								<object class="wxPanel" name="ID_PANEL7" variable="Panel7" member="yes">
 									<size>1439,1500</size>
-									<handler function="OnScrolledWindow1MouseMove" entry="EVT_LEFT_DOWN" />
-									<handler function="OnScrolledWindow6LeftUp" entry="EVT_LEFT_UP" />
+									<style>wxTAB_TRAVERSAL|wxFULL_REPAINT_ON_RESIZE</style>
+									<handler function="OnPanel7Paint" entry="EVT_PAINT" />
 								</object>
 							</object>
 							<label>Arena 6</label>
