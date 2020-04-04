@@ -1101,7 +1101,7 @@
 	<wx/app.h>
 	<wx/app.h>
 
-1585964501 /home/shayan/Desktop/Git/Jedi-VS-Sith/Jedi_VS_SithMain.h
+1585964985 /home/shayan/Desktop/Git/Jedi-VS-Sith/Jedi_VS_SithMain.h
 	<wx/sizer.h>
 	<wx/notebook.h>
 	<wx/menu.h>
@@ -1411,14 +1411,14 @@
 
 1522244266 /usr/include/wx-3.0/wx/gtk/stattext.h
 
-1585886019 /home/shayan/Desktop/Git/Jedi-VS-Sith/SimulationDialog.h
+1585964985 /home/shayan/Desktop/Git/Jedi-VS-Sith/SimulationDialog.h
 	<wx/spinctrl.h>
 	<wx/dialog.h>
 	<wx/button.h>
 	<wx/stattext.h>
 	"Jedi_VS_SithMain.h"
 
-1585964501 source:/home/shayan/Desktop/Git/Jedi-VS-Sith/SimulationDialog.cpp
+1585964985 source:/home/shayan/Desktop/Git/Jedi-VS-Sith/SimulationDialog.cpp
 	"SimulationDialog.h"
 	<wx/msgdlg.h>
 	<wx/string.h>
