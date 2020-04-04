@@ -17,7 +17,6 @@
 #include <wx/app.h>
 #include <wx/image.h>
 
-
 //(*InternalHeaders(Jedi_VS_SithFrame)
 #include <wx/string.h>
 #include <wx/intl.h>
