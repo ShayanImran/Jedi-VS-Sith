@@ -1,0 +1,38 @@
+# depslib dependency file v1.0
+1585877090 source:/home/shayan/Desktop/Jedi-VS-Sith_CommandLineVersion/Arena.cpp
+	"Arena.h"
+	"Characters.h"
+	<time.h>
+	<iostream>
+	<vector>
+
+1585877080 /home/shayan/Desktop/Jedi-VS-Sith_CommandLineVersion/Arena.h
+	"Characters.h"
+	<iostream>
+	"MainCharacter.h"
+
+1585870817 /home/shayan/Desktop/Jedi-VS-Sith_CommandLineVersion/Characters.h
+
+1585856628 /home/shayan/Desktop/Jedi-VS-Sith_CommandLineVersion/MainCharacter.h
+	"Characters.h"
+
+1585895746 source:/home/shayan/Desktop/Jedi-VS-Sith_CommandLineVersion/main.cpp
+	<iostream>
+	<unistd.h>
+	"Arena.h"
+	<utility>
+	"MainCharacter.h"
+
+1585870669 source:/home/shayan/Desktop/Jedi-VS-Sith_CommandLineVersion/MainCharacter.cpp
+	"MainCharacter.h"
+	<cstdlib>
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<bits/stdc++.h>
+	"Characters.h"
+
+1585895653 source:/home/shayan/Desktop/Jedi-VS-Sith_CommandLineVersion/Characters.cpp
+	"Characters.h"
+	<utility>
+
